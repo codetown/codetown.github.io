@@ -6,31 +6,77 @@
     <description>Recent content in index on AI实验室 - 探索AI的导航网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 15 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://codetown.github.io/categories/index/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Mar 2023 16:01:23 +0800</lastBuildDate><atom:link href="https://codetown.github.io/categories/index/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jane 主题预览</title>
-      <link>https://codetown.github.io/post/jane-theme-preview.zh-cn/</link>
-      <pubDate>Tue, 06 Mar 2018 16:01:23 +0800</pubDate>
+      <link>https://codetown.github.io/post/blog-00002/</link>
+      <pubDate>Mon, 06 Mar 2023 16:01:23 +0800</pubDate>
       
-      <guid>https://codetown.github.io/post/jane-theme-preview.zh-cn/</guid>
+      <guid>https://codetown.github.io/post/blog-00002/</guid>
       <description>主题预览,内容有待填充。</description>
     </item>
     
     <item>
       <title>GO语言生成批量插入数据SQL语句算法</title>
-      <link>https://codetown.github.io/post/jane-theme-preview/</link>
-      <pubDate>Mon, 01 Jan 2018 16:01:23 +0800</pubDate>
+      <link>https://codetown.github.io/post/blog-00001/</link>
+      <pubDate>Sun, 01 Jan 2023 16:01:23 +0800</pubDate>
       
-      <guid>https://codetown.github.io/post/jane-theme-preview/</guid>
+      <guid>https://codetown.github.io/post/blog-00001/</guid>
       <description>package main import &amp;#34;fmt&amp;#34; // Point 点名 type Point struct { PointID uint64 `json:&amp;#34;pointID&amp;#34;` PathName string `json:&amp;#34;pathName&amp;#34;` PointValue float32 `json:&amp;#34;pointValue&amp;#34;` StoreTime string `json:&amp;#34;storeTime&amp;#34;` } // GetSQLList 数据量太大分成多个sql语句并返回多个sql语句的切片 // groupSize 按照个人需求进行变更，代表 每</description>
     </item>
     
     <item>
+      <title>Demo: more Shortcodes</title>
+      <link>https://codetown.github.io/post/demo/7-shortcodes-preview/</link>
+      <pubDate>Sat, 04 Mar 2023 16:01:23 +0800</pubDate>
+      
+      <guid>https://codetown.github.io/post/demo/7-shortcodes-preview/</guid>
+      <description>&lt;h2 id=&#34;what-a-shortcode-is&#34;&gt;What a Shortcode is&lt;/h2&gt;
+&lt;p&gt;Hugo loves Markdown because of its simple content format, but there are times when Markdown falls short. Often, content authors are forced to add raw HTML (e.g., video &lt;code&gt;&amp;lt;iframes&amp;gt;&lt;/code&gt;) to Markdown content. We think this contradicts the beautiful simplicity of Markdown&amp;rsquo;s syntax.&lt;/p&gt;
+&lt;p&gt;Hugo created &lt;strong&gt;shortcodes&lt;/strong&gt; to circumvent these limitations.&lt;/p&gt;
+&lt;p&gt;A shortcode is a simple snippet inside a content file that Hugo will render using a predefined template. Note that shortcodes will not work in template files. If you need the type of drop-in functionality that shortcodes provide but in a template, you most likely want a [partial template]
+In addition to cleaner Markdown, shortcodes can be updated any time to reflect new classes, techniques, or standards. At the point of site generation, Hugo shortcodes will easily merge in your changes. You avoid a possibly complicated search and replace operation.&lt;/p&gt;
+&lt;p&gt;More details: &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/&#34;&gt;https://gohugo.io/content-management/shortcodes/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Demo: Image</title>
+      <link>https://codetown.github.io/post/demo/1-image/</link>
+      <pubDate>Fri, 03 Mar 2023 16:01:23 +0800</pubDate>
+      
+      <guid>https://codetown.github.io/post/demo/1-image/</guid>
+      <description>&lt;p&gt;Thanks for &lt;a href=&#34;https://github.com/liwenyip/hugo-easy-gallery&#34;&gt;liwenyip/hugo-easy-gallery&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://github.com/xianmin/hugo-theme-jane/pull/48&#34;&gt;Zebradil · Pull Request #48&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;Now, we could use &lt;code&gt;{{&amp;lt; gallery &amp;gt;}}&lt;/code&gt; shortcode in hugo-theme-jane.&lt;/p&gt;
+&lt;h2 id=&#34;normal-image&#34;&gt;Normal Image&lt;/h2&gt;
+&lt;p&gt;This is an image in &lt;code&gt;static/image&lt;/code&gt; folder.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;![&lt;span style=&#34;color:#f92672&#34;&gt;This is an image in `static/image` folder.&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;/image/example.jpg&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Demo: Shortcodes Notice</title>
+      <link>https://codetown.github.io/post/demo/6-shortcode-notice/</link>
+      <pubDate>Fri, 03 Mar 2023 16:01:23 +0800</pubDate>
+      
+      <guid>https://codetown.github.io/post/demo/6-shortcode-notice/</guid>
+      <description>normal use Note example: {{% notice note %}} A notice disclaimer {{% /notice %}} Result: You could custom title : {{% notice note 笔记 %}} A notice disclaimer {{% /notice %}} tip {{% notice tip %}} A tip disclaimer {{% /tip %}} info {{% notice info %}} A info disclaimer {{% /notice %}} warning {{% notice warning %}} A warning disclaimer {{% /notice %}}</description>
+    </item>
+    
+    <item>
+      <title>Demo: Footnote</title>
+      <link>https://codetown.github.io/post/demo/4-footnote/</link>
+      <pubDate>Wed, 01 Mar 2023 16:01:23 +0800</pubDate>
+      
+      <guid>https://codetown.github.io/post/demo/4-footnote/</guid>
+      <description>&lt;p&gt;Hugo-theme-jane optimized for footnote. When you mouse hover the footnote&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; , footnote content will be displayed.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>C语言实现单链表的基本操作（头插入法建表）</title>
-      <link>https://codetown.github.io/post/docs/how-to-contribute/</link>
+      <link>https://codetown.github.io/post/blog-00003/</link>
       <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://codetown.github.io/post/docs/how-to-contribute/</guid>
+      <guid>https://codetown.github.io/post/blog-00003/</guid>
       <description>头文件 reward.h #define MAX_LENGTH 256 //避免链表过长，这里给链表长度做个限制 typedef struct _MYNODE{ int node; struct _MYNODE* next; } MY_NODE,* PT_MY_NODE; PT_MY_NODE insert_node(PT_MY_NODE,int); PT_MY_NODE remove_node_by_value(PT_MY_NODE,int); PT_MY_NODE remove_node_by_index(PT_MY_NODE,int); PT_MY_NODE clear(PT_MY_NODE); int output(PT_MY_NODE); int find_by_index(PT_MY_NODE,int); int count(PT_MY_NODE); 实现文件 reward.c #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;stdlib.h&amp;gt; #include &amp;lt;time.h&amp;gt; #include &amp;#34;reward.h&amp;#34; // 插入节点</description>
     </item>
     
@@ -70,52 +116,6 @@ Header This tutorial will show you how to create a simple theme in Hugo.</descri
       
       <guid>https://codetown.github.io/post/demo/5-math/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.intmath.com/cg5/katex-mathjax-comparison.php&#34;&gt;KaTeX and MathJax Comparison Demo, currently processed as KaTeX&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Demo: more Shortcodes</title>
-      <link>https://codetown.github.io/post/demo/7-shortcodes-preview/</link>
-      <pubDate>Sun, 04 Mar 2018 16:01:23 +0800</pubDate>
-      
-      <guid>https://codetown.github.io/post/demo/7-shortcodes-preview/</guid>
-      <description>&lt;h2 id=&#34;what-a-shortcode-is&#34;&gt;What a Shortcode is&lt;/h2&gt;
-&lt;p&gt;Hugo loves Markdown because of its simple content format, but there are times when Markdown falls short. Often, content authors are forced to add raw HTML (e.g., video &lt;code&gt;&amp;lt;iframes&amp;gt;&lt;/code&gt;) to Markdown content. We think this contradicts the beautiful simplicity of Markdown&amp;rsquo;s syntax.&lt;/p&gt;
-&lt;p&gt;Hugo created &lt;strong&gt;shortcodes&lt;/strong&gt; to circumvent these limitations.&lt;/p&gt;
-&lt;p&gt;A shortcode is a simple snippet inside a content file that Hugo will render using a predefined template. Note that shortcodes will not work in template files. If you need the type of drop-in functionality that shortcodes provide but in a template, you most likely want a [partial template][partials] instead.&lt;/p&gt;
-&lt;p&gt;In addition to cleaner Markdown, shortcodes can be updated any time to reflect new classes, techniques, or standards. At the point of site generation, Hugo shortcodes will easily merge in your changes. You avoid a possibly complicated search and replace operation.&lt;/p&gt;
-&lt;p&gt;More details: &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/&#34;&gt;https://gohugo.io/content-management/shortcodes/&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Demo: Image</title>
-      <link>https://codetown.github.io/post/demo/1-image/</link>
-      <pubDate>Sat, 03 Mar 2018 16:01:23 +0800</pubDate>
-      
-      <guid>https://codetown.github.io/post/demo/1-image/</guid>
-      <description>&lt;p&gt;Thanks for &lt;a href=&#34;https://github.com/liwenyip/hugo-easy-gallery&#34;&gt;liwenyip/hugo-easy-gallery&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://github.com/xianmin/hugo-theme-jane/pull/48&#34;&gt;Zebradil · Pull Request #48&lt;/a&gt; .&lt;/p&gt;
-&lt;p&gt;Now, we could use &lt;code&gt;{{&amp;lt; gallery &amp;gt;}}&lt;/code&gt; shortcode in hugo-theme-jane.&lt;/p&gt;
-&lt;h2 id=&#34;normal-image&#34;&gt;Normal Image&lt;/h2&gt;
-&lt;p&gt;This is an image in &lt;code&gt;static/image&lt;/code&gt; folder.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;![&lt;span style=&#34;color:#f92672&#34;&gt;This is an image in `static/image` folder.&lt;/span&gt;](&lt;span style=&#34;color:#a6e22e&#34;&gt;/image/example.jpg&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>Demo: Shortcodes Notice</title>
-      <link>https://codetown.github.io/post/demo/6-shortcode-notice/</link>
-      <pubDate>Sat, 03 Mar 2018 16:01:23 +0800</pubDate>
-      
-      <guid>https://codetown.github.io/post/demo/6-shortcode-notice/</guid>
-      <description>normal use Note example: {{% notice note %}} A notice disclaimer {{% /notice %}} Result: You could custom title : {{% notice note 笔记 %}} A notice disclaimer {{% /notice %}} tip {{% notice tip %}} A tip disclaimer {{% /tip %}} info {{% notice info %}} A info disclaimer {{% /notice %}} warning {{% notice warning %}} A warning disclaimer {{% /notice %}}</description>
-    </item>
-    
-    <item>
-      <title>Demo: Footnote</title>
-      <link>https://codetown.github.io/post/demo/4-footnote/</link>
-      <pubDate>Thu, 01 Mar 2018 16:01:23 +0800</pubDate>
-      
-      <guid>https://codetown.github.io/post/demo/4-footnote/</guid>
-      <description>&lt;p&gt;Hugo-theme-jane optimized for footnote. When you mouse hover the footnote&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; , footnote content will be displayed.&lt;/p&gt;</description>
     </item>
     
     <item>

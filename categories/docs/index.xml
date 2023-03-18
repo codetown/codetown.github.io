@@ -6,22 +6,22 @@
     <description>Recent content in docs on AI实验室 - 探索AI的导航网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 15 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://codetown.github.io/categories/docs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Jan 2023 16:01:23 +0800</lastBuildDate><atom:link href="https://codetown.github.io/categories/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GO语言生成批量插入数据SQL语句算法</title>
-      <link>https://codetown.github.io/post/jane-theme-preview/</link>
-      <pubDate>Mon, 01 Jan 2018 16:01:23 +0800</pubDate>
+      <link>https://codetown.github.io/post/blog-00001/</link>
+      <pubDate>Sun, 01 Jan 2023 16:01:23 +0800</pubDate>
       
-      <guid>https://codetown.github.io/post/jane-theme-preview/</guid>
+      <guid>https://codetown.github.io/post/blog-00001/</guid>
       <description>package main import &amp;#34;fmt&amp;#34; // Point 点名 type Point struct { PointID uint64 `json:&amp;#34;pointID&amp;#34;` PathName string `json:&amp;#34;pathName&amp;#34;` PointValue float32 `json:&amp;#34;pointValue&amp;#34;` StoreTime string `json:&amp;#34;storeTime&amp;#34;` } // GetSQLList 数据量太大分成多个sql语句并返回多个sql语句的切片 // groupSize 按照个人需求进行变更，代表 每</description>
     </item>
     
     <item>
       <title>C语言实现单链表的基本操作（头插入法建表）</title>
-      <link>https://codetown.github.io/post/docs/how-to-contribute/</link>
+      <link>https://codetown.github.io/post/blog-00003/</link>
       <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://codetown.github.io/post/docs/how-to-contribute/</guid>
+      <guid>https://codetown.github.io/post/blog-00003/</guid>
       <description>头文件 reward.h #define MAX_LENGTH 256 //避免链表过长，这里给链表长度做个限制 typedef struct _MYNODE{ int node; struct _MYNODE* next; } MY_NODE,* PT_MY_NODE; PT_MY_NODE insert_node(PT_MY_NODE,int); PT_MY_NODE remove_node_by_value(PT_MY_NODE,int); PT_MY_NODE remove_node_by_index(PT_MY_NODE,int); PT_MY_NODE clear(PT_MY_NODE); int output(PT_MY_NODE); int find_by_index(PT_MY_NODE,int); int count(PT_MY_NODE); 实现文件 reward.c #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;stdlib.h&amp;gt; #include &amp;lt;time.h&amp;gt; #include &amp;#34;reward.h&amp;#34; // 插入节点</description>
     </item>
     

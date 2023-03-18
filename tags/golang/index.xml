@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 15 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://codetown.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C语言实现单链表的基本操作（头插入法建表）</title>
-      <link>https://codetown.github.io/post/docs/how-to-contribute/</link>
+      <link>https://codetown.github.io/post/blog-00003/</link>
       <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://codetown.github.io/post/docs/how-to-contribute/</guid>
+      <guid>https://codetown.github.io/post/blog-00003/</guid>
       <description>头文件 reward.h #define MAX_LENGTH 256 //避免链表过长，这里给链表长度做个限制 typedef struct _MYNODE{ int node; struct _MYNODE* next; } MY_NODE,* PT_MY_NODE; PT_MY_NODE insert_node(PT_MY_NODE,int); PT_MY_NODE remove_node_by_value(PT_MY_NODE,int); PT_MY_NODE remove_node_by_index(PT_MY_NODE,int); PT_MY_NODE clear(PT_MY_NODE); int output(PT_MY_NODE); int find_by_index(PT_MY_NODE,int); int count(PT_MY_NODE); 实现文件 reward.c #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;stdlib.h&amp;gt; #include &amp;lt;time.h&amp;gt; #include &amp;#34;reward.h&amp;#34; // 插入节点</description>
     </item>
     

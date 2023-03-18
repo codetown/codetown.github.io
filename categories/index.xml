@@ -6,31 +6,49 @@
     <description>Recent content in Categories on AI实验室 - 探索AI的导航网站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 15 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://codetown.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Mar 2023 16:01:23 +0800</lastBuildDate><atom:link href="https://codetown.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Development</title>
-      <link>https://codetown.github.io/categories/development/</link>
-      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
+      <title>index</title>
+      <link>https://codetown.github.io/categories/index/</link>
+      <pubDate>Mon, 06 Mar 2023 16:01:23 +0800</pubDate>
       
-      <guid>https://codetown.github.io/categories/development/</guid>
+      <guid>https://codetown.github.io/categories/index/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shortcodes</title>
+      <link>https://codetown.github.io/categories/shortcodes/</link>
+      <pubDate>Mon, 06 Mar 2023 16:01:23 +0800</pubDate>
+      
+      <guid>https://codetown.github.io/categories/shortcodes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>demo</title>
+      <link>https://codetown.github.io/categories/demo/</link>
+      <pubDate>Sat, 04 Mar 2023 16:01:23 +0800</pubDate>
+      
+      <guid>https://codetown.github.io/categories/demo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docs</title>
       <link>https://codetown.github.io/categories/docs/</link>
-      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Jan 2023 16:01:23 +0800</pubDate>
       
       <guid>https://codetown.github.io/categories/docs/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>index</title>
-      <link>https://codetown.github.io/categories/index/</link>
+      <title>Development</title>
+      <link>https://codetown.github.io/categories/development/</link>
       <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://codetown.github.io/categories/index/</guid>
+      <guid>https://codetown.github.io/categories/development/</guid>
       <description></description>
     </item>
     
@@ -44,29 +62,11 @@
     </item>
     
     <item>
-      <title>demo</title>
-      <link>https://codetown.github.io/categories/demo/</link>
-      <pubDate>Mon, 04 Mar 2019 16:01:23 +0800</pubDate>
-      
-      <guid>https://codetown.github.io/categories/demo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>math</title>
       <link>https://codetown.github.io/categories/math/</link>
       <pubDate>Mon, 04 Mar 2019 16:01:23 +0800</pubDate>
       
       <guid>https://codetown.github.io/categories/math/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>shortcodes</title>
-      <link>https://codetown.github.io/categories/shortcodes/</link>
-      <pubDate>Tue, 06 Mar 2018 16:01:23 +0800</pubDate>
-      
-      <guid>https://codetown.github.io/categories/shortcodes/</guid>
       <description></description>
     </item>
     
