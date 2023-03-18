@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://codetown.github.io/sitemap.xml

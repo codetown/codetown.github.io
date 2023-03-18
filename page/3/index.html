@@ -443,15 +443,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-        <span class="post-pinned">
-          <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
-  width="32" height="32">
-  <path d="M682.666667 512V170.666667h42.666666V85.333333H298.666667v85.333334h42.666666v341.333333l-85.333333 85.333333v85.333334h221.866667v256h68.266666v-256H768v-85.333334l-85.333333-85.333333z"></path>
-</svg>
-
-        </span>
-      
-      <a class="post-link" href="/post/jane-theme-preview.zh-cn/">Jane 主题预览</a>
+      <a class="post-link" href="/post/demo/5-math/">Demo: Math</a>
     </h1>
     
 
@@ -460,22 +452,22 @@
     by
       <a href="/about">
         <span class="post-meta-author-name">
-          Typora
+          Murray Bourne
         </span>
       </a>
     
   </div>
 
   <div class="post-meta-time">
-    <time datetime="2018-03-06">
-      2018-03-06
+    <time datetime="2019-03-04">
+      2019-03-04
     </time>
   </div>
 
   
     <div class="post-meta-lastmod">
       (:
-      2018-03-07)
+      2019-03-05)
     </div>
   
 
@@ -484,7 +476,8 @@
     
 
     <div class="post-meta-category">
-        <a href="https://codetown.github.io/categories/shortcodes/"> shortcodes </a>
+        <a href="https://codetown.github.io/categories/demo/"> demo </a>
+          <a href="https://codetown.github.io/categories/math/"> math </a>
           <a href="https://codetown.github.io/categories/index/"> index </a>
           
       </div>
@@ -504,10 +497,10 @@
   <div class="post-content">
     
       <div class="post-summary">
-        主题预览,内容有待填充。
+        <p><a href="https://www.intmath.com/cg5/katex-mathjax-comparison.php">KaTeX and MathJax Comparison Demo, currently processed as KaTeX</a></p>
       </div>
       <div class="read-more">
-        <a href="/post/jane-theme-preview.zh-cn/" class="read-more-link"
+        <a href="/post/demo/5-math/" class="read-more-link"
           ></a
         >
       </div>
@@ -520,15 +513,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-        <span class="post-pinned">
-          <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
-  width="32" height="32">
-  <path d="M682.666667 512V170.666667h42.666666V85.333333H298.666667v85.333334h42.666666v341.333333l-85.333333 85.333333v85.333334h221.866667v256h68.266666v-256H768v-85.333334l-85.333333-85.333333z"></path>
-</svg>
-
-        </span>
-      
-      <a class="post-link" href="/post/jane-theme-preview/">GO语言生成批量插入数据SQL语句算法</a>
+      <a class="post-link" href="/post/demo/7-shortcodes-preview/">Demo: more Shortcodes</a>
     </h1>
     
 
@@ -544,15 +529,15 @@
   </div>
 
   <div class="post-meta-time">
-    <time datetime="2018-01-01">
-      2018-01-01
+    <time datetime="2018-03-04">
+      2018-03-04
     </time>
   </div>
 
   
     <div class="post-meta-lastmod">
       (:
-      2018-03-07)
+      2018-03-05)
     </div>
   
 
@@ -561,7 +546,7 @@
     
 
     <div class="post-meta-category">
-        <a href="https://codetown.github.io/categories/docs/"> docs </a>
+        <a href="https://codetown.github.io/categories/demo/"> demo </a>
           <a href="https://codetown.github.io/categories/shortcodes/"> shortcodes </a>
           <a href="https://codetown.github.io/categories/index/"> index </a>
           
@@ -582,10 +567,15 @@
   <div class="post-content">
     
       <div class="post-summary">
-        package main import &#34;fmt&#34; // Point 点名 type Point struct { PointID uint64 `json:&#34;pointID&#34;` PathName string `json:&#34;pathName&#34;` PointValue float32 `json:&#34;pointValue&#34;` StoreTime string `json:&#34;storeTime&#34;` } // GetSQLList 数据量太大分成多个sql语句并返回多个sql语句的切片 // groupSize 按照个人需求进行变更，代表 每
+        <h2 id="what-a-shortcode-is">What a Shortcode is</h2>
+<p>Hugo loves Markdown because of its simple content format, but there are times when Markdown falls short. Often, content authors are forced to add raw HTML (e.g., video <code>&lt;iframes&gt;</code>) to Markdown content. We think this contradicts the beautiful simplicity of Markdown&rsquo;s syntax.</p>
+<p>Hugo created <strong>shortcodes</strong> to circumvent these limitations.</p>
+<p>A shortcode is a simple snippet inside a content file that Hugo will render using a predefined template. Note that shortcodes will not work in template files. If you need the type of drop-in functionality that shortcodes provide but in a template, you most likely want a [partial template][partials] instead.</p>
+<p>In addition to cleaner Markdown, shortcodes can be updated any time to reflect new classes, techniques, or standards. At the point of site generation, Hugo shortcodes will easily merge in your changes. You avoid a possibly complicated search and replace operation.</p>
+<p>More details: <a href="https://gohugo.io/content-management/shortcodes/">https://gohugo.io/content-management/shortcodes/</a></p>
       </div>
       <div class="read-more">
-        <a href="/post/jane-theme-preview/" class="read-more-link"
+        <a href="/post/demo/7-shortcodes-preview/" class="read-more-link"
           ></a
         >
       </div>
@@ -598,7 +588,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/docs/how-to-contribute/">C语言实现单链表的基本操作（头插入法建表）</a>
+      <a class="post-link" href="/post/demo/1-image/">Demo: Image</a>
     </h1>
     
 
@@ -614,11 +604,16 @@
   </div>
 
   <div class="post-meta-time">
-    <time datetime="2022-10-15">
-      2022-10-15
+    <time datetime="2018-03-03">
+      2018-03-03
     </time>
   </div>
 
+  
+    <div class="post-meta-lastmod">
+      (:
+      2018-03-04)
+    </div>
   
 
 
@@ -626,8 +621,8 @@
     
 
     <div class="post-meta-category">
-        <a href="https://codetown.github.io/categories/docs/"> docs </a>
-          <a href="https://codetown.github.io/categories/development/"> Development </a>
+        <a href="https://codetown.github.io/categories/demo/"> demo </a>
+          <a href="https://codetown.github.io/categories/shortcodes/"> shortcodes </a>
           <a href="https://codetown.github.io/categories/index/"> index </a>
           
       </div>
@@ -647,10 +642,15 @@
   <div class="post-content">
     
       <div class="post-summary">
-        头文件 reward.h #define MAX_LENGTH 256 //避免链表过长，这里给链表长度做个限制 typedef struct _MYNODE{ int node; struct _MYNODE* next; } MY_NODE,* PT_MY_NODE; PT_MY_NODE insert_node(PT_MY_NODE,int); PT_MY_NODE remove_node_by_value(PT_MY_NODE,int); PT_MY_NODE remove_node_by_index(PT_MY_NODE,int); PT_MY_NODE clear(PT_MY_NODE); int output(PT_MY_NODE); int find_by_index(PT_MY_NODE,int); int count(PT_MY_NODE); 实现文件 reward.c #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;time.h&gt; #include &#34;reward.h&#34; // 插入节点
+        <p>Thanks for <a href="https://github.com/liwenyip/hugo-easy-gallery">liwenyip/hugo-easy-gallery</a> &amp; <a href="https://github.com/xianmin/hugo-theme-jane/pull/48">Zebradil · Pull Request #48</a> .</p>
+<p>Now, we could use <code>{{&lt; gallery &gt;}}</code> shortcode in hugo-theme-jane.</p>
+<h2 id="normal-image">Normal Image</h2>
+<p>This is an image in <code>static/image</code> folder.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>![<span style="color:#f92672">This is an image in `static/image` folder.</span>](<span style="color:#a6e22e">/image/example.jpg</span>)
+</span></span></code></pre></div>
       </div>
       <div class="read-more">
-        <a href="/post/docs/how-to-contribute/" class="read-more-link"
+        <a href="/post/demo/1-image/" class="read-more-link"
           ></a
         >
       </div>
@@ -684,7 +684,7 @@
   <nav class="pagination">
     <ul>
       
-      <li  class="active" >
+      <li >
         <a href="/">1</a>
       </li>
       
@@ -692,7 +692,7 @@
         <a href="/page/2/">2</a>
       </li>
       
-      <li >
+      <li  class="active" >
         <a href="/page/3/">3</a>
       </li>
       
