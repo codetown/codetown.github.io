@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <title>YYDS影视</title>
+  <meta name="keywords" content="影视大全,YYDS" />
+  <meta name="description" content="" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <script>
+    var maccms = {
+      path: "",
+      mid: "",
+      url: "www.yyds.one",
+      wapurl: "www.yyds.one",
+      mob_status: "0",
+    };
+  </script>
+  <link type="image/png" rel="icon" href="./yyds_files/logo.png" />
+  <link type="text/css" rel="stylesheet" href="./yyds_files/style.css" />
+  <link type="text/css" rel="stylesheet" href="./yyds_files/aliicon.css" />
+  <link type="text/css" rel="stylesheet" href="./yyds_files/mxhtmlblack.css" />
+  <script type="text/javascript" src="./yyds_files/jquery.min.js"></script>
+  <script type="text/javascript" src="./yyds_files/jquery.lazyload.js"></script>
+  <script type="text/javascript" src="./yyds_files/jquery.autocomplete.js"></script>
+  <script type="text/javascript" src="./yyds_files/jquery.cookie.js"></script>
+  <script type="text/javascript" src="./yyds_files/home.js"></script>
+  <script type="text/javascript" src="./yyds_files/swiper.min.js"></script>
+  <script>
+    var clothes = $.cookie("clothes");
+    if (clothes) {
+      if (clothes == "black") {
+        $(".theme_white").removeAttr("disabled");
+      } else {
+        $(".theme_white").attr("disabled", "");
+      }
+    } else {
+      $.cookie("clothes", "white", { expires: 365, path: "/" });
+    }
+  </script>
+  <script>
+    function clothesChange() {
+      var clothes = $.cookie("clothes");
+      if (clothes == "white") {
+        $.cookie("clothes", "black", { expires: 365, path: "/" });
+        $(".theme_white").each(function () {
+          $(this).removeAttr("disabled");
+        });
+      } else {
+        $.cookie("clothes", "white", { expires: 365, path: "/" });
+        $(".theme_white").each(function () {
+          $(this).attr("disabled", "");
+        });
+      }
+      clothes = $.cookie("clothes");
+    }
+  </script>
+</head>
+
+<body class="homepage">
+  <header id="header" class="wrapper">
+    <div class="header-content">
+      <div class="banyundog-com">
+        <div class="header-logo">
+          <h1 class="slogan">本站网址YYDSD</h1>
+          <div class="fixed-logo">
+            <a href="https://www.yyds.one/" class="logo" title="YYDS影视"><img src="./yyds_files/logo.png"
+                alt="YYDS影视" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-search">
+        <form action="https://www.yyds.one/c/--.html" class="search-dh"></form>
+      </div>
+
+      <div class="nav">
+        <ul class="nav-menu-items">
+          <li class="nav-menu-item selected">
+            <a href="https://www.yyds.one/" title="YYDS影视首页"><i class="icon-home"></i> <span>首页</span></a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="https://www.yyds.one/f/1.html" title="电影">
+              <i class="icon-cate-dy"></i>
+              <span>电影</span>
+            </a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="https://www.yyds.one/f/2.html" title="连续剧">
+              <i class="icon-cate-ds"></i>
+              <span>连续剧</span>
+            </a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="https://www.yyds.one/f/3.html" title="综艺">
+              <i class="icon-cate-zy"></i>
+              <span>综艺</span>
+            </a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="https://www.yyds.one/f/4.html" title="动漫">
+              <i class="icon-cate-dm"></i>
+              <span>动漫</span>
+            </a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="https://www.yyds.one/play/215332-1-1.html" title="YYDS影视直播">
+              <i class="iconfont icon-zhibo"></i><span>直播</span>
+            </a>
+          </li>
+
+          <li class="nav-menu-item">
+            <a href="https://www.yyds.one/label/app.html" title="下载YYDS影视APP"><i
+                class="icon-app pc"></i><span>APP</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="header-module">
+        <ul class="nav-menu-items">
+          <li class="nav-menu-item drop">
+            <span class="nav-menu-icon"><i class="icon-all"></i></span>
+            <div class="drop-content sub-block">
+              <div class="drop-content-box grid-box">
+                <ul class="drop-content-items grid-items">
+                  <li class="grid-item">
+                    <a href="https://www.yyds.one/"><i class="icon-home"></i>
+                      <div class="grid-item-name" title="YYDS影视首页">
+                        首页
+                      </div>
+                    </a>
+                  </li>
+                  <li class="grid-item">
+                    <a href="https://www.yyds.one/f/1.html" title="电影">
+                      <i class="icon-cate-dy"></i>
+                      <div class="grid-item-name">电影</div>
+                    </a>
+                  </li>
+                  <li class="grid-item">
+                    <a href="https://www.yyds.one/f/2.html" title="连续剧">
+                      <i class="icon-cate-ds"></i>
+                      <div class="grid-item-name">连续剧</div>
+                    </a>
+                  </li>
+                  <li class="grid-item">
+                    <a href="https://www.yyds.one/f/3.html" title="综艺">
+                      <i class="icon-cate-zy"></i>
+                      <div class="grid-item-name">综艺</div>
+                    </a>
+                  </li>
+                  <li class="grid-item">
+                    <a href="https://www.yyds.one/f/4.html" title="动漫">
+                      <i class="icon-cate-dm"></i>
+                      <div class="grid-item-name">动漫</div>
+                    </a>
+                  </li>
+                  --&gt;
+                  <li class="grid-item grid-more">
+                    <a class="grid-more-link" href="https://www.yyds.one/s/1.html" title="查看全部影片">
+                      <div class="grid-item-name">全部影片</div>
+                    </a>
+                  </li>
+                  <li class="grid-item grid-more android">
+                    <a href="https://www.yyds.one/label/app.html" class="grid-more-link" title="下载YYDS影视APP">
+                      <div class="grid-item-name">下载客户端</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="shortcuts-mobile-overlay"></div>
+          </li>
+          <li class="nav-menu-item nav-menu-search">
+            <i class="icon-search"></i>
+          </li>
+          <li class="space-line-bold"></li>
+          <li class="nav-menu-item drop">
+            <span class="nav-menu-icon"><i class="icon-watch-history"></i></span>
+            <div class="drop-content drop-history">
+              <div class="drop-content-box">
+                <ul class="drop-content-items" id="history">
+                  <li class="list-item list-item-title">
+                    <a href="https://www.yyds.one/" class="playlist historyclean"><i class="icon-clear"></i></a>
+                    <strong>我的观影记录</strong>
+                  </li>
+                  <li class="drop-tips">暂无观影历史</li>
+                </ul>
+              </div>
+            </div>
+            <div class="shortcuts-mobile-overlay"></div>
+          </li>
+          <li class="space-line-bold"></li>
+          <li class="nav-menu-item drop wapblock">
+            <a class="mac_user" href="javascript:;" title="会员中心"><i class="iconfont icon-yonghu-fuben"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="search-content" class="indexsearch">
+      <div class="index-logo">
+        <span class="logo-s"><img src="./yyds_files/logo(1).png" title="YYDS影视" /></span>
+      </div>
+      <form action="https://www.yyds.one/c/--.html">
+        <div class="search-main">
+          <div class="search-box">
+            <input class="search-input ac_wd" id="txtKeywords" type="text" name="wd" autocomplete="off"
+              placeholder="搜索电影、电视剧、综艺、动漫" />
+            <div class="search-drop">
+              <div class="drop-content-items ac_hot none">
+                <div class="list-item list-item-title">
+                  <strong>大家都在搜这些影片</strong>
+                </div>
+                <div class="search-tag">
+                  <a href="https://www.yyds.one/c/%E5%B0%98%E5%B0%81%E5%8D%81%E4%B8%89%E8%BD%BD--.html" class="hot"><i
+                      class="icon-hot"></i>尘封十三载</a>
+                  <a href="https://www.yyds.one/c/%E6%AC%A2%E4%B9%90%E9%A2%824--.html" class="hot"><i
+                      class="icon-hot"></i>欢乐颂4</a>
+                  <a href="https://www.yyds.one/c/%E6%81%A9%E7%88%B1%E4%B8%A4%E4%B8%8D%E7%96%91--.html" class="hot"><i
+                      class="icon-hot"></i>恩爱两不疑</a>
+                  <a href="https://www.yyds.one/c/%E9%95%BF%E6%9C%88%E7%83%AC%E6%98%8E--.html" class="hot"><i
+                      class="icon-hot"></i>长月烬明</a>
+                  <a href="https://www.yyds.one/c/%E6%97%A0%E9%97%B4--.html" class=""><i class="icon-hot"></i>无间</a>
+                  <a href="https://www.yyds.one/c/%E6%98%A5%E9%97%BA%E6%A2%A6%E9%87%8C%E4%BA%BA--.html" class=""><i
+                      class="icon-hot"></i>春闺梦里人</a>
+                  <a href="https://www.yyds.one/c/%E7%88%B1%E6%83%85%E8%80%8C%E5%B7%B2--.html" class=""><i
+                      class="icon-hot"></i>爱情而已</a>
+                  <a href="https://www.yyds.one/c/%E7%81%BF%E7%83%82%E7%9A%84%E8%BD%AC%E8%BA%AB--.html" class=""><i
+                      class="icon-hot"></i>灿烂的转身</a>
+                  <a href="https://www.yyds.one/c/%E7%96%BE%E9%80%9F%E8%BF%BD%E6%9D%804--.html" class=""><i
+                      class="icon-hot"></i>疾速追杀4</a>
+                  <a href="https://www.yyds.one/c/%E9%98%BF%E5%87%A1%E8%BE%BE2%EF%BC%9A%E6%B0%B4%E4%B9%8B%E9%81%93--.html"
+                    class=""><i class="icon-hot"></i>阿凡达2：水之道</a>
+                  <a href="https://www.yyds.one/c/%E6%B5%81%E6%B5%AA%E5%9C%B0%E7%90%832%E6%BB%A1%E6%B1%9F%E7%BA%A2--.html"
+                    class=""><i class="icon-hot"></i>流浪地球2满江红</a>
+                  <a href="https://www.yyds.one/c/%E9%9B%B7%E9%9C%86%E6%B2%99%E8%B5%9E2%EF%BC%9A%E4%BC%97%E7%A5%9E%E4%B9%8B%E6%80%92--.html"
+                    class=""><i class="icon-hot"></i>雷霆沙赞2：众神之怒</a>
+                  <a href="https://www.yyds.one/c/%E9%BE%99%E4%B8%8E%E5%9C%B0%E4%B8%8B%E5%9F%8E%EF%BC%9A%E4%BE%A0%E7%9B%97%E8%8D%A3%E8%80%80--.html"
+                    class=""><i class="icon-hot"></i>龙与地下城：侠盗荣耀</a>
+                  <a href="https://www.yyds.one/c/%E9%80%83%E5%87%BA%E7%99%BD%E5%9E%A9%E7%BA%AA--.html" class=""><i
+                      class="icon-hot"></i>逃出白垩纪</a>
+                </div>
+              </div>
+            </div>
+            <a href="https://www.yyds.one/label/top.html" class="search-btn search-cupfox" id="search-cupfox"
+              title="YYDS影视排行榜"><i class="iconfont icon-paihangbang1 phb phb phb"></i><span>搜全网</span></a>
+            <button class="search-btn search-go" type="submit">
+              <i class="icon-search"></i>
+            </button>
+            <button class="cancel-btn" type="button">取消</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </header>
+  <script>
+    $(".nav-menu-search").click(function () {
+      $(".nav-search").addClass("block");
+    });
+    $(document).scroll(function () {
+      var H = $(document).scrollTop();
+      if (H > 20) {
+        $(".header-content").addClass("header-bg");
+      } else {
+        $(".header-content").removeClass("header-bg");
+      }
+      if (H > 110) {
+        $(".header-content").addClass("header-bg");
+        $(".search-dh").append($(".search-box"));
+        $(".nav-menu-search").click(function () {
+          $(".nav-search").addClass("block");
+        });
+      } else {
+        $(".header-content").removeClass("header-bg");
+        $(".search-main").append($(".search-box"));
+      }
+    });
+  </script>
+  <!-- 头部 -->
+
+  <div class="app-text">
+    <a href="https://www.yyds.one/label/app.html"><i class="icon-download"></i>下载<strong>YYDS影视APP</strong>客户端</a>
+    <div class="bg-ball"></div>
+  </div>
+  <link rel="stylesheet" href="./yyds_files/swiper.min.css" type="text/css" />
+  <link rel="stylesheet" href="./yyds_files/hdp.css" type="text/css" />
+  <div class="swiper-container swiper-container-horizontal swiper-container-fade">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <a class="dymrslide banner" data-name="毛雪汪" data-fname="更新至第20230510" href="https://www.yyds.one/v/216630.html"
+          style="
+              background: url(https://puui.qpic.cn/tv/0/1249551476_1920800/0?max_age=7776000)
+                center no-repeat;
+              background-size: cover;
+            ">
+          <div class="focus_leftshode focusleftshode"></div>
+          <div class="focus_rightshode focusrightshode"></div>
+          <div class="focus_topshode focustopshode"></div>
+          <div class="focus_bottomshode focusbottomshode"></div>
+          <div class="txt-info">
+            <p class="gate"><span>综艺</span></p>
+            <p class="name">毛雪汪</p>
+            <p class="info">更新至第20230510</p>
+          </div>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a class="dymrslide banner" data-name="战火中的青春" data-fname="更新至第36集" href="https://www.yyds.one/v/240548.html"
+          style="
+              background: url(https://liangcang-material.alicdn.com/prod/upload/2306802405ec4fb88295cb0db2bdbe0b.webp.jpg)
+                center no-repeat;
+              background-size: cover;
+            ">
+          <div class="focus_leftshode focusleftshode"></div>
+          <div class="focus_rightshode focusrightshode"></div>
+          <div class="focus_topshode focustopshode"></div>
+          <div class="focus_bottomshode focusbottomshode"></div>
+          <div class="txt-info">
+            <p class="gate"><span>国产剧</span></p>
+            <p class="name">战火中的青春</p>
+            <p class="info">更新至第36集</p>
+          </div>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a class="dymrslide banner" data-name="保你平安" data-fname="HD" href="https://www.yyds.one/v/238771.html" style="
+              background: url(https://liangcang-material.alicdn.com/prod/upload/f0c00640ff3749b4aa6317bc89a1ee9b.webp.jpg)
+                center no-repeat;
+              background-size: cover;
+            ">
+          <div class="focus_leftshode focusleftshode"></div>
+          <div class="focus_rightshode focusrightshode"></div>
+          <div class="focus_topshode focustopshode"></div>
+          <div class="focus_bottomshode focusbottomshode"></div>
+          <div class="txt-info">
+            <p class="gate"><span>喜剧片</span></p>
+            <p class="name">保你平安</p>
+            <p class="info">HD</p>
+          </div>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a class="dymrslide banner" data-name="护心" data-fname="更新至第08集" href="https://www.yyds.one/v/239882.html">
+          <div class="focus_leftshode focusleftshode"></div>
+          <div class="focus_rightshode focusrightshode"></div>
+          <div class="focus_topshode focustopshode"></div>
+          <div class="focus_bottomshode focusbottomshode"></div>
+          <div class="txt-info">
+            <p class="gate"><span>国产剧</span></p>
+            <p class="name">护心</p>
+            <p class="info">更新至第08集</p>
+          </div>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a class="dymrslide banner" data-name="凌云志" data-fname="更新至第33集" href="https://www.yyds.one/v/240452.html"
+          style="
+              background: url(https://liangcang-material.alicdn.com/prod/upload/9b9c68de325145b1afef7525e85757b0.webp.jpg)
+                center no-repeat;
+              background-size: cover;
+            ">
+          <div class="focus_leftshode focusleftshode"></div>
+          <div class="focus_rightshode focusrightshode"></div>
+          <div class="focus_topshode focustopshode"></div>
+          <div class="focus_bottomshode focusbottomshode"></div>
+          <div class="txt-info">
+            <p class="gate"><span>国产剧</span></p>
+            <p class="name">凌云志</p>
+            <p class="info">更新至第33集</p>
+          </div>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a class="dymrslide banner" data-name="云襄传" data-fname="更新至第22集" href="https://www.yyds.one/v/239987.html"
+          style="
+              background: url(https://api.80ym.net/i/2023/05/01/xz1kdl.jpg)
+                center no-repeat;
+              background-size: cover;
+            ">
+          <div class="focus_leftshode focusleftshode"></div>
+          <div class="focus_rightshode focusrightshode"></div>
+          <div class="focus_topshode focustopshode"></div>
+          <div class="focus_bottomshode focusbottomshode"></div>
+          <div class="txt-info">
+            <p class="gate"><span>国产剧</span></p>
+            <p class="name">云襄传</p>
+            <p class="info">更新至第22集</p>
+          </div>
+        </a>
+      </div>
+      <div class="swiper-slide" style="
+            width: 1903px;
+            opacity: 0;
+            transform: translate3d(-11418px, 0px, 0px);
+            transition-duration: 0ms;
+          ">
+        <a class="dymrslide banner" data-name="平凡之路" data-fname="更新至第22集" href="https://www.yyds.one/v/213589.html"
+          style="
+              background: url(https://api.80ym.net/i/2023/05/03/mal4jm.jpg)
+                center no-repeat;
+              background-size: cover;
+            ">
+          <div class="focus_leftshode focusleftshode"></div>
+          <div class="focus_rightshode focusrightshode"></div>
+          <div class="focus_topshode focustopshode"></div>
+          <div class="focus_bottomshode focusbottomshode"></div>
+          <div class="txt-info">
+            <p class="gate"><span>国产剧</span></p>
+            <p class="name">平凡之路</p>
+            <p class="info">更新至第22集</p>
+          </div>
+        </a>
+      </div>
+      <div class="swiper-slide" style="
+            width: 1903px;
+            opacity: 0;
+            transform: translate3d(-13321px, 0px, 0px);
+            transition-duration: 0ms;
+          ">
+        <a class="dymrslide banner" data-name="温暖的甜蜜的" data-fname="更新至第18集" href="https://www.yyds.one/v/240795.html"
+          style="
+              background: url(https://api.80ym.net/i/2023/05/06/11cefnk.jpg)
+                center no-repeat;
+              background-size: cover;
+            ">
+          <div class="focus_leftshode focusleftshode"></div>
+          <div class="focus_rightshode focusrightshode"></div>
+          <div class="focus_topshode focustopshode"></div>
+          <div class="focus_bottomshode focusbottomshode"></div>
+          <div class="txt-info">
+            <p class="gate"><span>国产剧</span></p>
+            <p class="name">温暖的甜蜜的</p>
+            <p class="info">更新至第18集</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+      <li class="swiper-pagination-bullet">
+        <div class="focusswiper_nav_slide">
+          <h2><span class="nav_index nav_index_1">1</span>毛雪汪</h2>
+          <div class="sub_title focusswiper_sub_title">更新至第20230510</div>
+        </div>
+      </li>
+      <li class="swiper-pagination-bullet">
+        <div class="focusswiper_nav_slide">
+          <h2><span class="nav_index nav_index_2">2</span>战火中的青春</h2>
+          <div class="sub_title focusswiper_sub_title">更新至第36集</div>
+        </div>
+      </li>
+      <li class="swiper-pagination-bullet">
+        <div class="focusswiper_nav_slide">
+          <h2><span class="nav_index nav_index_3">3</span>保你平安</h2>
+          <div class="sub_title focusswiper_sub_title">HD</div>
+        </div>
+      </li>
+      <li class="swiper-pagination-bullet">
+        <div class="focusswiper_nav_slide">
+          <h2><span class="nav_index nav_index_4">4</span>护心</h2>
+          <div class="sub_title focusswiper_sub_title">更新至第08集</div>
+        </div>
+      </li>
+      <li class="swiper-pagination-bullet">
+        <div class="focusswiper_nav_slide">
+          <h2><span class="nav_index nav_index_5">5</span>凌云志</h2>
+          <div class="sub_title focusswiper_sub_title">更新至第33集</div>
+        </div>
+      </li>
+      <li class="swiper-pagination-bullet">
+        <div class="focusswiper_nav_slide">
+          <h2><span class="nav_index nav_index_6">6</span>云襄传</h2>
+          <div class="sub_title focusswiper_sub_title">更新至第22集</div>
+        </div>
+      </li>
+      <li class="swiper-pagination-bullet">
+        <div class="focusswiper_nav_slide">
+          <h2><span class="nav_index nav_index_7">7</span>平凡之路</h2>
+          <div class="sub_title focusswiper_sub_title">更新至第22集</div>
+        </div>
+      </li>
+      <li class="swiper-pagination-bullet">
+        <div class="focusswiper_nav_slide">
+          <h2><span class="nav_index nav_index_8">8</span>温暖的甜蜜的</h2>
+          <div class="sub_title focusswiper_sub_title">更新至第18集</div>
+        </div>
+      </li>
+    </div>
+  </div>
+
+  <!-- 轮播图 -->
+  <main id="index-main" class="wrapper">
+    <div class="content">
+      <div class="module homepage_homepage_channelnav">
+        <div class="homepage_left_content">
+          <div class="homepage_main_tabs_wrap_new">
+            <div class="homepage_main_tabs_new">
+              <a class="homepage_main_tabs_title_new" href="https://www.yyds.one/f/1.html" target="_blank">电影</a>
+              <div class="homepage_main_tabs_sub_new">
+                <a class="homepage_sub_title_new" target="_blank"
+                  href="https://www.yyds.one/s/1---%E5%96%9C%E5%89%A7--------.html" title="喜剧">喜剧</a>
+                <a class="homepage_sub_title_new" target="_blank"
+                  href="https://www.yyds.one/s/1---%E7%88%B1%E6%83%85--------.html" title="爱情">爱情</a>
+              </div>
+              <div class="homepage_channel_video_wrap" style="display: none">
+                <div class="homepage_arrow"></div>
+                <a class="homepage_title col4" href="https://www.yyds.one/f/1.html">更多电影<span
+                    class="fa fa-step-forward"></span></a>
+                <a href="https://www.yyds.one/play/238326-1-1.html" class="homepage_video_wrap" title="银河护卫队3"><img
+                    src="./yyds_files/bd56954919c3845ab25fcbe04f932155.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">银河护卫队3</div>
+                </a>
+                <a href="https://www.yyds.one/play/240582-1-1.html" class="homepage_video_wrap" title="宇宙探索编辑部"><img
+                    src="./yyds_files/86f6b3164ca500d5b5e77c32fe152a1a.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">宇宙探索编辑部</div>
+                </a>
+                <a href="https://www.yyds.one/play/238771-1-1.html" class="homepage_video_wrap" title="保你平安"><img
+                    src="./yyds_files/2c2ec20aa0fbe322a7ac63a520bad786.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">保你平安</div>
+                </a>
+                <a href="https://www.yyds.one/play/240818-1-1.html" class="homepage_video_wrap" title="不止不休"><img
+                    src="./yyds_files/64c606b10b065c089a6a80fd3665097a.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">不止不休</div>
+                </a>
+              </div>
+            </div>
+            <div class="homepage_main_tabs_new">
+              <a class="homepage_main_tabs_title_new" href="https://www.yyds.one/f/2.html" target="_blank">连续剧</a>
+              <div class="homepage_main_tabs_sub_new">
+                <a class="homepage_sub_title_new" target="_blank"
+                  href="https://www.yyds.one/s/2---%E5%8F%A4%E8%A3%85--------.html" title="古装">古装</a>
+                <a class="homepage_sub_title_new" target="_blank"
+                  href="https://www.yyds.one/s/2---%E6%88%98%E4%BA%89--------.html" title="战争">战争</a>
+              </div>
+              <div class="homepage_channel_video_wrap" style="display: none">
+                <div class="homepage_arrow"></div>
+                <a class="homepage_title col4" href="https://www.yyds.one/f/2.html">更多连续剧<span
+                    class="fa fa-step-forward"></span></a>
+                <a href="https://www.yyds.one/play/239882-1-1.html" class="homepage_video_wrap" title="护心"><img
+                    src="./yyds_files/c168227616abb0721e20311e632f18dc.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">护心</div>
+                </a>
+                <a href="https://www.yyds.one/play/240821-1-1.html" class="homepage_video_wrap" title="甜小姐与冷先生"><img
+                    src="./yyds_files/702a8aadfb61f5867066e295ad2d7911.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">甜小姐与冷先生</div>
+                </a>
+                <a href="https://www.yyds.one/play/237090-1-1.html" class="homepage_video_wrap" title="长月烬明"><img
+                    src="./yyds_files/59397ec9b173e326693ee658bebd1775.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">长月烬明</div>
+                </a>
+                <a href="https://www.yyds.one/play/213589-1-1.html" class="homepage_video_wrap" title="平凡之路"><img
+                    src="./yyds_files/49ce49a630ef08708cc564245444ac2e.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">平凡之路</div>
+                </a>
+              </div>
+            </div>
+            <div class="homepage_main_tabs_new">
+              <a class="homepage_main_tabs_title_new" href="https://www.yyds.one/f/3.html" target="_blank">综艺</a>
+              <div class="homepage_main_tabs_sub_new">
+                <a class="homepage_sub_title_new" target="_blank"
+                  href="https://www.yyds.one/s/3---%E9%80%89%E7%A7%80--------.html" title="选秀">选秀</a>
+                <a class="homepage_sub_title_new" target="_blank"
+                  href="https://www.yyds.one/s/3---%E6%83%85%E6%84%9F--------.html" title="情感">情感</a>
+              </div>
+              <div class="homepage_channel_video_wrap" style="display: none">
+                <div class="homepage_arrow"></div>
+                <a class="homepage_title col4" href="https://www.yyds.one/f/3.html">更多综艺<span
+                    class="fa fa-step-forward"></span></a>
+                <a href="https://www.yyds.one/play/237507-1-1.html" class="homepage_video_wrap" title="一年一度喜剧大赛2"><img
+                    src="./yyds_files/144b0a4a08a74749b6d604c14453511d.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">
+                    一年一度喜剧大赛2
+                  </div>
+                </a>
+                <a href="https://www.yyds.one/play/216630-1-1.html" class="homepage_video_wrap" title="毛雪汪"><img
+                    src="./yyds_files/6b8aadb0673562db312d7323c7128b65.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">毛雪汪</div>
+                </a>
+                <a href="https://www.yyds.one/play/238207-1-1.html" class="homepage_video_wrap" title="奔跑吧·共同富裕篇"><img
+                    src="./yyds_files/181819699123273a604e751b59be332a.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">
+                    奔跑吧·共同富裕篇
+                  </div>
+                </a>
+                <a href="https://www.yyds.one/play/239083-1-1.html" class="homepage_video_wrap" title="最强大脑第十季"><img
+                    src="./yyds_files/ec03480082e397ef72cde31fe48f5bdb.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">最强大脑第十季</div>
+                </a>
+              </div>
+            </div>
+            <div class="homepage_main_tabs_new">
+              <a class="homepage_main_tabs_title_new" href="https://www.yyds.one/f/4.html" target="_blank">动漫</a>
+              <div class="homepage_main_tabs_sub_new">
+                <a class="homepage_sub_title_new" target="_blank"
+                  href="https://www.yyds.one/s/4---%E6%83%85%E6%84%9F--------.html" title="情感">情感</a>
+                <a class="homepage_sub_title_new" target="_blank"
+                  href="https://www.yyds.one/s/4---%E7%A7%91%E5%B9%BB--------.html" title="科幻">科幻</a>
+              </div>
+              <div class="homepage_channel_video_wrap" style="display: none">
+                <div class="homepage_arrow"></div>
+                <a class="homepage_title col4" href="https://www.yyds.one/f/4.html">更多动漫<span
+                    class="fa fa-step-forward"></span></a>
+                <a href="https://www.yyds.one/play/240786-1-1.html" class="homepage_video_wrap" title="遮天动画版"><img
+                    src="./yyds_files/5241cbf6af302594885da2a71dbefb1b.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">遮天动画版</div>
+                </a>
+                <a href="https://www.yyds.one/play/236530-1-1.html" class="homepage_video_wrap" title="斗破苍穹年番"><img
+                    src="./yyds_files/5c1c5f47f13d70b086303b47000a95b2.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">斗破苍穹年番</div>
+                </a>
+                <a href="https://www.yyds.one/play/141436-1-1.html" class="homepage_video_wrap" title="斗罗大陆第一季"><img
+                    src="./yyds_files/ffc3018b1211e7dff641c33dddd1f3ec.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">斗罗大陆第一季</div>
+                </a>
+                <a href="https://www.yyds.one/play/147480-1-1.html" class="homepage_video_wrap" title="吞噬星空"><img
+                    src="./yyds_files/00a5b3846c480f415bca75b4eef2e3b5.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">吞噬星空</div>
+                </a>
+              </div>
+            </div>
+            <div class="homepage_main_tabs_new">
+              <a class="homepage_main_tabs_title_new" href="https://www.yyds.one/f/15.html" target="_blank">日韩剧</a>
+              <div class="homepage_main_tabs_sub_new">
+                <a class="homepage_sub_title_new" target="_blank" href="https://www.yyds.one/s/15.html" title=""></a>
+              </div>
+              <div class="homepage_channel_video_wrap" style="display: none">
+                <div class="homepage_arrow"></div>
+                <a class="homepage_title col4" href="https://www.yyds.one/f/15.html">更多日韩剧<span
+                    class="fa fa-step-forward"></span></a>
+              </div>
+            </div>
+            <div class="homepage_main_tabs_new">
+              <a class="homepage_main_tabs_title_new" href="https://www.yyds.one/f/16.html" target="_blank">欧美剧</a>
+              <div class="homepage_main_tabs_sub_new">
+                <a class="homepage_sub_title_new" target="_blank" href="https://www.yyds.one/s/16.html" title=""></a>
+              </div>
+              <div class="homepage_channel_video_wrap" style="display: none">
+                <div class="homepage_arrow"></div>
+                <a class="homepage_title col4" href="https://www.yyds.one/f/16.html">更多欧美剧<span
+                    class="fa fa-step-forward"></span></a>
+                <a href="https://www.yyds.one/play/240806-1-1.html" class="homepage_video_wrap" title="羊毛战记第一季"><img
+                    src="./yyds_files/994d634250b8325e3c2f828272344ecc.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">羊毛战记第一季</div>
+                </a>
+                <a href="https://www.yyds.one/play/240658-1-1.html" class="homepage_video_wrap" title="梦魇绝镇第二季"><img
+                    src="./yyds_files/88e54e3631112b78dde2a4a5572beff7.jpg" class="homepage_video_img" />
+                  <div class="homepage_video_title col1">梦魇绝镇第二季</div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="homepage_normal_tabs_wrap">
+            <div class="homepage_normal_tabs homepage_hide_1"></div>
+            <div class="homepage_normal_tabs homepage_hide_2"></div>
+            <div class="homepage_normal_tabs homepage_hide_3"></div>
+          </div>
+        </div>
+
+        <div class="homepage_opt_wrap">
+          <a href="https://www.yyds.one/user" class="aplus_exp aplus_clk">
+            <img src="./yyds_files/vip.png" style="margin-left: 0" />
+            <span>VIP会员</span></a>
+          <a href="https://www.yyds.one/play/215332-1-1.html" class="aplus_exp aplus_clk">
+            <img src="./yyds_files/zhibo.png" />
+            <span>直播</span></a>
+          <a href="https://www.yyds.one/s/1.html" class="aplus_exp aplus_clk">
+            <img src="./yyds_files/pianku.png" />
+            <span>片库</span></a>
+        </div>
+        <div class="homepage_cut_line_wrap">
+          <div class="homepage_cut_line"></div>
+        </div>
+      </div>
+
+      <!-- 幻灯下导航 -->
+      <div class="module">
+        <div class="module-heading">
+          <h2 class="module-title">
+            <i class="icon-happy" style="color: #ff0000"></i> 最新影片
+          </h2>
+          <div class="module-tab">
+            <input type="hidden" name="tab" id="tab" class="module-tab-input" />
+            <label class="module-tab-name"><span class="module-tab-value">全部</span><i
+                class="icon-arrow-bottom"></i></label>
+            <div class="module-tab-items">
+              <div class="module-tab-title">
+                选择类型<span class="close-drop"><i class="icon-close-o"></i></span>
+              </div>
+              <div>
+                <span class="module-tab-item tab-item selected" data-dropdown-value="全部">全部</span>
+
+                <span class="module-tab-item tab-item" data-dropdown-value="电影">电影</span>
+
+                <span class="module-tab-item tab-item" data-dropdown-value="连续剧">连续剧</span>
+
+                <span class="module-tab-item tab-item" data-dropdown-value="综艺">综艺</span>
+
+                <span class="module-tab-item tab-item" data-dropdown-value="动漫">动漫</span>
+              </div>
+            </div>
+          </div>
+          <div class="shortcuts-mobile-overlay"></div>
+        </div>
+        <div class="module-list module-line-list tab-list selected">
+          <div class="module-items scroll-box">
+            <div class="scroll-content">
+              <div class="module-item">
+                <div class="module-item-cover">
+                  <div class="module-item-pic">
+                    <a href="https://www.yyds.one/v/237822.html" title="法律与秩序：特殊受害者第二十四季">
+                      <i class="icon-play"></i>
+                    </a>
+                    <img class="lazy lazyloaded" src="./yyds_files/cc78461cdd2d8a75ea7098de55e3e2bf.jpg"
+                      alt="法律与秩序：特殊受害者第二十四季" />
+                    <div class="loading"></div>
+                  </div>
+                  <div class="module-item-caption">
+                    <span>2022</span>
+                    <span class="video-class">欧美剧</span>
+                    <span>美国</span>
+                  </div>
+                  <div class="module-item-ru">
+                    <span class="rebo">今日更新</span>
+                  </div>
+
+                  <div class="module-item-content">
+                    <div class="module-item-style video-name">
+                      <a href="https://www.yyds.one/v/237822.html" title="法律与秩序：特殊受害者第二十四季">法律与秩序：特殊受害者第二十四季</a>
+                    </div>
+                    <div class="module-item-style video-tag">
+                      <a href="https://www.yyds.one/c/-%E7%8E%9B%E8%8E%89%E4%B8%9D%E5%8D%A1%C2%B7%E5%93%88%E5%90%89%E5%A1%94-.html"
+                        target="_blank">玛莉丝卡·哈吉塔</a>&nbsp;<a
+                        href="https://www.yyds.one/c/-%E5%87%AF%E8%8E%89%C2%B7%E5%90%89%E8%92%82%E4%BB%80-.html"
+                        target="_blank">凯莉·吉蒂什</a>&nbsp;<a href="https://www.yyds.one/c/-%E8%89%BE%E6%96%AF-T-.html"
+                        target="_blank">艾斯-T</a>&nbsp;<a
+                        href="https://www.yyds.one/c/-%E5%BD%BC%E5%BE%97%C2%B7%E6%96%AF%E5%8D%A1%E7%BA%B3%E7%BB%B4%E8%AF%BA-.html"
+                        target="_blank">彼得·斯卡纳维诺</a>&nbsp;<a href="https://www.yyds.one/c/-Octavio+Pisano-.html"
+                        target="_blank">Octavio Pisano</a>&nbsp;<a
+                        href="https://www.yyds.one/c/-%E5%85%8B%E9%87%8C%E6%96%AF%E6%89%98%E5%BC%97%C2%B7%E7%B1%B3%E6%B4%9B%E5%B0%BC-.html"
+                        target="_blank">克里斯托弗·米洛尼</a>&nbsp;<a
+                        href="https://www.yyds.one/c/-Danielle+Mon%C3%A9+Truitt-.html" target="_blank">Danielle Moné
+                        Truitt</a>&nbsp;<a href="https://www.yyds.one/c/-Ainsley+Seiger-.html" target="_blank">Ainsley
+                        Seiger</a>&nbsp;<a
+                        href="https://www.yyds.one/c/-%E6%9D%B0%E5%BC%97%E9%87%8C%C2%B7%E5%A4%9A%E8%AF%BA%E4%B8%87-.html"
+                        target="_blank">杰弗里·多诺万</a>&nbsp;
+                    </div>
+                    <div class="module-item-style video-text">
+                      　　NBC宣布一口气续订《#法律与秩序：特殊受害者# Law
+                      &amp;amp; Order: Special Victims Unit》三季（22-24）。
+                    </div>
+                  </div>
+                </div>
+                <div class="module-item-titlebox">
+                  <a href="https://www.yyds.one/v/237822.html" class="module-item-title"
+                    title="法律与秩序：特殊受害者第二十四季">法律与秩序：特殊受害者第二十四季</a>
+                </div>
+                <div class="module-item-text">更新至第19集</div>
+              </div>
+            </div>
+          </div>
+          <div class="module-footer">
+            <a href="https://www.yyds.one/s/1.html" class="load-all" title="更多">查看更多<i
+                class="icon-arrow-right-o"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- 最新影片 -->
+      <div class="module">
+        <div class="module-heading">
+          <h2 class="module-title">
+            <i class="icon-hot" style="color: #ff0000"></i> 最新热播
+          </h2>
+          <span class="more nonemore">今日更新：<font color="#FF0000">“186”</font> 部</span>
+        </div>
+        <div class="module-list module-lines-list">
+          <div class="module-items">
+            <div class="module-item">
+              <div class="module-item-cover">
+                <div class="module-item-pic">
+                  <a href="https://www.yyds.one/v/238771.html" title="保你平安">
+                    <i class="icon-play"></i>
+                  </a>
+                  <img class="lazy lazyloaded" src="./yyds_files/2c2ec20aa0fbe322a7ac63a520bad786.jpg" alt="保你平安" />
+                  <div class="loading"></div>
+                </div>
+                <div class="module-item-caption">
+                  <span>2022</span>
+                  <span class="video-class">喜剧片</span>
+                  <span>大陆</span>
+                </div>
+                <div class="module-item-ru">
+                  <span class="rebo">热播</span>
+                </div>
+
+                <div class="module-item-content">
+                  <div class="module-item-style video-name">
+                    <a href="https://www.yyds.one/v/238771.html" title="保你平安">保你平安</a>
+                  </div>
+                  <div class="module-item-style video-tag">
+                    <a href="https://www.yyds.one/c/-%E5%A4%A7%E9%B9%8F-.html" target="_blank">大鹏</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E6%9D%8E%E9%9B%AA%E7%90%B4-.html" target="_blank">李雪琴</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E5%B0%B9%E6%AD%A3-.html" target="_blank">尹正</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E7%8E%8B%E8%BF%85-.html" target="_blank">王迅</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E7%8E%8B%E5%9C%A3%E8%BF%AA-.html" target="_blank">王圣迪</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E9%A9%AC%E4%B8%BD-.html" target="_blank">马丽</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E5%AE%8B%E8%8C%9C-.html" target="_blank">宋茜</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E7%99%BD%E5%AE%87-.html" target="_blank">白宇</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E8%B4%BE%E5%86%B0-.html" target="_blank">贾冰</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E6%9D%A8%E8%BF%AA-.html" target="_blank">杨迪</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E6%BD%98%E6%96%8C%E9%BE%99-.html" target="_blank">潘斌龙</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E5%80%AA%E8%99%B9%E6%B4%81-.html" target="_blank">倪虹洁</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E4%B9%94%E6%9D%89-.html" target="_blank">乔杉</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E4%BA%8E%E6%B4%8B-.html" target="_blank">于洋</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E5%88%98%E9%87%91%E5%B1%B1-.html" target="_blank">刘金山</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E6%9B%B9%E7%82%B3%E7%90%A8-.html" target="_blank">曹炳琨</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E6%A2%81%E8%B6%85-.html" target="_blank">梁超</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E5%BC%A0%E6%9E%97-.html" target="_blank">张林</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E8%80%81%E5%9B%9B-.html" target="_blank">老四</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E6%9D%8E%E8%83%A4%E7%BB%B4-.html" target="_blank">李胤维</a>&nbsp;<a
+                      href="https://www.yyds.one/c/--.html" target="_blank"></a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E5%A4%8F%E7%94%84-.html" target="_blank">夏甄</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E9%82%93%E9%A3%9E-.html" target="_blank">邓飞</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E6%9D%8E%E5%A6%AE%E5%A6%AE-.html" target="_blank">李妮妮</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E5%BC%A0%E5%A9%89%E5%84%BF-.html" target="_blank">张婉儿</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E5%A8%84%E4%B9%83%E9%B8%A3-.html" target="_blank">娄乃鸣</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E9%99%88%E7%A5%89%E5%B8%8C-.html" target="_blank">陈祉希</a>&nbsp;<a
+                      href="https://www.yyds.one/c/-%E5%85%B6%E9%82%A3%E6%97%A5%E5%9B%BE-.html"
+                      target="_blank">其那日图</a>&nbsp;<a href="https://www.yyds.one/c/-%E5%85%B0%E8%A5%BF%E9%9B%85-.html"
+                      target="_blank">兰西雅</a>&nbsp;<a href="https://www.yyds.one/c/-%E6%96%B9%E5%9C%86%E5%9C%86-.html"
+                      target="_blank">方圆圆</a>&nbsp;<a href="https://www.yyds.one/c/-%E6%9E%97%E8%8B%A5%E6%83%9C-.html"
+                      target="_blank">林若惜</a>&nbsp;<a href="https://www.yyds.one/c/-%E5%A4%A7%E8%83%BD-.html"
+                      target="_blank">大能</a>&nbsp;<a href="https://www.yyds.one/c/-%E5%90%B4%E6%98%8A%E5%AE%B8-.html"
+                      target="_blank">吴昊宸</a>&nbsp;
+                  </div>
+                  <div class="module-item-style video-text">
+                    　　落魄中年魏平安（大鹏
+                    饰）以直播带货卖墓地为生，他的客户韩露（宋茜
+                    饰）过世后被造谣抹黑，魏平安路见不平，辟谣跑断腿，笑料频出，反转不断，而他自己也因此陷入到新的谣言和网暴之中。
+                  </div>
+                </div>
+              </div>
+              <div class="module-item-titlebox">
+                <a href="https://www.yyds.one/v/238771.html" class="module-item-title" title="保你平安">保你平安</a>
+              </div>
+              <div class="module-item-text">HD</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 正在热播 -->
+      <div class="module">
+        <div class="module-heading">
+          <h2 class="module-title">
+            <i class="icon-hot" style="color: #ff0000"></i> 新片速递
+          </h2>
+
+          <div class="module-tab">
+            <div class="module-tab-items">
+              <a class="module-tab-item" href="https://www.yyds.one/f/1.html" title="电影">电影</a>
+              <a class="module-tab-item" href="https://www.yyds.one/f/2.html" title="电视剧">剧集</a>
+              <a class="module-tab-item" href="https://www.yyds.one/f/3.html" title="综艺">综艺</a>
+              <a class="module-tab-item" href="https://www.yyds.one/f/4.html" title="动漫">动漫</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="module-list module-line-list">
+          <div class="module-items scroll-box">
+            <div class="scroll-content">
+              <div class="module-item">
+                <div class="pack_reserve">
+                  <p>即将上线</p>
+                </div>
+                <div class="module-item-cover">
+                  <div class="module-item-pic">
+                    <a href="https://www.yyds.one/v/240855.html" title="鸣龙少年">
+                      <i class="icon-play"></i>
+                    </a>
+                    <img class="lazy lazyloaded" src="./yyds_files/62cc0b2bc4b14697c52e9b5ff265ebea.jpg" alt="鸣龙少年" />
+                    <div class="loading"></div>
+                  </div>
+                  <div class="module-item-caption">
+                    <span>2023</span>
+                    <span class="video-class">国产剧</span>
+                    <span>内地</span>
+                  </div>
+                  {/if}
+                  <div class="module-item-ru">
+                    <span class="rebo">预告</span>
+                  </div>
+
+                  <div class="module-item-content">
+                    <div class="module-item-style video-name">
+                      <a href="https://www.yyds.one/v/240855.html" title="鸣龙少年">鸣龙少年</a>
+                    </div>
+                    <div class="module-item-style video-tag">
+                      <a href="https://www.yyds.one/c/-%E5%BC%A0%E8%8B%A5%E6%98%80-.html"
+                        target="_blank">张若昀</a>&nbsp;<a href="https://www.yyds.one/c/-%E9%BB%84%E5%B0%A7-.html"
+                        target="_blank">黄尧</a>&nbsp;<a href="https://www.yyds.one/c/-%E7%8E%8B%E9%94%B5-.html"
+                        target="_blank">王锵</a>&nbsp;<a href="https://www.yyds.one/c/-%E5%BE%90%E8%8B%A5%E6%99%97-.html"
+                        target="_blank">徐若晗</a>&nbsp;<a href="https://www.yyds.one/c/-%E6%9D%8E%E6%98%8E%E5%BE%B7-.html"
+                        target="_blank">李明德</a>&nbsp;<a href="https://www.yyds.one/c/-%E5%BC%A0%E7%90%9B-.html"
+                        target="_blank">张琛</a>&nbsp;<a href="https://www.yyds.one/c/-%E6%9B%BE%E5%AE%A5%E8%87%BB-.html"
+                        target="_blank">曾宥臻</a>&nbsp;<a href="https://www.yyds.one/c/-%E8%AE%B8%E6%B7%87%E6%9D%B0-.html"
+                        target="_blank">许淇杰</a>&nbsp;<a href="https://www.yyds.one/c/-%E5%88%98%E4%B8%B9-.html"
+                        target="_blank">刘丹</a>&nbsp;<a href="https://www.yyds.one/c/-%E7%8E%8B%E9%91%AB-.html"
+                        target="_blank">王鑫</a>&nbsp;<a href="https://www.yyds.one/c/-%E7%8E%8B%E6%BE%9C-.html"
+                        target="_blank">王澜</a>&nbsp;<a href="https://www.yyds.one/c/-%E5%AD%94%E8%BF%9E%E9%A1%BA-.html"
+                        target="_blank">孔连顺</a>&nbsp;<a href="https://www.yyds.one/c/-%E5%BE%B7%E6%9F%8F-.html"
+                        target="_blank">德柏</a>&nbsp;<a href="https://www.yyds.one/c/-%E7%8E%8B%E5%8A%B2%E6%9D%BE-.html"
+                        target="_blank">王劲松</a>&nbsp;<a href="https://www.yyds.one/c/-%E9%99%88%E6%98%8A-.html"
+                        target="_blank">陈昊</a>&nbsp;<a href="https://www.yyds.one/c/-%E5%B1%88%E8%8F%81%E8%8F%81-.html"
+                        target="_blank">屈菁菁</a>&nbsp;
+                    </div>
+                    <div class="module-item-style video-text">
+                      星洲市民办高中铭龙中学为了更好地发挥学生的潜力，成立了以优秀英语教师雷鸣（张若昀
+                      饰）和心理老师桑夏（黄尧 饰）为首的高三18班。李燃（王锵
+                      饰）是铭龙中学一名普通的高三学生，他自幼失去父母，一直跟奶
+                    </div>
+                  </div>
+                </div>
+                <div class="module-item-titlebox">
+                  <a href="https://www.yyds.one/v/240855.html" class="module-item-title" title="鸣龙少年">鸣龙少年</a>
+                </div>
+                <div class="module-item-text">即将开播</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 预告-->
+
+      <div class="module module-wrapper">
+        <div class="module-main">
+          <div class="module-heading">
+            <h2 class="module-title">
+              <i class="icon-cate-dy" style="color: #ff0000"></i>
+
+              电影
+            </h2>
+            <a class="more" href="https://www.yyds.one/f/1.html" title="更多电影">更多电影 <i class="icon-arrow-right-o"></i>
+            </a>
+          </div>
+          <div class="module-list module-lines-list">
+            <div class="module-items">
+              <div class="module-item">
+                <div class="module-item-cover">
+                  <div class="module-item-pic">
+                    <a href="https://www.yyds.one/v/240876.html" title="青春皇家恋曲：玛格丽特公主">
+                      <i class="icon-play"></i>
+                    </a>
+                    <img class="lazy lazyloaded"
+                      data-src="https://img.liangzipic.com/upload/vod/20230511-1/92f1dbfa5a75d24046d47bf718c8d9c5.jpg"
+                      src="./yyds_files/92f1dbfa5a75d24046d47bf718c8d9c5.jpg" alt="青春皇家恋曲：玛格丽特公主" />
+                    <div class="loading"></div>
+                  </div>
+                  <div class="module-item-caption">
+                    <span>2023</span>
+                    <span class="video-class">爱情片</span>
+                    <span>其它</span>
+                  </div>
+
+                  <div class="module-item-content">
+                    <div class="module-item-style video-name">
+                      <a href="https://www.yyds.one/v/240876.html" title="青春皇家恋曲：玛格丽特公主">青春皇家恋曲：玛格丽特公主</a>
+                    </div>
+                    <div class="module-item-style video-tag">
+                      <a href="https://www.yyds.one/c/-%E8%89%BE%E4%B8%BD%C2%B7%E7%91%9E%E4%BA%9A%E4%BE%AC%C2%B7%E7%A9%86%E5%8B%92%C2%B7%E5%A5%A5%E6%96%AF%E6%9C%AC-.html"
+                        target="_blank">艾丽·瑞亚侬·穆勒·奥斯本</a>&nbsp;<a
+                        href="https://www.yyds.one/c/-%E5%BC%97%E7%BD%97%E5%BE%B7%C2%B7%E6%B8%A9%E7%91%9F-.html"
+                        target="_blank">弗罗德·温瑟</a>&nbsp;<a href="https://www.yyds.one/c/-Kirsti+Stub%C3%B8-.html"
+                        target="_blank">Kirsti Stubø</a>&nbsp;<a href="https://www.yyds.one/c/-Sammy+Germain+Wadi-.html"
+                        target="_blank">Sammy Germain Wadi</a>&nbsp;
+                    </div>
+                    <div class="module-item-style video-text">
+                      　　遭遇舞会丑闻后，玛格丽特公主渴望拥有正常的生活。在艰难维持完形象的同时，她还要应对家庭矛盾。
+                    </div>
+                  </div>
+                </div>
+                <div class="module-item-titlebox">
+                  <a href="https://www.yyds.one/v/240876.html" class="module-item-title"
+                    title="青春皇家恋曲：玛格丽特公主">青春皇家恋曲：玛格丽特公主</a>
+                </div>
+                <div class="module-item-text">HD</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="module-side">
+          <div class="module-heading">
+            <h2 class="module-title">电影<span>•</span>月榜</h2>
+          </div>
+          <div class="module-side-list module-bg">
+            <div class="scroll-box">
+              <div class="module-textlist scroll-content">
+                <a href="https://www.yyds.one/v/238326.html" class="text-list-item">
+                  <div class="text-list-num top-main top-1">1</div>
+                  <div class="text-list-title">
+                    <h3>银河护卫队3</h3>
+                    <p>TC</p>
+                  </div>
+                </a>
+
+                <a href="https://www.yyds.one/v/238771.html" class="text-list-item">
+                  <div class="text-list-num top-main top-2">2</div>
+                  <div class="text-list-title">
+                    <h3>保你平安</h3>
+                    <p>HD</p>
+                  </div>
+                </a>
+
+                <a href="https://www.yyds.one/v/240582.html" class="text-list-item">
+                  <div class="text-list-num top-main top-3">3</div>
+                  <div class="text-list-title">
+                    <h3>宇宙探索编辑部</h3>
+                    <p>HD</p>
+                  </div>
+                </a>
+
+                <a href="https://www.yyds.one/v/240759.html" class="text-list-item">
+                  <div class="text-list-num">4</div>
+                  <div class="text-list-title">
+                    <h3>忠犬八公</h3>
+                    <p>HD</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="module module-wrapper">
+        <div class="module-main">
+          <div class="module-heading">
+            <h2 class="module-title">
+              <i class="icon-cate-ds" style="color: #ff0000"></i>
+
+              连续剧
+            </h2>
+            <a class="more" href="https://www.yyds.one/f/2.html" title="更多连续剧">更多连续剧 <i class="icon-arrow-right-o"></i>
+            </a>
+          </div>
+          <div class="module-list module-lines-list">
+            <div class="module-items">
+              <div class="module-item">
+                <div class="module-item-cover">
+                  <div class="module-item-pic">
+                    <a href="https://www.yyds.one/v/240006.html" title="你给我的喜欢">
+                      <i class="icon-play"></i>
+                    </a>
+                    <img class="lazy lazyloaded" src="./yyds_files/c33bc58b06208d7356e9c89212fc77bb.jpg" alt="你给我的喜欢" />
+                    <div class="loading"></div>
+                  </div>
+                  <div class="module-item-caption">
+                    <span>2023</span>
+                    <span class="video-class">国产剧</span>
+                    <span>大陆</span>
+                  </div>
+
+                  <div class="module-item-content">
+                    <div class="module-item-style video-name">
+                      <a href="https://www.yyds.one/v/240006.html" title="你给我的喜欢">你给我的喜欢</a>
+                    </div>
+                    <div class="module-item-style video-tag">
+                      <a href="https://www.yyds.one/c/-%E7%8E%8B%E5%AD%90%E5%A5%87-.html"
+                        target="_blank">王子奇</a>&nbsp;<a href="https://www.yyds.one/c/-%E7%8E%8B%E7%8E%89%E9%9B%AF-.html"
+                        target="_blank">王玉雯</a>&nbsp;<a href="https://www.yyds.one/c/-%E6%9D%8E%E5%B7%9D-.html"
+                        target="_blank">李川</a>&nbsp;<a href="https://www.yyds.one/c/-%E9%A9%AC%E5%BF%83%E7%91%9E-.html"
+                        target="_blank">马心瑞</a>&nbsp;<a href="https://www.yyds.one/c/-%E9%99%88%E9%91%AB%E6%B5%B7-.html"
+                        target="_blank">陈鑫海</a>&nbsp;<a href="https://www.yyds.one/c/-%E6%9D%8E%E6%98%9F%E7%91%B6-.html"
+                        target="_blank">李星瑶</a>&nbsp;<a href="https://www.yyds.one/c/-%E9%87%91%E6%B3%BD%E7%81%8F-.html"
+                        target="_blank">金泽灏</a>&nbsp;<a href="https://www.yyds.one/c/-%E5%BE%90%E6%B4%81%E5%84%BF-.html"
+                        target="_blank">徐洁儿</a>&nbsp;<a href="https://www.yyds.one/c/-%E6%A2%85%E5%AE%9D%E8%8E%B1-.html"
+                        target="_blank">梅宝莱</a>&nbsp;<a href="https://www.yyds.one/c/-%E6%9D%8E%E4%BC%9F%E9%BE%99-.html"
+                        target="_blank">李伟龙</a>&nbsp;<a href="https://www.yyds.one/c/-%E9%98%BF%E4%B8%BD%E4%BA%9A-.html"
+                        target="_blank">阿丽亚</a>&nbsp;<a href="https://www.yyds.one/c/-%E5%B4%94%E5%A5%95%E6%AC%A3-.html"
+                        target="_blank">崔奕欣</a>&nbsp;
+                    </div>
+                    <div class="module-item-style video-text">
+                      　　企鹅影视出品，改编自施定柔的同名都市言情小说，讲述了两个素不相识的女生在一辆长途大巴上相遇，闵慧对自己只字不提，好奇的苏田却觉察到她的心事，并为此献出了生命，为了填补内心的亏欠，闵慧决定替代苏田去
+                    </div>
+                  </div>
+                </div>
+                <div class="module-item-titlebox">
+                  <a href="https://www.yyds.one/v/240006.html" class="module-item-title" title="你给我的喜欢">你给我的喜欢</a>
+                </div>
+                <div class="module-item-text">已完结</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="module-side">
+          <div class="module-heading">
+            <h2 class="module-title">连续剧<span>•</span>月榜</h2>
+          </div>
+          <div class="module-side-list module-bg">
+            <div class="scroll-box">
+              <div class="module-textlist scroll-content">
+                <a href="https://www.yyds.one/v/239987.html" class="text-list-item">
+                  <div class="text-list-num top-main top-1">1</div>
+                  <div class="text-list-title">
+                    <h3>云襄传</h3>
+                    <p>更新至第22集</p>
+                  </div>
+                </a>
+
+                <a href="https://www.yyds.one/v/213589.html" class="text-list-item">
+                  <div class="text-list-num top-main top-2">2</div>
+                  <div class="text-list-title">
+                    <h3>平凡之路</h3>
+                    <p>更新至第22集</p>
+                  </div>
+                </a>
+
+                <a href="https://www.yyds.one/v/239882.html" class="text-list-item">
+                  <div class="text-list-num top-main top-3">3</div>
+                  <div class="text-list-title">
+                    <h3>护心</h3>
+                    <p>更新至第08集</p>
+                  </div>
+                </a>
+
+                <a href="https://www.yyds.one/v/239998.html" class="text-list-item">
+                  <div class="text-list-num">4</div>
+                  <div class="text-list-title">
+                    <h3>后浪</h3>
+                    <p>即将开播</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="module module-wrapper">
+        <div class="module-main">
+          <div class="module-heading">
+            <h2 class="module-title">
+              <i class="icon-cate-zy" style="color: #ff0000"></i>
+
+              综艺
+            </h2>
+            <a class="more" href="https://www.yyds.one/f/3.html" title="更多综艺">更多综艺 <i class="icon-arrow-right-o"></i>
+            </a>
+          </div>
+          <div class="module-list module-lines-list">
+            <div class="module-items">
+              <div class="module-item">
+                <div class="module-item-cover">
+                  <div class="module-item-pic">
+                    <a href="https://www.yyds.one/v/240143.html" title="结伙072第五季">
+                      <i class="icon-play"></i>
+                    </a>
+                    <img class="lazy lazyloaded" src="./yyds_files/01af653b8a8c278b736a8b6f3ce769ab.jpg"
+                      alt="结伙072第五季" />
+                    <div class="loading"></div>
+                  </div>
+                  <div class="module-item-caption">
+                    <span>2023</span>
+                    <span class="video-class">综艺</span>
+                    <span>韩国</span>
+                  </div>
+
+                  <div class="module-item-content">
+                    <div class="module-item-style video-name">
+                      <a href="https://www.yyds.one/v/240143.html" title="结伙072第五季">结伙072第五季</a>
+                    </div>
+                    <div class="module-item-style video-tag">
+                      <a href="https://www.yyds.one/c/-%E5%A7%9C%E8%99%8E%E4%B8%9C-.html"
+                        target="_blank">姜虎东</a>&nbsp;<a href="https://www.yyds.one/c/-%E8%BD%A6%E5%A4%AA%E8%B4%A4-.html"
+                        target="_blank">车太贤</a>&nbsp;<a href="https://www.yyds.one/c/-%E6%9C%B4%E7%BE%8E%E5%96%84-.html"
+                        target="_blank">朴美善</a>&nbsp;<a href="https://www.yyds.one/c/-%E6%9F%B3%E8%B4%A4%E7%8F%A0-.html"
+                        target="_blank">柳贤珠</a>&nbsp;<a href="https://www.yyds.one/c/-%E6%9D%8E%E4%BA%AC%E5%A5%8E-.html"
+                        target="_blank">李京奎</a>&nbsp;<a href="https://www.yyds.one/c/-%E6%B4%AA%E4%BA%AC%E6%B0%91-.html"
+                        target="_blank">洪京民</a>&nbsp;<a href="https://www.yyds.one/c/-%E6%AE%B7%E5%BF%97%E6%BA%90-.html"
+                        target="_blank">殷志源</a>&nbsp;<a href="https://www.yyds.one/c/-%E7%94%B3%E6%89%BF%E7%84%95-.html"
+                        target="_blank">申承焕</a>&nbsp;<a href="https://www.yyds.one/c/-%E9%87%91%E9%92%9F%E6%B0%91-.html"
+                        target="_blank">金钟民</a>&nbsp;<a href="https://www.yyds.one/c/-%E6%9D%8E%E5%A4%A7%E6%B5%A9-.html"
+                        target="_blank">李大浩</a>&nbsp;<a href="https://www.yyds.one/c/-%E6%9C%B4%E6%B0%B8%E5%8D%93-.html"
+                        target="_blank">朴永卓</a>&nbsp;<a href="https://www.yyds.one/c/-%E6%A2%81%E4%B8%96%E7%81%BF-.html"
+                        target="_blank">梁世灿</a>&nbsp;<a href="https://www.yyds.one/c/-%E6%9D%8E%E6%AD%A3%E4%BF%A1-.html"
+                        target="_blank">李正信</a>&nbsp;<a href="https://www.yyds.one/c/-%E5%AD%99%E8%8B%B1%E5%AE%B0-.html"
+                        target="_blank">孙英宰</a>&nbsp;
+                    </div>
+                    <div class="module-item-style video-text">
+                      　　和第4季一样，以“演艺界最强高尔夫球手”的头衔展开的淘汰赛形式。与副标题相称的072名出演者作为场上的胜负师展开了激烈的对决。　　特别是，从上赛季正式比赛开始在一起的画廊们，从本赛季的首场比赛开始
+                    </div>
+                  </div>
+                </div>
+                <div class="module-item-titlebox">
+                  <a href="https://www.yyds.one/v/240143.html" class="module-item-title" title="结伙072第五季">结伙072第五季</a>
+                </div>
+                <div class="module-item-text">更新至第07集</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="module-side">
+          <div class="module-heading">
+            <h2 class="module-title">综艺<span>•</span>月榜</h2>
+          </div>
+          <div class="module-side-list module-bg">
+            <div class="scroll-box">
+              <div class="module-textlist scroll-content">
+                <a href="https://www.yyds.one/v/237507.html" class="text-list-item">
+                  <div class="text-list-num top-main top-1">1</div>
+                  <div class="text-list-title">
+                    <h3>一年一度喜剧大赛2</h3>
+                    <p>更新至第20221218</p>
+                  </div>
+                </a>
+
+                <a href="https://www.yyds.one/v/216630.html" class="text-list-item">
+                  <div class="text-list-num top-main top-2">2</div>
+                  <div class="text-list-title">
+                    <h3>毛雪汪</h3>
+                    <p>更新至第20230510</p>
+                  </div>
+                </a>
+
+                <a href="https://www.yyds.one/v/238207.html" class="text-list-item">
+                  <div class="text-list-num top-main top-3">3</div>
+                  <div class="text-list-title">
+                    <h3>奔跑吧·共同富裕篇</h3>
+                    <p>已完结</p>
+                  </div>
+                </a>
+
+                <a href="https://www.yyds.one/v/239083.html" class="text-list-item">
+                  <div class="text-list-num">4</div>
+                  <div class="text-list-title">
+                    <h3>最强大脑第十季</h3>
+                    <p>已完结</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="module module-wrapper">
+        <div class="module-main">
+          <div class="module-heading">
+            <h2 class="module-title">
+              <i class="icon-cate-dm" style="color: #ff0000"></i>
+
+              动漫
+            </h2>
+            <a class="more" href="https://www.yyds.one/f/4.html" title="更多动漫">更多动漫 <i class="icon-arrow-right-o"></i>
+            </a>
+          </div>
+          <div class="module-list module-lines-list">
+            <div class="module-items">
+              <div class="module-item">
+                <div class="module-item-cover">
+                  <div class="module-item-pic">
+                    <a href="https://www.yyds.one/v/240648.html" title="青莲剑仙传">
+                      <i class="icon-play"></i>
+                    </a>
+                    <img class="lazy lazyloaded" src="./yyds_files/72e3389cb8aae385adcf07e24489c552.jpg" alt="青莲剑仙传" />
+                    <div class="loading"></div>
+                  </div>
+                  <div class="module-item-caption">
+                    <span>2023</span>
+                    <span class="video-class">动漫</span>
+                    <span>大陆</span>
+                  </div>
+
+                  <div class="module-item-content">
+                    <div class="module-item-style video-name">
+                      <a href="https://www.yyds.one/v/240648.html" title="青莲剑仙传">青莲剑仙传</a>
+                    </div>
+                    <div class="module-item-style video-tag">
+                      <a href="https://www.yyds.one/c/-%E6%9C%AA%E7%9F%A5-.html" target="_blank">未知</a>&nbsp;
+                    </div>
+                    <div class="module-item-style video-text">
+                      　　苍云界，仙魔两道相争不断。
+                      徐长青出身青莲剑谷，一心想当剑仙，好景不长，苍月宫第九魔将入侵青莲剑谷，徐长青爷爷牺牲，徐长青获得“青莲帝剑”的认可，与第九魔将对抗不敌。后昆仑太白剑仙秋无涯赶到，击退
+                    </div>
+                  </div>
+                </div>
+                <div class="module-item-titlebox">
+                  <a href="https://www.yyds.one/v/240648.html" class="module-item-title" title="青莲剑仙传">青莲剑仙传</a>
+                </div>
+                <div class="module-item-text">更新至第09集</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="module-side">
+          <div class="module-heading">
+            <h2 class="module-title">动漫<span>•</span>月榜</h2>
+          </div>
+          <div class="module-side-list module-bg">
+            <div class="scroll-box">
+              <div class="module-textlist scroll-content">
+                <a href="https://www.yyds.one/v/240786.html" class="text-list-item">
+                  <div class="text-list-num top-main top-1">1</div>
+                  <div class="text-list-title">
+                    <h3>遮天动画版</h3>
+                    <p>更新至第04集</p>
+                  </div>
+                </a>
+
+                <a href="https://www.yyds.one/v/236530.html" class="text-list-item">
+                  <div class="text-list-num top-main top-2">2</div>
+                  <div class="text-list-title">
+                    <h3>斗破苍穹年番</h3>
+                    <p>更新至43集</p>
+                  </div>
+                </a>
+
+                <a href="https://www.yyds.one/v/147480.html" class="text-list-item">
+                  <div class="text-list-num top-main top-3">3</div>
+                  <div class="text-list-title">
+                    <h3>吞噬星空</h3>
+                    <p>更新至85集</p>
+                  </div>
+                </a>
+
+                <a href="https://www.yyds.one/v/238329.html" class="text-list-item">
+                  <div class="text-list-num">8</div>
+                  <div class="text-list-title">
+                    <h3>蜘蛛侠：平行宇宙2</h3>
+                    <p>6.2上映</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 列表 -->
+
+      <div class="module">
+        <div class="module-heading">
+          <h2 class="module-title" title="最新专题">专题</h2>
+          <a class="more" href="https://www.yyds.one/topic.html" title="更多专题">更多专题</a>
+        </div>
+        <div class="module-list module-lines-list">
+          <div class="module-items scroll-box">
+            <div class="scroll-content">
+              <div class="module-item module-item-go picw">
+                <div class="module-item-cover nohoverbg pt50">
+                  <div class="module-item-pic">
+                    <a href="https://www.yyds.one/topicdetail-13.html"></a><img class="ls-is-cached lazy lazyloaded"
+                      data-src="https://api.80ym.net/i/2023/01/07/njd5pa.jpg" src="./yyds_files/njd5pa.jpg"
+                      alt="2023年最新电影合集" />
+                    <div class="loading"></div>
+                  </div>
+                </div>
+                <div class="module-item-titlebox w100">
+                  <a href="https://www.yyds.one/topicdetail-13.html" class="module-item-title ccenter"
+                    title="2023年最新电影合集">2023年最新电影合集</a>
+                </div>
+                <div class="module-item-text ccenter">
+                  <span>—— 20个影片 ——</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 专题 -->
+      <!-- 资讯 -->
+    </div>
+  </main>
+  <div id="friendlink" class="wrapper hidden-xs">
+    <div class="content">
+      <h2>友情链接：</h2>
+      <a href="https://www.80ys.tv/" target="_blank" title="80影视">80影视</a>
+    </div>
+  </div>
+  <!-- 友情链接 -->
+  <footer id="footer" class="wrapper pd60">
+    <p class="sitemap">
+      <img src="./yyds_files/logo.png" height="10" />
+      <a target="_blank" href="https://www.yyds.one/label/about.html">关于我们</a><span class="space-line-bold"></span>
+
+      <a target="_blank" href="https://www.yyds.one/label/service.html">服务协议</a><span class="space-line-bold"></span>
+      <a target="_blank" href="https://www.yyds.one/label/privacy.html">隐私政策</a><span class="space-line-bold"></span>
+      <a target="_blank" href="https://www.yyds.one/label/statement.html">免责声明</a><span class="space-line-bold"></span>
+      <a target="_blank" href="https://www.yyds.one/label/copyright.html">版权声明</a><span class="space-line-bold"></span>
+      <a target="_blank" href="https://www.yyds.one/label/gbook/">留言反馈</a>
+      <br />
+      <a target="_blank" href="https://www.yyds.one/map.html">MAP</a><span class="space-line-bold"></span>
+      <a target="_blank" href="https://www.yyds.one/rss.xml">RSS</a><span class="space-line-bold"></span>
+      <a target="_blank" href="https://www.yyds.one/rss/baidu.xml">Baidu</a><span class="space-line-bold"></span>
+      <a target="_blank" href="https://www.yyds.one/rss/baidu.xml">Google</a><span class="space-line-bold"></span>
+      <a target="_blank" href="https://www.yyds.one/rss/bing.xml">Bing</a><span class="space-line-bold"></span>
+      <a target="_blank" href="https://www.yyds.one/rss/so.xml">so</a><span class="space-line-bold"></span>
+      <a target="_blank" href="https://www.yyds.one/rss/sogou.xml">Sogou</a><span class="space-line-bold"></span>
+      <a target="_blank" href="https://www.yyds.one/rss/sm.xml">SM</a><span class="space-line-bold"></span>
+      <a target="_blank" href="https://www.yyds.one/map.html">网站地图</a>
+      <br />Copyright<a target="_blank"></a> © 2022 YYDS影视 版权所有
+      <script>
+        var _hmt = _hmt || [];
+        (function () {
+          var hm = document.createElement("script");
+          hm.src =
+            "https://hm.baidu.com/hm.js?7db3ee0f60d6918dc26d41808ae067b6";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      </script>
+    </p>
+    <p>
+      <br />本站所有内容均来自互联网分享站点所提供的公开引用资源，未提供资源上传、存储服务。<br />如果侵犯了您的权益，请通知我们，我们会及时删除侵权内容，谢谢合作！
+      <a href="https://www.yyds.one/">版权反馈</a>
+    </p>
+  </footer>
+
+  <div class="fixed_right_bar">
+    <div class="mx-lrmenu">
+      <div class="ant-back-top dbicon" style="display: none">
+        <i class="iconfont icon-a-zhiding5"></i>
+      </div>
+      <div class="dbicon" id="clothes" onclick="clothesChange();">
+        <i class="iconfont icon-rijianmoshi"></i>
+      </div>
+      <div class="dbicon ly">
+        <a href="https://www.yyds.one/gbook.html"><i class="iconfont icon-a-pinglun"></i></a>
+      </div>
+      <div class="dbicon">
+        <a href="https://www.yyds.one/topic.html"><i class="iconfont icon-zhuanti-2"></i></a>
+      </div>
+    </div>
+    <div class="moremeum">
+      <i class="iconfont icon-a-gengduo1"></i>
+    </div>
+  </div>
+  <div class="mxonefoot">
+    <a class="item" href="https://www.yyds.one/">
+      <i class="icon-home size20"></i>
+      <div class="grid-item-name" title="YYDS影视首页">首页</div>
+    </a>
+
+    <a class="item" href="https://www.yyds.one/f/1.html">
+      <i class="size20 icon-cate-dy"></i>
+      <div class="grid-item-name">电影</div>
+    </a>
+
+    <a class="item" href="https://www.yyds.one/f/2.html">
+      <i class="size20 icon-cate-ds"></i>
+      <div class="grid-item-name">连续剧</div>
+    </a>
+
+    <a class="item" href="https://www.yyds.one/f/3.html">
+      <i class="size20 icon-cate-zy"></i>
+      <div class="grid-item-name">综艺</div>
+    </a>
+
+    <a class="item" href="https://www.yyds.one/f/4.html">
+      <i class="size20 icon-cate-dm"></i>
+      <div class="grid-item-name">动漫</div>
+    </a>
+  </div>
+  <script type="text/javascript">
+    $("#clothes").on("click", function () {
+      $(this).children(".iconfont").toggleClass("icon-a-yejian2");
+      $(this).children(".iconfont").toggleClass("icon-rijianmoshi");
+    });
+  </script>
+
+  <script type="text/javascript">
+    document.onkeydown = function () {
+      var e = window.event || arguments[0];
+    };
+  </script>
+</body>
+
+</html>
