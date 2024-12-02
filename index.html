@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="static/css/home.css" />
-    <link rel="stylesheet" href="static/css/swiper-bundle.min.css" />
+    <base href="/static/">
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link
       rel="shortcut icon"
-      href="static/images/logo.png"
+      href="images/logo.png"
       type="image/x-icon"
     />
-    <script src="static/js/swiper-bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
   </head>
 
   <body id="home-page">
@@ -22,7 +23,7 @@
 <header id="header">
   <div class="main">
     <a href="/movie" class="logo">
-      <img src="static/images/logo.png" alt="" />
+      <img src="images/logo.png" alt="" />
       <strong>奇清影视</strong>
     </a>
     <form id="search-form" class="search-box" action="search" target="_blank">
@@ -31,7 +32,7 @@
         method="get"
         name="keyword"
         id=""
-        placeholder="搜索电影、电视剧、综艺、动漫"
+        placeholder="搜索电影、电视剧、动漫、综艺"
         autocomplete="off"
       />
       <i class="iconfont" onclick="toCommit();">&#xe679;</i>
@@ -69,17 +70,17 @@
           <div class="pop">
             <a href="category/1" class="pop-title">更多电影</a>
             <div class="pop-content"><a href="play/1">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p480747492.webp" alt="肖申克的救赎" onerror="videoImgError(this)"/>
+                <img src="image/movies/p480747492.webp" alt="肖申克的救赎"/>
                 <span>肖申克的救赎</span>
+                </a><a href="play/2">
+                <img src="image/movies/p2561716440.webp" alt="霸王别姬"/>
+                <span>霸王别姬</span>
                 </a><a href="play/3">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2372307693.webp" alt="阿甘正传" onerror="videoImgError(this)"/>
+                <img src="image/movies/p2372307693.webp" alt="阿甘正传"/>
                 <span>阿甘正传</span>
                 </a><a href="play/4">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2896604953.webp" alt="泰坦尼克号" onerror="videoImgError(this)"/>
+                <img src="image/movies/p2896604953.webp" alt="泰坦尼克号"/>
                 <span>泰坦尼克号</span>
-                </a><a href="play/5">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p511118051.webp" alt="这个杀手不太冷" onerror="videoImgError(this)"/>
-                <span>这个杀手不太冷</span>
                 </a></div>
           </div>
         </li><li>
@@ -87,18 +88,18 @@
           <div class="sub-cate"><a href="sub-category/201">古装</a><a href="sub-category/202">都市</a></div>
           <div class="pop">
             <a href="category/2" class="pop-title">更多电视剧</a>
-            <div class="pop-content"><a href="play/16">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p1461851991.webp" alt="机器人总动员" onerror="videoImgError(this)"/>
+            <div class="pop-content"><a href="play/15">
+                <img src="image/movies/p2884280708.webp" alt="放牛班的春天"/>
+                <span>放牛班的春天</span>
+                </a><a href="play/16">
+                <img src="image/movies/p1461851991.webp" alt="机器人总动员"/>
                 <span>机器人总动员</span>
                 </a><a href="play/17">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2896589742.webp" alt="疯狂动物城" onerror="videoImgError(this)"/>
+                <img src="image/movies/p2896589742.webp" alt="疯狂动物城"/>
                 <span>疯狂动物城</span>
                 </a><a href="play/18">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2564556863.webp" alt="无间道" onerror="videoImgError(this)"/>
+                <img src="image/movies/p2564556863.webp" alt="无间道"/>
                 <span>无间道</span>
-                </a><a href="play/19">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p1505392928.webp" alt="控方证人" onerror="videoImgError(this)"/>
-                <span>控方证人</span>
                 </a></div>
           </div>
         </li><li>
@@ -106,18 +107,18 @@
           <div class="sub-cate"><a href="sub-category/301">国产</a><a href="sub-category/302">日漫</a></div>
           <div class="pop">
             <a href="category/3" class="pop-title">更多动漫</a>
-            <div class="pop-content"><a href="play/30">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p462657443.webp" alt="蝙蝠侠：黑暗骑士" onerror="videoImgError(this)"/>
+            <div class="pop-content"><a href="play/29">
+                <img src="image/movies/p2597919477.webp" alt="活着"/>
+                <span>活着</span>
+                </a><a href="play/30">
+                <img src="image/movies/p462657443.webp" alt="蝙蝠侠：黑暗骑士"/>
                 <span>蝙蝠侠：黑暗骑士</span>
                 </a><a href="play/31">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2614949805.webp" alt="哈利·波特与魔法石" onerror="videoImgError(this)"/>
+                <img src="image/movies/p2614949805.webp" alt="哈利·波特与魔法石"/>
                 <span>哈利·波特与魔法石</span>
                 </a><a href="play/32">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2642829472.webp" alt="指环王3：王者无敌" onerror="videoImgError(this)"/>
+                <img src="image/movies/p2642829472.webp" alt="指环王3：王者无敌"/>
                 <span>指环王3：王者无敌</span>
-                </a><a href="play/33">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2561305376.webp" alt="我不是药神" onerror="videoImgError(this)"/>
-                <span>我不是药神</span>
                 </a></div>
           </div>
         </li><li>
@@ -125,18 +126,18 @@
           <div class="sub-cate"><a href="sub-category/401">真人</a><a href="sub-category/402">竞演</a></div>
           <div class="pop">
             <a href="category/4" class="pop-title">更多综艺</a>
-            <div class="pop-content"><a href="play/44">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2553104888.webp" alt="鬼子来了" onerror="videoImgError(this)"/>
+            <div class="pop-content"><a href="play/43">
+                <img src="image/movies/p453924541.webp" alt="猫鼠游戏"/>
+                <span>猫鼠游戏</span>
+                </a><a href="play/44">
+                <img src="image/movies/p2553104888.webp" alt="鬼子来了"/>
                 <span>鬼子来了</span>
                 </a><a href="play/45">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2896590696.webp" alt="少年派的奇幻漂流" onerror="videoImgError(this)"/>
+                <img src="image/movies/p2896590696.webp" alt="少年派的奇幻漂流"/>
                 <span>少年派的奇幻漂流</span>
                 </a><a href="play/46">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2554525534.webp" alt="海蒂和爷爷" onerror="videoImgError(this)"/>
+                <img src="image/movies/p2554525534.webp" alt="海蒂和爷爷"/>
                 <span>海蒂和爷爷</span>
-                </a><a href="play/47">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p1381339291.webp" alt="钢琴家" onerror="videoImgError(this)"/>
-                <span>钢琴家</span>
                 </a></div>
           </div>
         </li></ul>
@@ -146,7 +147,7 @@
           <h2 class="title">电影</h2>
           <div class="video-list"><div class="video-item">
               <a class="poster-card" href="play/1">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p480747492.webp" alt="肖申克的救赎" onerror="videoImgError(this)" />
+                <img src="image/movies/p480747492.webp" alt="肖申克的救赎"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -159,8 +160,22 @@
               <h3>肖申克的救赎</h3>
               <p>犯罪 剧情</p>
             </div><div class="video-item">
+              <a class="poster-card" href="play/2">
+                <img src="image/movies/p2561716440.webp" alt="霸王别姬"/>
+                <span class="play-icon">
+                  <i class="iconfont">&#xe601;</i>
+                </span>
+                <span class="play-info">
+                  <strong>霸王别姬</strong>
+                  <span class="tags"><em>张国荣 张丰毅</em></span>
+                  <span class="desc">风华绝代 </span>
+                </span>
+              </a>
+              <h3>霸王别姬</h3>
+              <p>剧情 爱情 同性</p>
+            </div><div class="video-item">
               <a class="poster-card" href="play/3">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2372307693.webp" alt="阿甘正传" onerror="videoImgError(this)" />
+                <img src="image/movies/p2372307693.webp" alt="阿甘正传"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -174,7 +189,7 @@
               <p>剧情 爱情</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/4">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2896604953.webp" alt="泰坦尼克号" onerror="videoImgError(this)" />
+                <img src="image/movies/p2896604953.webp" alt="泰坦尼克号"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -188,7 +203,7 @@
               <p>剧情 爱情 灾难</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/5">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p511118051.webp" alt="这个杀手不太冷" onerror="videoImgError(this)" />
+                <img src="image/movies/p511118051.webp" alt="这个杀手不太冷"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -202,7 +217,7 @@
               <p>剧情 动作 犯罪</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/6">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2557573348.webp" alt="千与千寻" onerror="videoImgError(this)" />
+                <img src="image/movies/p2557573348.webp" alt="千与千寻"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -216,7 +231,7 @@
               <p>剧情 动画 奇幻</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/7">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2578474613.webp" alt="美丽人生" onerror="videoImgError(this)" />
+                <img src="image/movies/p2578474613.webp" alt="美丽人生"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -230,7 +245,7 @@
               <p>剧情 喜剧 爱情 战争</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/8">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2614988097.webp" alt="星际穿越" onerror="videoImgError(this)" />
+                <img src="image/movies/p2614988097.webp" alt="星际穿越"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -244,7 +259,7 @@
               <p>剧情 科幻 冒险</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/9">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p492406163.webp" alt="辛德勒的名单" onerror="videoImgError(this)" />
+                <img src="image/movies/p492406163.webp" alt="辛德勒的名单"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -258,7 +273,7 @@
               <p>剧情 历史 战争</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/10">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p513344864.webp" alt="盗梦空间" onerror="videoImgError(this)" />
+                <img src="image/movies/p513344864.webp" alt="盗梦空间"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -272,7 +287,7 @@
               <p>剧情 科幻 悬疑 冒险</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/11">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p479682972.webp" alt="楚门的世界" onerror="videoImgError(this)" />
+                <img src="image/movies/p479682972.webp" alt="楚门的世界"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -286,7 +301,7 @@
               <p>剧情 科幻</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/12">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2587099240.webp" alt="忠犬八公的故事" onerror="videoImgError(this)" />
+                <img src="image/movies/p2587099240.webp" alt="忠犬八公的故事"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -300,7 +315,7 @@
               <p>剧情</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/13">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2574551676.webp" alt="海上钢琴师" onerror="videoImgError(this)" />
+                <img src="image/movies/p2574551676.webp" alt="海上钢琴师"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -314,7 +329,7 @@
               <p>剧情 音乐</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/14">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p579729551.webp" alt="三傻大闹宝莱坞" onerror="videoImgError(this)" />
+                <img src="image/movies/p579729551.webp" alt="三傻大闹宝莱坞"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -326,9 +341,58 @@
               </a>
               <h3>三傻大闹宝莱坞</h3>
               <p>剧情 喜剧 爱情 歌舞</p>
-            </div><div class="video-item">
+            </div></div>
+        </div>
+        <div class="sider">
+          <a href="category/1" class="title">电影·热榜</a>
+          <div class="content"><a href="play/1">
+                <em>1</em>
+                <strong>肖申克的救赎</strong>
+                <span title="希望让人自由 ">希望让人自由 </span>
+            </a><a href="play/2">
+                <em>2</em>
+                <strong>霸王别姬</strong>
+                <span title="风华绝代 ">风华绝代 </span>
+            </a><a href="play/3">
+                <em>3</em>
+                <strong>阿甘正传</strong>
+                <span title="一部美国近现代史 ">一部美国近现代史 </span>
+            </a><a href="play/4">
+                <em>4</em>
+                <strong>泰坦尼克号</strong>
+                <span title="失去的才是永恒的  ">失去的才是永恒的  </span>
+            </a><a href="play/5">
+                <em>5</em>
+                <strong>这个杀手不太冷</strong>
+                <span title="怪蜀黍和小萝莉不得不说的故事 ">怪蜀黍和小萝莉不得不说的故事 </span>
+            </a><a href="play/6">
+                <em>6</em>
+                <strong>千与千寻</strong>
+                <span title="最好的宫崎骏，最好的久石让  ">最好的宫崎骏，最好的久石让  </span>
+            </a><a href="play/7">
+                <em>7</em>
+                <strong>美丽人生</strong>
+                <span title="最美的谎言 ">最美的谎言 </span>
+            </a><a href="play/8">
+                <em>8</em>
+                <strong>星际穿越</strong>
+                <span title="爱是一种力量，让我们超越时空感知它的存在 ">爱是一种力量，让我们超越时空感知它的存在 </span>
+            </a><a href="play/9">
+                <em>9</em>
+                <strong>辛德勒的名单</strong>
+                <span title="拯救一个人，就是拯救整个世界 ">拯救一个人，就是拯救整个世界 </span>
+            </a><a href="play/10">
+                <em>10</em>
+                <strong>盗梦空间</strong>
+                <span title="诺兰给了我们一场无法盗取的梦 ">诺兰给了我们一场无法盗取的梦 </span>
+            </a></div>
+        </div>
+      </div><div class="module-block">
+        <div class="module">
+          <h2 class="title">电视剧</h2>
+          <div class="video-list"><div class="video-item">
               <a class="poster-card" href="play/15">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2884280708.webp" alt="放牛班的春天" onerror="videoImgError(this)" />
+                <img src="image/movies/p2884280708.webp" alt="放牛班的春天"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -340,58 +404,9 @@
               </a>
               <h3>放牛班的春天</h3>
               <p>剧情 音乐</p>
-            </div></div>
-        </div>
-        <div class="sider">
-          <a href="category/1" class="title">电影·热榜</a>
-          <div class="content"><a href="play/1">
-                <em>1</em>
-                <strong>肖申克的救赎</strong>
-                <span title="希望让人自由 ">希望让人自由 </span>
-            </a><a href="play/3">
-                <em>2</em>
-                <strong>阿甘正传</strong>
-                <span title="一部美国近现代史 ">一部美国近现代史 </span>
-            </a><a href="play/4">
-                <em>3</em>
-                <strong>泰坦尼克号</strong>
-                <span title="失去的才是永恒的  ">失去的才是永恒的  </span>
-            </a><a href="play/5">
-                <em>4</em>
-                <strong>这个杀手不太冷</strong>
-                <span title="怪蜀黍和小萝莉不得不说的故事 ">怪蜀黍和小萝莉不得不说的故事 </span>
-            </a><a href="play/6">
-                <em>5</em>
-                <strong>千与千寻</strong>
-                <span title="最好的宫崎骏，最好的久石让  ">最好的宫崎骏，最好的久石让  </span>
-            </a><a href="play/7">
-                <em>6</em>
-                <strong>美丽人生</strong>
-                <span title="最美的谎言 ">最美的谎言 </span>
-            </a><a href="play/8">
-                <em>7</em>
-                <strong>星际穿越</strong>
-                <span title="爱是一种力量，让我们超越时空感知它的存在 ">爱是一种力量，让我们超越时空感知它的存在 </span>
-            </a><a href="play/9">
-                <em>8</em>
-                <strong>辛德勒的名单</strong>
-                <span title="拯救一个人，就是拯救整个世界 ">拯救一个人，就是拯救整个世界 </span>
-            </a><a href="play/10">
-                <em>9</em>
-                <strong>盗梦空间</strong>
-                <span title="诺兰给了我们一场无法盗取的梦 ">诺兰给了我们一场无法盗取的梦 </span>
-            </a><a href="play/11">
-                <em>10</em>
-                <strong>楚门的世界</strong>
-                <span title="如果再也不能见到你，祝你早安，午安，晚安 ">如果再也不能见到你，祝你早安，午安，晚安 </span>
-            </a></div>
-        </div>
-      </div><div class="module-block">
-        <div class="module">
-          <h2 class="title">电视剧</h2>
-          <div class="video-list"><div class="video-item">
+            </div><div class="video-item">
               <a class="poster-card" href="play/16">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p1461851991.webp" alt="机器人总动员" onerror="videoImgError(this)" />
+                <img src="image/movies/p1461851991.webp" alt="机器人总动员"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -405,7 +420,7 @@
               <p>科幻 动画 冒险</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/17">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2896589742.webp" alt="疯狂动物城" onerror="videoImgError(this)" />
+                <img src="image/movies/p2896589742.webp" alt="疯狂动物城"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -419,7 +434,7 @@
               <p>喜剧 动画 冒险</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/18">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2564556863.webp" alt="无间道" onerror="videoImgError(this)" />
+                <img src="image/movies/p2564556863.webp" alt="无间道"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -433,7 +448,7 @@
               <p>剧情 犯罪 惊悚</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/19">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p1505392928.webp" alt="控方证人" onerror="videoImgError(this)" />
+                <img src="image/movies/p1505392928.webp" alt="控方证人"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -447,7 +462,7 @@
               <p>剧情 犯罪 悬疑</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/20">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2455050536.webp" alt="大话西游之大圣娶亲" onerror="videoImgError(this)" />
+                <img src="image/movies/p2455050536.webp" alt="大话西游之大圣娶亲"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -461,7 +476,7 @@
               <p>喜剧 爱情 奇幻 古装</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/21">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p1363250216.webp" alt="熔炉" onerror="videoImgError(this)" />
+                <img src="image/movies/p1363250216.webp" alt="熔炉"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -475,7 +490,7 @@
               <p>剧情</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/22">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p616779645.webp" alt="教父" onerror="videoImgError(this)" />
+                <img src="image/movies/p616779645.webp" alt="教父"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -489,7 +504,7 @@
               <p>剧情 犯罪</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/23">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p1454261925.webp" alt="触不可及" onerror="videoImgError(this)" />
+                <img src="image/movies/p1454261925.webp" alt="触不可及"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -503,7 +518,7 @@
               <p>剧情 喜剧</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/24">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2614359276.webp" alt="当幸福来敲门" onerror="videoImgError(this)" />
+                <img src="image/movies/p2614359276.webp" alt="当幸福来敲门"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -517,7 +532,7 @@
               <p>剧情 传记 家庭</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/25">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p452089833.webp" alt="末代皇帝" onerror="videoImgError(this)" />
+                <img src="image/movies/p452089833.webp" alt="末代皇帝"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -531,7 +546,7 @@
               <p>剧情 传记 历史</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/26">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2540924496.webp" alt="龙猫" onerror="videoImgError(this)" />
+                <img src="image/movies/p2540924496.webp" alt="龙猫"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -545,7 +560,7 @@
               <p>动画 奇幻 冒险</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/27">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2896589968.webp" alt="寻梦环游记" onerror="videoImgError(this)" />
+                <img src="image/movies/p2896589968.webp" alt="寻梦环游记"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -559,7 +574,7 @@
               <p>喜剧 动画 奇幻 音乐</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/28">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p501177648.webp" alt="怦然心动" onerror="videoImgError(this)" />
+                <img src="image/movies/p501177648.webp" alt="怦然心动"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -571,9 +586,58 @@
               </a>
               <h3>怦然心动</h3>
               <p>剧情 喜剧 爱情</p>
-            </div><div class="video-item">
+            </div></div>
+        </div>
+        <div class="sider">
+          <a href="category/2" class="title">电视剧·热榜</a>
+          <div class="content"><a href="play/15">
+                <em>1</em>
+                <strong>放牛班的春天</strong>
+                <span title="天籁一般的童声，是最接近上帝的存在  ">天籁一般的童声，是最接近上帝的存在  </span>
+            </a><a href="play/16">
+                <em>2</em>
+                <strong>机器人总动员</strong>
+                <span title="小瓦力，大人生 ">小瓦力，大人生 </span>
+            </a><a href="play/17">
+                <em>3</em>
+                <strong>疯狂动物城</strong>
+                <span title="迪士尼给我们营造的乌托邦就是这样，永远善良勇敢，永远出乎意料 ">迪士尼给我们营造的乌托邦就是这样，永远善良勇敢，永远出乎意料 </span>
+            </a><a href="play/18">
+                <em>4</em>
+                <strong>无间道</strong>
+                <span title="香港电影史上永不过时的杰作 ">香港电影史上永不过时的杰作 </span>
+            </a><a href="play/19">
+                <em>5</em>
+                <strong>控方证人</strong>
+                <span title="比利·怀德满分作品 ">比利·怀德满分作品 </span>
+            </a><a href="play/20">
+                <em>6</em>
+                <strong>大话西游之大圣娶亲</strong>
+                <span title="一生所爱 ">一生所爱 </span>
+            </a><a href="play/21">
+                <em>7</em>
+                <strong>熔炉</strong>
+                <span title="我们一路奋战不是为了改变世界，而是为了不让世界改变我们 ">我们一路奋战不是为了改变世界，而是为了不让世界改变我们 </span>
+            </a><a href="play/22">
+                <em>8</em>
+                <strong>教父</strong>
+                <span title="千万不要记恨你的对手，这样会让你失去理智 ">千万不要记恨你的对手，这样会让你失去理智 </span>
+            </a><a href="play/23">
+                <em>9</em>
+                <strong>触不可及</strong>
+                <span title="满满温情的高雅喜剧 ">满满温情的高雅喜剧 </span>
+            </a><a href="play/24">
+                <em>10</em>
+                <strong>当幸福来敲门</strong>
+                <span title="平民励志片  ">平民励志片  </span>
+            </a></div>
+        </div>
+      </div><div class="module-block">
+        <div class="module">
+          <h2 class="title">动漫</h2>
+          <div class="video-list"><div class="video-item">
               <a class="poster-card" href="play/29">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2597919477.webp" alt="活着" onerror="videoImgError(this)" />
+                <img src="image/movies/p2597919477.webp" alt="活着"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -585,58 +649,9 @@
               </a>
               <h3>活着</h3>
               <p>剧情 历史 家庭</p>
-            </div></div>
-        </div>
-        <div class="sider">
-          <a href="category/2" class="title">电视剧·热榜</a>
-          <div class="content"><a href="play/16">
-                <em>1</em>
-                <strong>机器人总动员</strong>
-                <span title="小瓦力，大人生 ">小瓦力，大人生 </span>
-            </a><a href="play/17">
-                <em>2</em>
-                <strong>疯狂动物城</strong>
-                <span title="迪士尼给我们营造的乌托邦就是这样，永远善良勇敢，永远出乎意料 ">迪士尼给我们营造的乌托邦就是这样，永远善良勇敢，永远出乎意料 </span>
-            </a><a href="play/18">
-                <em>3</em>
-                <strong>无间道</strong>
-                <span title="香港电影史上永不过时的杰作 ">香港电影史上永不过时的杰作 </span>
-            </a><a href="play/19">
-                <em>4</em>
-                <strong>控方证人</strong>
-                <span title="比利·怀德满分作品 ">比利·怀德满分作品 </span>
-            </a><a href="play/20">
-                <em>5</em>
-                <strong>大话西游之大圣娶亲</strong>
-                <span title="一生所爱 ">一生所爱 </span>
-            </a><a href="play/21">
-                <em>6</em>
-                <strong>熔炉</strong>
-                <span title="我们一路奋战不是为了改变世界，而是为了不让世界改变我们 ">我们一路奋战不是为了改变世界，而是为了不让世界改变我们 </span>
-            </a><a href="play/22">
-                <em>7</em>
-                <strong>教父</strong>
-                <span title="千万不要记恨你的对手，这样会让你失去理智 ">千万不要记恨你的对手，这样会让你失去理智 </span>
-            </a><a href="play/23">
-                <em>8</em>
-                <strong>触不可及</strong>
-                <span title="满满温情的高雅喜剧 ">满满温情的高雅喜剧 </span>
-            </a><a href="play/24">
-                <em>9</em>
-                <strong>当幸福来敲门</strong>
-                <span title="平民励志片  ">平民励志片  </span>
-            </a><a href="play/25">
-                <em>10</em>
-                <strong>末代皇帝</strong>
-                <span title="“不要跟我比惨，我比你更惨”再适合这部电影不过了 ">“不要跟我比惨，我比你更惨”再适合这部电影不过了 </span>
-            </a></div>
-        </div>
-      </div><div class="module-block">
-        <div class="module">
-          <h2 class="title">动漫</h2>
-          <div class="video-list"><div class="video-item">
+            </div><div class="video-item">
               <a class="poster-card" href="play/30">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p462657443.webp" alt="蝙蝠侠：黑暗骑士" onerror="videoImgError(this)" />
+                <img src="image/movies/p462657443.webp" alt="蝙蝠侠：黑暗骑士"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -650,7 +665,7 @@
               <p>剧情 动作 科幻 犯罪 惊悚</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/31">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2614949805.webp" alt="哈利·波特与魔法石" onerror="videoImgError(this)" />
+                <img src="image/movies/p2614949805.webp" alt="哈利·波特与魔法石"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -664,7 +679,7 @@
               <p>奇幻 冒险</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/32">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2642829472.webp" alt="指环王3：王者无敌" onerror="videoImgError(this)" />
+                <img src="image/movies/p2642829472.webp" alt="指环王3：王者无敌"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -678,7 +693,7 @@
               <p>剧情 动作 奇幻 冒险</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/33">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2561305376.webp" alt="我不是药神" onerror="videoImgError(this)" />
+                <img src="image/movies/p2561305376.webp" alt="我不是药神"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -692,7 +707,7 @@
               <p>剧情 喜剧</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/34">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p1963126880.webp" alt="乱世佳人" onerror="videoImgError(this)" />
+                <img src="image/movies/p1963126880.webp" alt="乱世佳人"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -706,7 +721,7 @@
               <p>剧情 历史 爱情 战争</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/35">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2896589700.webp" alt="飞屋环游记" onerror="videoImgError(this)" />
+                <img src="image/movies/p2896589700.webp" alt="飞屋环游记"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -720,7 +735,7 @@
               <p>剧情 喜剧 动画 冒险</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/36">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2118532944.webp" alt="素媛" onerror="videoImgError(this)" />
+                <img src="image/movies/p2118532944.webp" alt="素媛"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -734,7 +749,7 @@
               <p>剧情</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/37">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2174346180.webp" alt="哈尔的移动城堡" onerror="videoImgError(this)" />
+                <img src="image/movies/p2174346180.webp" alt="哈尔的移动城堡"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -748,7 +763,7 @@
               <p>动画 奇幻 冒险</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/38">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2173577632.webp" alt="十二怒汉" onerror="videoImgError(this)" />
+                <img src="image/movies/p2173577632.webp" alt="十二怒汉"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -762,7 +777,7 @@
               <p>剧情</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/39">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2555295759.webp" alt="何以为家" onerror="videoImgError(this)" />
+                <img src="image/movies/p2555295759.webp" alt="何以为家"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -776,7 +791,7 @@
               <p>剧情</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/40">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2401676338.webp" alt="摔跤吧！爸爸" onerror="videoImgError(this)" />
+                <img src="image/movies/p2401676338.webp" alt="摔跤吧！爸爸"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -790,7 +805,7 @@
               <p>剧情 传记 运动 家庭</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/41">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p1512562287.webp" alt="让子弹飞" onerror="videoImgError(this)" />
+                <img src="image/movies/p1512562287.webp" alt="让子弹飞"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -804,7 +819,7 @@
               <p>剧情 喜剧 动作 西部</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/42">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2892380420.webp" alt="天空之城" onerror="videoImgError(this)" />
+                <img src="image/movies/p2892380420.webp" alt="天空之城"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -816,9 +831,58 @@
               </a>
               <h3>天空之城</h3>
               <p>动画 奇幻 冒险</p>
-            </div><div class="video-item">
+            </div></div>
+        </div>
+        <div class="sider">
+          <a href="category/3" class="title">动漫·热榜</a>
+          <div class="content"><a href="play/29">
+                <em>1</em>
+                <strong>活着</strong>
+                <span title="张艺谋最好的电影 ">张艺谋最好的电影 </span>
+            </a><a href="play/30">
+                <em>2</em>
+                <strong>蝙蝠侠：黑暗骑士</strong>
+                <span title="无尽的黑暗 ">无尽的黑暗 </span>
+            </a><a href="play/31">
+                <em>3</em>
+                <strong>哈利·波特与魔法石</strong>
+                <span title="童话世界的开端 ">童话世界的开端 </span>
+            </a><a href="play/32">
+                <em>4</em>
+                <strong>指环王3：王者无敌</strong>
+                <span title="史诗的终章 ">史诗的终章 </span>
+            </a><a href="play/33">
+                <em>5</em>
+                <strong>我不是药神</strong>
+                <span title="对我们国家而言，这样的电影多一部是一部 ">对我们国家而言，这样的电影多一部是一部 </span>
+            </a><a href="play/34">
+                <em>6</em>
+                <strong>乱世佳人</strong>
+                <span title="Tomorrow is another day.">Tomorrow is another day.</span>
+            </a><a href="play/35">
+                <em>7</em>
+                <strong>飞屋环游记</strong>
+                <span title="最后那些最无聊的事情，才是最值得怀念的  ">最后那些最无聊的事情，才是最值得怀念的  </span>
+            </a><a href="play/36">
+                <em>8</em>
+                <strong>素媛</strong>
+                <span title="受过伤害的人总是笑得最开心，因为他们不愿意让身边的人承受一样的痛苦 ">受过伤害的人总是笑得最开心，因为他们不愿意让身边的人承受一样的痛苦 </span>
+            </a><a href="play/37">
+                <em>9</em>
+                <strong>哈尔的移动城堡</strong>
+                <span title="带着心爱的人在天空飞翔 ">带着心爱的人在天空飞翔 </span>
+            </a><a href="play/38">
+                <em>10</em>
+                <strong>十二怒汉</strong>
+                <span title="1957年的理想主义  ">1957年的理想主义  </span>
+            </a></div>
+        </div>
+      </div><div class="module-block">
+        <div class="module">
+          <h2 class="title">综艺</h2>
+          <div class="video-list"><div class="video-item">
               <a class="poster-card" href="play/43">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p453924541.webp" alt="猫鼠游戏" onerror="videoImgError(this)" />
+                <img src="image/movies/p453924541.webp" alt="猫鼠游戏"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -830,58 +894,9 @@
               </a>
               <h3>猫鼠游戏</h3>
               <p>传记 犯罪 剧情</p>
-            </div></div>
-        </div>
-        <div class="sider">
-          <a href="category/3" class="title">动漫·热榜</a>
-          <div class="content"><a href="play/30">
-                <em>1</em>
-                <strong>蝙蝠侠：黑暗骑士</strong>
-                <span title="无尽的黑暗 ">无尽的黑暗 </span>
-            </a><a href="play/31">
-                <em>2</em>
-                <strong>哈利·波特与魔法石</strong>
-                <span title="童话世界的开端 ">童话世界的开端 </span>
-            </a><a href="play/32">
-                <em>3</em>
-                <strong>指环王3：王者无敌</strong>
-                <span title="史诗的终章 ">史诗的终章 </span>
-            </a><a href="play/33">
-                <em>4</em>
-                <strong>我不是药神</strong>
-                <span title="对我们国家而言，这样的电影多一部是一部 ">对我们国家而言，这样的电影多一部是一部 </span>
-            </a><a href="play/34">
-                <em>5</em>
-                <strong>乱世佳人</strong>
-                <span title="Tomorrow is another day.">Tomorrow is another day.</span>
-            </a><a href="play/35">
-                <em>6</em>
-                <strong>飞屋环游记</strong>
-                <span title="最后那些最无聊的事情，才是最值得怀念的  ">最后那些最无聊的事情，才是最值得怀念的  </span>
-            </a><a href="play/36">
-                <em>7</em>
-                <strong>素媛</strong>
-                <span title="受过伤害的人总是笑得最开心，因为他们不愿意让身边的人承受一样的痛苦 ">受过伤害的人总是笑得最开心，因为他们不愿意让身边的人承受一样的痛苦 </span>
-            </a><a href="play/37">
-                <em>8</em>
-                <strong>哈尔的移动城堡</strong>
-                <span title="带着心爱的人在天空飞翔 ">带着心爱的人在天空飞翔 </span>
-            </a><a href="play/38">
-                <em>9</em>
-                <strong>十二怒汉</strong>
-                <span title="1957年的理想主义  ">1957年的理想主义  </span>
-            </a><a href="play/39">
-                <em>10</em>
-                <strong>何以为家</strong>
-                <span title="凝视卑弱生命，用电影改变命运 ">凝视卑弱生命，用电影改变命运 </span>
-            </a></div>
-        </div>
-      </div><div class="module-block">
-        <div class="module">
-          <h2 class="title">综艺</h2>
-          <div class="video-list"><div class="video-item">
+            </div><div class="video-item">
               <a class="poster-card" href="play/44">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2553104888.webp" alt="鬼子来了" onerror="videoImgError(this)" />
+                <img src="image/movies/p2553104888.webp" alt="鬼子来了"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -895,7 +910,7 @@
               <p>剧情 喜剧</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/45">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2896590696.webp" alt="少年派的奇幻漂流" onerror="videoImgError(this)" />
+                <img src="image/movies/p2896590696.webp" alt="少年派的奇幻漂流"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -909,7 +924,7 @@
               <p>剧情 奇幻 冒险</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/46">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2554525534.webp" alt="海蒂和爷爷" onerror="videoImgError(this)" />
+                <img src="image/movies/p2554525534.webp" alt="海蒂和爷爷"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -923,7 +938,7 @@
               <p>剧情 冒险 家庭</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/47">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p1381339291.webp" alt="钢琴家" onerror="videoImgError(this)" />
+                <img src="image/movies/p1381339291.webp" alt="钢琴家"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -937,7 +952,7 @@
               <p>剧情 传记 战争 音乐</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/48">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2561721372.webp" alt="大话西游之月光宝盒" onerror="videoImgError(this)" />
+                <img src="image/movies/p2561721372.webp" alt="大话西游之月光宝盒"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -951,7 +966,7 @@
               <p>喜剧 爱情 奇幻 古装</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/49">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2640236255.webp" alt="指环王2：双塔奇兵" onerror="videoImgError(this)" />
+                <img src="image/movies/p2640236255.webp" alt="指环王2：双塔奇兵"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -965,7 +980,7 @@
               <p>剧情 动作 奇幻 冒险</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/50">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2550757929.webp" alt="闻香识女人" onerror="videoImgError(this)" />
+                <img src="image/movies/p2550757929.webp" alt="闻香识女人"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -979,7 +994,7 @@
               <p>剧情</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/51">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2189265085.webp" alt="罗马假日" onerror="videoImgError(this)" />
+                <img src="image/movies/p2189265085.webp" alt="罗马假日"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -993,7 +1008,7 @@
               <p>喜剧 剧情 爱情</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/52">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2575465690.webp" alt="死亡诗社" onerror="videoImgError(this)" />
+                <img src="image/movies/p2575465690.webp" alt="死亡诗社"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -1007,7 +1022,7 @@
               <p>剧情</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/53">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2531065411.webp" alt="绿皮书" onerror="videoImgError(this)" />
+                <img src="image/movies/p2531065411.webp" alt="绿皮书"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -1021,7 +1036,7 @@
               <p>剧情 喜剧 传记 音乐</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/54">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2653054340.webp" alt="天堂电影院" onerror="videoImgError(this)" />
+                <img src="image/movies/p2653054340.webp" alt="天堂电影院"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -1035,7 +1050,7 @@
               <p>剧情 爱情</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/55">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2184505167.webp" alt="大闹天宫" onerror="videoImgError(this)" />
+                <img src="image/movies/p2184505167.webp" alt="大闹天宫"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -1049,7 +1064,7 @@
               <p>剧情 动画 奇幻 古装</p>
             </div><div class="video-item">
               <a class="poster-card" href="play/56">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p2197698335.webp" alt="指环王1：护戒使者" onerror="videoImgError(this)" />
+                <img src="image/movies/p2197698335.webp" alt="指环王1：护戒使者"/>
                 <span class="play-icon">
                   <i class="iconfont">&#xe601;</i>
                 </span>
@@ -1061,64 +1076,50 @@
               </a>
               <h3>指环王1：护戒使者</h3>
               <p>剧情 动作 奇幻 冒险</p>
-            </div><div class="video-item">
-              <a class="poster-card" href="play/57">
-                <img src="https://raw.githubusercontent.com/codetown/viteplat/refs/heads/master/public/images/movies/p451926968.webp" alt="黑客帝国" onerror="videoImgError(this)" />
-                <span class="play-icon">
-                  <i class="iconfont">&#xe601;</i>
-                </span>
-                <span class="play-info">
-                  <strong>黑客帝国</strong>
-                  <span class="tags"><em>未知</em></span>
-                  <span class="desc">视觉革命 </span>
-                </span>
-              </a>
-              <h3>黑客帝国</h3>
-              <p>动作 科幻</p>
             </div></div>
         </div>
         <div class="sider">
           <a href="category/4" class="title">综艺·热榜</a>
-          <div class="content"><a href="play/44">
+          <div class="content"><a href="play/43">
                 <em>1</em>
+                <strong>猫鼠游戏</strong>
+                <span title="骗子大师和执著警探的你追我跑故事  ">骗子大师和执著警探的你追我跑故事  </span>
+            </a><a href="play/44">
+                <em>2</em>
                 <strong>鬼子来了</strong>
                 <span title="对敌人的仁慈，就是对自己残忍 ">对敌人的仁慈，就是对自己残忍 </span>
             </a><a href="play/45">
-                <em>2</em>
+                <em>3</em>
                 <strong>少年派的奇幻漂流</strong>
                 <span title="瑰丽壮观、无人能及的冒险之旅 ">瑰丽壮观、无人能及的冒险之旅 </span>
             </a><a href="play/46">
-                <em>3</em>
+                <em>4</em>
                 <strong>海蒂和爷爷</strong>
                 <span title="如果生活中有什么使你感到快乐，那就去做吧！不要管别人说什么 ">如果生活中有什么使你感到快乐，那就去做吧！不要管别人说什么 </span>
             </a><a href="play/47">
-                <em>4</em>
+                <em>5</em>
                 <strong>钢琴家</strong>
                 <span title="音乐能化解仇恨 ">音乐能化解仇恨 </span>
             </a><a href="play/48">
-                <em>5</em>
+                <em>6</em>
                 <strong>大话西游之月光宝盒</strong>
                 <span title="旷古烁今 ">旷古烁今 </span>
             </a><a href="play/49">
-                <em>6</em>
+                <em>7</em>
                 <strong>指环王2：双塔奇兵</strong>
                 <span title="承前启后的史诗篇章 ">承前启后的史诗篇章 </span>
             </a><a href="play/50">
-                <em>7</em>
+                <em>8</em>
                 <strong>闻香识女人</strong>
                 <span title="史上最美的探戈 ">史上最美的探戈 </span>
             </a><a href="play/51">
-                <em>8</em>
+                <em>9</em>
                 <strong>罗马假日</strong>
                 <span title="爱情哪怕只有一天 ">爱情哪怕只有一天 </span>
             </a><a href="play/52">
-                <em>9</em>
+                <em>10</em>
                 <strong>死亡诗社</strong>
                 <span title="当一个死水般的体制内出现一个活跃的变数时，所有的腐臭都站在了光明的对面 ">当一个死水般的体制内出现一个活跃的变数时，所有的腐臭都站在了光明的对面 </span>
-            </a><a href="play/53">
-                <em>10</em>
-                <strong>绿皮书</strong>
-                <span title="去除成见，需要勇气 ">去除成见，需要勇气 </span>
             </a></div>
         </div>
       </div></main>
@@ -1134,7 +1135,7 @@
 </footer>
 
   </body>
-  <script src="static/js/main.js"></script>
+  <script src="js/main.js"></script>
   <script>
     const swiper = new Swiper(".mySwiper", {
       loop: true,
@@ -1170,9 +1171,6 @@
       if (searchForm["keyword"].value != "") {
         searchForm.submit();
       }
-    }
-    const videoImgError=(e)=>{
-      e.src='/images/nopic.png'
     }
   </script>
 </html>
