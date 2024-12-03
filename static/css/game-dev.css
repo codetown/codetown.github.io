@@ -183,9 +183,12 @@ main>section {
 }
 
 .poster {
-    height: 540px;
+    padding-top:20%;
     background-size: 100% auto;
     background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height:160px;
 }
 
 .cb01 {
@@ -199,13 +202,20 @@ main>section {
 .poster>section {
     backdrop-filter: blur(4px);
     background-color: rgba(0, 0, 0, 0.3);
-    height: 540px;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .poster-inner {
     color: #fff;
     text-align: center;
-    padding-top: 200px;
 }
 
 .poster-inner>h1 {

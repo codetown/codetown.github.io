@@ -335,6 +335,8 @@ header.active .nav-menu>a:hover {
 /***首页专有开始***/
 .module {
     margin-bottom: 24px;
+    max-height:686px;
+    overflow: hidden;
 }
 
 .module h2 {
@@ -1186,7 +1188,8 @@ footer .copy a{
 }
 
 #cloud-tabs>a {
-    width:72px;
+    min-width:72px;
+    flex:1;
     text-align: center;
     height:32px;
     line-height:32px;
@@ -1258,7 +1261,8 @@ footer .copy a{
     border-radius: 4px;
     font-size: 12px;
     cursor: pointer;
-    width: 68px;
+    min-width: 68px;
+    flex:1;
     height: 32px;
     line-height: 30px;
     text-align: center;
