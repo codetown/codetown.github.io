@@ -1,0 +1,47 @@
+header {
+    background-color: rgb(250, 204, 21);
+    padding: 4px 0 8px 0;
+    margin-bottom: 24px;
+}
+
+header h1 {
+    margin: 0 auto;
+}
+
+header p {
+    margin: 0;
+}
+header>.main{
+    display: flex;
+    align-items: center;
+}
+header nav{
+    margin-left:auto;
+    display: flex;
+    column-gap: 1em;
+}
+nav a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+/* 动画效果 */
+nav a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 3px;
+    background: #000;
+    margin-top:3px;
+    transition: width 0.25s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+main,
+.main {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}

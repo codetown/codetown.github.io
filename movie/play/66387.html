@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奇清影视 - 播放 《阿甘正传》</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/plyr.css" />
+    <script src="js/plyr.js"></script>
+    <script src="js/hls.min.js"></script>
+    <style type="text/css">
+        .source-area{
+            display: none !important;
+        }
+    </style>
+</head>
+<body id="play-page">
+    <header id="header">
+        <div class="main">
+            <a href="/movie" class="logo">
+                <img src="images/logo.png" alt="奇清影视" />
+                <strong>奇清影视</strong>
+            </a>
+            <form id="search-form" method="get" target="_blank" action="search" class="search-box">
+                <input type="search" name="keyword" placeholder="搜索电影、电视剧、动漫、综艺" autocomplete="off" />
+                <i class="iconfont">&#xe679;</i>
+            </form>
+            <div class="nav-menu">
+                <a href="">电影</a><a href="">电视剧</a><a href="">动漫</a><a href="">综艺</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="video-view">
+            <div class="player-area">
+                <video id="player" controls crossorigin playsinline poster="images/poster.jpg">
+                </video>
+            </div>
+            <div class="source-area">
+                <div id="cloud-tabs"><a href="javascript:void(0);" onclick="setCloud('0');return false;">
+                        线路1
+                    </a></div>
+                <div id="tab-contents" class="tab-contents"><p class="play-list"><a href="https://vip.lzcdn2.com/20220318/40_023ee76a/index.m3u8" onclick="setSerie('0','0');return false;">阿甘正传</a></p></div>
+            </div>
+        </div>
+        <div class="video-info">
+            <div class="title-row">
+                <strong>阿甘正传</strong>
+                <p><em>导演：罗伯特·泽米吉斯</em></p>
+                
+            </div>
+            <div class="actors-row">主演：汤姆·汉克斯</div>
+            
+            <div class="remark">
+                内容简介：一部美国近现代史 
+            </div>
+            
+        </div>
+    </main>
+<footer>
+  <hr class="divider"/>
+  <div class="main copy">
+      <div>版权所有 Copyright&nbsp;&copy;&nbsp;CodeMorn All rights resevrved</div>
+      <div><strong>某某科技有限公司</strong>&nbsp;&nbsp;&nbsp;版权所有&nbsp;&nbsp;&nbsp;<a href="">苏ICP备000000号</a></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

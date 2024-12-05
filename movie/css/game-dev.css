@@ -1,0 +1,266 @@
+header {
+    height: 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+}
+
+header.sticky {
+    /* background: linear-gradient(#6340ff, #9f89ff); */
+    background: rgba(0, 0, 16, 0.6);
+    border-bottom: 1px solid #22222f;
+    backdrop-filter: blur(8px);
+}
+
+header>.container {
+    display: flex;
+    align-items: center;
+}
+
+/* footer {
+    padding: 24px;
+    justify-content:space-between;
+    border-top: 1px solid #f2f2f2;
+    background-color: #f6f6ff;
+    flex-wrap: wrap;
+    gap: 16px;
+}   
+footer p{
+    margin:0;
+}
+footer a {
+    color: #666;
+    text-decoration: none;
+    white-space: nowrap;
+} */
+/***页脚开始***/
+footer {
+    /* border-top: 2px solid greenyellow; */
+    /* background-color:#141618; */
+    font-size: 14px;
+    background-position:center bottom;
+    background-size:100% auto;
+}
+footer>section{
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+footer .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 0;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    column-gap:5em;
+}
+
+footer .main>a {
+    color: #ccc;
+    /* min-width: 5em; */
+    /* margin-bottom: 0.5em; */
+    text-align: center;
+}
+
+footer .feed {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2em;
+    width: 42.8%;
+    min-width: 320px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+footer .feed>a {
+    color: #eee;
+    min-width: 5em;
+    text-align: center;
+}
+.divider{
+    height:1px;
+    margin:0;
+    padding:0;
+    border:none;
+    overflow: hidden;
+    background-color:rgba(192, 192, 255, 0.3);
+}
+footer .copy {
+    height: 2.75em;
+    padding-top: 1.25em;
+    color: #f2f2f2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/***页脚结束***/
+header a.site-name {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    white-space: nowrap;
+}
+
+header a>svg {
+    margin-right: 8px;
+    width: 48px;
+    height: 48px;
+}
+
+header a>strong {
+    font-size: 24px;
+}
+
+header nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+
+header nav>a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    margin-top: 3px;
+    transition: width 0.2s;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+main {
+    min-height: calc(100vh - 130px);
+    margin: 0;
+}
+
+main>section {
+    margin-top: 48px;
+}
+
+.module-title {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.module-title>h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.module-title>p {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #666;
+    font-size: 12px;
+    margin-left: 2em;
+}
+
+.module-title a {
+    margin-left: auto;
+    text-decoration: none;
+    color: #999;
+}
+
+.poster {
+    padding-top:20%;
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height:160px;
+}
+
+.cb01 {
+    background-image: url("../images/cb01.png");
+}
+
+.cb02 {
+    background-image: url("../images/cb02.png");
+}
+
+.poster>section {
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.poster-inner {
+    color: #fff;
+    text-align: center;
+}
+
+.poster-inner>h1 {
+    margin-top: 0;
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.poster-inner>p {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 64px;
+}
+
+.poster-inner>a.black-button {
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #000;
+    /* 黑色背景 */
+    color: #fff;
+    /* 白色文字 */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* 平滑过渡效果 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* 阴影效果 */
+}
+
+/* 鼠标悬停效果 */
+.black-button:hover {
+    background-color: #333;
+    /* 悬停时加深背景颜色 */
+    transform: translateY(-2px);
+    /* 上升效果 */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    /* 加深阴影效果 */
+}
+
+/* 按钮激活效果 */
+.black-button:active {
+    transform: translateY(0);
+    /* 重置位置 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* 减弱阴影效果 */
+}
