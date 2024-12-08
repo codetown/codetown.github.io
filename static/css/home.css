@@ -1302,13 +1302,12 @@ footer .copy a{
 .title-row>p{
     margin:0;
     color:#aaa;
-    padding-right:24px;
 }
 
 .title-row>span {
     color: greenyellow;
     font-size:14px;
-    padding-left:12px;
+    padding-left:48px;
 }
 
 .actors-row {
