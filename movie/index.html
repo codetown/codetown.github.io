@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <base href="/movie/"><link rel="stylesheet" href="css/home.css" />
+    <base href="/movie/">
+    <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link
       rel="shortcut icon"
@@ -38,7 +39,7 @@
   </div>
 </header>
 
-    <div class="swiper mySwiper">
+    <div class="swiper">
       <div class="swiper-wrapper"><div class="swiper-slide">
           <a class="slider" href="play/251" target="_blank">
             <img src="https://img.zcool.cn/community/01c6615d3ae047a8012187f447cfef.jpg" alt="哪吒-魔童降世" loading="lazy"/>
@@ -1602,7 +1603,7 @@
   </body>
   <script src="js/main.js"></script>
   <script>
-    const swiper = new Swiper(".mySwiper", {
+    const swiper = new Swiper(".swiper", {
       loop: true,
       autoplay: true,
       navigation: {
