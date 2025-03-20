@@ -7,13 +7,13 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <base href="/movie/"><link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/carousel.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link
       rel="shortcut icon"
       href="images/logo.png"
       type="image/x-icon"
     />
-    <script src="js/carousel.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
   </head>
   <body id="home-page">
     
@@ -38,35 +38,18 @@
   </div>
 </header>
 
-    
-    <div class="carousel-container">
-      <div class="carousel">
-        <div class="slides"><div class="slide">
-            <img src="https://img.zcool.cn/community/01c6615d3ae047a8012187f447cfef.jpg" alt="哪吒-魔童降世" />
-            <div class="slide-content">
-              <div class="main">
-                <h2>哪吒-魔童降世</h2>
-                <p>哪吒-魔童降世</p>
-              </div>
-            </div>
-          </div><div class="slide">
-            <img src="https://tv.puui.qpic.cn/tv/0/mz_tv_image_frontend_1f0e95-5_841640384_1737718486153782_pic_1920x800?max_age=7776001" alt="遮天" />
-            <div class="slide-content">
-              <div class="main">
-                <h2>遮天</h2>
-                <p>遮天</p>
-              </div>
-            </div>
-          </div></div>
-        <button class="carousel-button prev" aria-label="Previous slide">
-          &#10094;
-        </button>
-        <button class="carousel-button next" aria-label="Next slide">
-          &#10095;
-        </button>
-
-        <div class="carousel-dots"><span class="dot" data-index="0"></span><span class="dot" data-index="1"></span></div>
-      </div>
+    <div class="swiper">
+      <div class="swiper-wrapper"><div class="swiper-slide">
+          <a class="slider" href="play/251" target="_blank">
+            <img src="https://img.zcool.cn/community/01c6615d3ae047a8012187f447cfef.jpg" alt="哪吒-魔童降世" loading="lazy"/>
+          </a>
+        </div><div class="swiper-slide">
+          <a class="slider" href="play/3" target="_blank">
+            <img src="https://tv.puui.qpic.cn/tv/0/mz_tv_image_frontend_1f0e95-5_841640384_1737718486153782_pic_1920x800?max_age=7776001" alt="遮天" loading="lazy"/>
+          </a>
+        </div></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
     <div class="cate-bar main">
       <ul><li>
@@ -77,16 +60,16 @@
             <div class="pop-content"><a href="play/66385">
                 <img src="images/movies/p480747492.webp" alt="肖申克的救赎" loading="lazy"/>
                 <span>肖申克的救赎</span>
-              </a><a href="play/66387">
+                </a><a href="play/66387">
                 <img src="images/movies/p2372307693.webp" alt="阿甘正传" loading="lazy"/>
                 <span>阿甘正传</span>
-              </a><a href="play/66388">
+                </a><a href="play/66388">
                 <img src="images/movies/p2896604953.webp" alt="泰坦尼克号" loading="lazy"/>
                 <span>泰坦尼克号</span>
-              </a><a href="play/66389">
+                </a><a href="play/66389">
                 <img src="images/movies/p511118051.webp" alt="这个杀手不太冷" loading="lazy"/>
                 <span>这个杀手不太冷</span>
-              </a></div>
+                </a></div>
           </div>
         </li><li>
           <a href="category/2" class="cate-name">电视剧</a>
@@ -96,16 +79,16 @@
             <div class="pop-content"><a href="play/66410">
                 <img src="images/movies/p2540924496.webp" alt="龙猫" loading="lazy"/>
                 <span>龙猫</span>
-              </a><a href="play/66411">
+                </a><a href="play/66411">
                 <img src="images/movies/p2896589968.webp" alt="寻梦环游记" loading="lazy"/>
                 <span>寻梦环游记</span>
-              </a><a href="play/66412">
+                </a><a href="play/66412">
                 <img src="images/movies/p501177648.webp" alt="怦然心动" loading="lazy"/>
                 <span>怦然心动</span>
-              </a><a href="play/66413">
+                </a><a href="play/66413">
                 <img src="images/movies/p2597919477.webp" alt="活着" loading="lazy"/>
                 <span>活着</span>
-              </a></div>
+                </a></div>
           </div>
         </li><li>
           <a href="category/3" class="cate-name">动漫</a>
@@ -115,16 +98,16 @@
             <div class="pop-content"><a href="play/66434">
                 <img src="images/movies/p2550757929.webp" alt="闻香识女人" loading="lazy"/>
                 <span>闻香识女人</span>
-              </a><a href="play/66435">
+                </a><a href="play/66435">
                 <img src="images/movies/p2189265085.webp" alt="罗马假日" loading="lazy"/>
                 <span>罗马假日</span>
-              </a><a href="play/66436">
+                </a><a href="play/66436">
                 <img src="images/movies/p2575465690.webp" alt="死亡诗社" loading="lazy"/>
                 <span>死亡诗社</span>
-              </a><a href="play/66437">
+                </a><a href="play/66437">
                 <img src="images/movies/p2531065411.webp" alt="绿皮书" loading="lazy"/>
                 <span>绿皮书</span>
-              </a></div>
+                </a></div>
           </div>
         </li><li>
           <a href="category/4" class="cate-name">综艺</a>
@@ -134,16 +117,16 @@
             <div class="pop-content"><a href="play/66458">
                 <img src="images/movies/p917846733.webp" alt="哈利·波特与死亡圣器(下)" loading="lazy"/>
                 <span>哈利·波特与死亡圣器(下)</span>
-              </a><a href="play/66459">
+                </a><a href="play/66459">
                 <img src="images/movies/p792238287.webp" alt="飞越疯人院" loading="lazy"/>
                 <span>飞越疯人院</span>
-              </a><a href="play/66460">
+                </a><a href="play/66460">
                 <img src="images/movies/p2165511465.webp" alt="小鞋子" loading="lazy"/>
                 <span>小鞋子</span>
-              </a><a href="play/66461">
+                </a><a href="play/66461">
                 <img src="images/movies/p1593414327.webp" alt="沉默的羔羊" loading="lazy"/>
                 <span>沉默的羔羊</span>
-              </a></div>
+                </a></div>
           </div>
         </li><li>
           <a href="category/5" class="cate-name">短剧</a>
@@ -153,16 +136,16 @@
             <div class="pop-content"><a href="play/66483">
                 <img src="images/movies/p1546987967.webp" alt="狩猎" loading="lazy"/>
                 <span>狩猎</span>
-              </a><a href="play/66484">
+                </a><a href="play/66484">
                 <img src="images/movies/p2357915564.webp" alt="唐伯虎点秋香" loading="lazy"/>
                 <span>唐伯虎点秋香</span>
-              </a><a href="play/66485">
+                </a><a href="play/66485">
                 <img src="images/movies/p1816276065.webp" alt="7号房的礼物" loading="lazy"/>
                 <span>7号房的礼物</span>
-              </a><a href="play/66486">
+                </a><a href="play/66486">
                 <img src="images/movies/p884763596.webp" alt="被嫌弃的松子的一生" loading="lazy"/>
                 <span>被嫌弃的松子的一生</span>
-              </a></div>
+                </a></div>
           </div>
         </li></ul>
     </div>
@@ -1619,6 +1602,14 @@
   </body>
   <script src="js/main.js"></script>
   <script>
+    const swiper = new Swiper(".swiper", {
+      loop: true,
+      autoplay: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
     const cateBarParent=document.querySelector(".cate-bar") 
     const cateBar=document.querySelector(".cate-bar>ul")
     const searchForm = document.querySelector("#search-form");
