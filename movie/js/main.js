@@ -1,6 +1,13 @@
 const form = document.getElementById("search-form");
+
 function search(e) {
-  const effectValue = e.currentTarget["keyword"].value.trim();
+  const keywordElement = e.target.elements.keyword;
+  if (!keywordElement) {
+    console.error("表单中未找到 keyword 元素");
+    return false;
+  }
+
+  const effectValue = keywordElement.value.trim();
   if (!effectValue) {
     e.preventDefault();
     e.stopPropagation();
@@ -8,56 +15,37 @@ function search(e) {
   }
   return true;
 }
+
 form.addEventListener("submit", search);
 
-/**
- * 处理图片加载失败事件
- * @param {Event} event - 事件对象
- */
 document.addEventListener(
   "error",
-  function (event) {
+  (event) => {
     if (event.target.tagName.toLowerCase() === "img") {
-      // 检查是否已经处理过错误
       if (event.target.getAttribute("data-error-handled") === "true") {
-        event.stopImmediatePropagation(); // 防止其他监听器处理
+        event.stopImmediatePropagation();
         return;
       }
 
-      // 标记此图片错误已处理
       event.target.setAttribute("data-error-handled", "true");
-
-      // 移除 onerror 事件处理器
       event.target.onerror = null;
-
-      // 设置默认图片
       event.target.src = "images/nopic.png";
-
-      // 阻止默认行为
       event.preventDefault();
       event.stopPropagation();
     }
   },
   true
-); // 使用 capture 模式
+);
 
 const playerOptions = {
   controls: [
     "play-large",
-    // 'restart',
-    // 'rewind',
     "play",
-    // 'fast-forward',
     "progress",
     "current-time",
-    // 'duration',
     "mute",
     "volume",
-    // 'captions',
     "settings",
-    // 'pip',
-    // 'airplay',
-    // 'download',
     "fullscreen",
   ],
   settings: ["quality", "speed"],
@@ -88,79 +76,120 @@ const playerOptions = {
   },
 };
 
-let gHls, gPlayer;
-let currentCloudIndex = 0,
-  currentSerieIndex = 0;
-const tabs = document.getElementById("cloud-tabs")?.children || [];
-const clouds = document.getElementById("tab-contents")?.children || [];
-const xlx = document.getElementById("xlx");
-const jjx = document.getElementById("jjx");
-console.info("tabs=>",tabs)
-console.info("tab-contents=>",clouds)
+const state = {
+  gHls: null,
+  gPlayer: null,
+  currentCloudIndex: 0,
+  currentSerieIndex: 0,
+  tabs: Array.from(document.getElementById("cloud-tabs")?.children || []),
+  clouds: Array.from(document.getElementById("tab-contents")?.children || []),
+  xlx: document.getElementById("xlx"),
+  jjx: document.getElementById("jjx"),
+  video: document.getElementById("player"),
+  videoTitle:
+    document.getElementById("video-title")?.innerText?.trim() || "视频默认名称",
+};
+
+const isM3u8Url = (url) => {
+  const pathname = new URL(url).pathname.toLowerCase();
+  return pathname.endsWith(".m3u8") || pathname.endsWith(".m3u");
+};
+
 function setSerie(cloudIndex, serieIndex) {
-  for (let index = 0; index < clouds.length; index++) {
-    if (index == cloudIndex) {
-      clouds[index].style = "display:flex";
-    } else {
-      clouds[index].style = "display:none";
-    }
+  if (
+    cloudIndex < 0 ||
+    cloudIndex >= state.clouds.length ||
+    serieIndex < 0 ||
+    serieIndex >= state.clouds[cloudIndex].children.length
+  ) {
+    console.error("无效的云或集索引");
+    return;
   }
+
+  state.clouds.forEach((cloud, index) => {
+    cloud.style.display = index === cloudIndex ? "flex" : "none";
+  });
+
   let fileURL = "";
-  for (let index = 0; index < clouds[cloudIndex].children.length; index++) {
-    const a = clouds[cloudIndex].children[index];
-    if (index == serieIndex) {
-      a.className = "active";
+  Array.from(state.clouds[cloudIndex]?.children || []).forEach((a, index) => {
+    a.className = index === serieIndex ? "active" : "normal";
+    if (index === serieIndex) {
       fileURL = a.href;
-    } else {
-      a.className = "normal";
     }
+  });
+
+  if (state.xlx) {
+    state.xlx.innerHTML = cloudIndex + 1;
   }
-  if(xlx){
-    xlx.innerHTML = cloudIndex + 1;
+
+  if (state.jjx) {
+    state.jjx.innerHTML =
+      state.clouds[cloudIndex].children[serieIndex]?.innerHTML || "";
   }
-  if(jjx){
-    jjx.innerHTML = clouds[cloudIndex].children[serieIndex].innerHTML;
-  }
-  currentCloudIndex = cloudIndex;
-  currentSerieIndex= serieIndex;
+
+  state.currentCloudIndex = cloudIndex;
+  state.currentSerieIndex = serieIndex;
+
   if (!fileURL) {
     return;
   }
-  if (gHls) {
-    gHls.destroy();
-  }
-  gHls = new Hls();
-  const video = document.getElementById("player");
-  gHls.loadSource(fileURL);
-  gHls.attachMedia(video);
-  // 监听 Hls.goog Events.MANIFEST_PARSED 事件，当播放列表解析完成后进行 Plyr 初始化
-  gHls.on(Hls.Events.MANIFEST_PARSED, function () {
-    if (!gPlayer) {
-      gPlayer = new Plyr(video, playerOptions);
+  if (isM3u8Url(fileURL)) {
+    if (state.gHls) {
+      state.gHls.destroy();
     }
-  });
+    state.gHls = new Hls();
+    state.gHls.loadSource(fileURL);
+    state.gHls.attachMedia(state.video);
+    state.gHls.on(Hls.Events.MANIFEST_PARSED, () => {
+      if (!state.gPlayer) {
+        state.gPlayer = new Plyr(state.video, playerOptions);
+      }
+    });
+  } else {
+    if (!state.gPlayer) {
+      state.gPlayer = new Plyr(state.video, playerOptions);
+    }
+    state.gPlayer.source = {
+      type: "video",
+      title: state.videoTitle,
+      sources: [{ src: fileURL, type: "video/mp4" }],
+    };
+  }
 }
+
 function setCloud(cloudIndex) {
-  for (let index = 0; index < tabs.length; index++) {
-    if (cloudIndex == index) {
-      currentCloudIndex = cloudIndex;
-      tabs[index].className = "active";
-      clouds[index].style = "display:flex";
-    } else {
-      tabs[index].className = "";
-      clouds[index].style = "display:none";
-    }
+  if (
+    cloudIndex < 0 ||
+    cloudIndex >= state.tabs.length ||
+    cloudIndex >= state.clouds.length
+  ) {
+    console.error("无效的云索引");
+    return;
   }
-  setSerie(cloudIndex, currentSerieIndex );
+
+  state.tabs.forEach((tab, index) => {
+    tab.className = index === cloudIndex ? "active" : "";
+  });
+
+  state.clouds.forEach((cloud, index) => {
+    cloud.style.display = index === cloudIndex ? "flex" : "none";
+  });
+
+  state.currentCloudIndex = cloudIndex;
+  setSerie(cloudIndex, state.currentSerieIndex);
 }
+
 function init() {
   if (!Hls.isSupported()) {
     alert("该浏览器不支持视频流播放，请更换浏览器打开本网站");
     return;
   }
-  setCloud("0");
+
+  if (state.tabs.length > 0 && state.clouds.length > 0) {
+    setCloud(0);
+  }
 }
 
-if (tabs.length > 0 && clouds.length > 0) {
+if (state.tabs.length > 0 && state.clouds.length > 0) {
   init();
 }
