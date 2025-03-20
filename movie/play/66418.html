@@ -24,7 +24,7 @@
                 <strong>奇清影视</strong>
             </a>
             <form id="search-form" method="get" target="_blank" action="search" class="search-box">
-                <input type="search" name="keyword" placeholder="搜索电影、电视剧、动漫、综艺" autocomplete="off" />
+                <input type="search" name="keyword" placeholder="搜索电影、电视剧、动漫、综艺、短剧" autocomplete="off" />
                 <i class="iconfont">&#xe679;</i>
             </form>
             <div class="nav-menu">
@@ -35,7 +35,7 @@
     <main>
         <div class="video-view">
             <div class="player-area">
-                <video id="player" controls crossorigin playsinline poster="images/poster.jpg">
+                <video id="player" controls crossorigin playsinline name="media"  poster="images/poster.jpg">
                 </video>
             </div>
             <div class="source-area">
@@ -47,7 +47,7 @@
         </div>
         <div class="video-info">
             <div class="title-row">
-                <strong>乱世佳人</strong>
+                <strong id="video-title">乱世佳人</strong>
                 <p><em>导演：维克多·弗莱明 乔治·库克</em></p>
                 
             </div>
@@ -66,6 +66,6 @@
       <div><strong>某某科技有限公司</strong>&nbsp;&nbsp;&nbsp;版权所有&nbsp;&nbsp;&nbsp;<a href="">苏ICP备000000号</a></div>
   </div>
 </footer>
-<script src="js/main.js"></script>
+<script src="js/main.min.js"></script>
 </body>
 </html>

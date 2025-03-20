@@ -24,7 +24,7 @@
                 <strong>奇清影视</strong>
             </a>
             <form id="search-form" method="get" target="_blank" action="search" class="search-box">
-                <input type="search" name="keyword" placeholder="搜索电影、电视剧、动漫、综艺" autocomplete="off" />
+                <input type="search" name="keyword" placeholder="搜索电影、电视剧、动漫、综艺、短剧" autocomplete="off" />
                 <i class="iconfont">&#xe679;</i>
             </form>
             <div class="nav-menu">
@@ -35,19 +35,19 @@
     <main>
         <div class="video-view">
             <div class="player-area">
-                <video id="player" controls crossorigin playsinline poster="images/poster.jpg">
+                <video id="player" controls crossorigin playsinline name="media"  poster="images/poster.jpg">
                 </video>
             </div>
             <div class="source-area">
                 <div id="cloud-tabs"><a href="javascript:void(0);" onclick="setCloud('0');return false;">
                         线路1
                     </a></div>
-                <div id="tab-contents" class="tab-contents"><p class="play-list"><a href="https://vip.lz-cdn.com/20220828/30516_297c85f8/index.m3u8" onclick="setSerie('0','0');return false;">这个杀手不太冷</a></p></div>
+                <div id="tab-contents" class="tab-contents"><p class="play-list"><a href="https://vip.lzcdn2.com/20220318/8_858ff095/index.m3u8" onclick="setSerie('0','0');return false;">这个杀手不太冷</a></p></div>
             </div>
         </div>
         <div class="video-info">
             <div class="title-row">
-                <strong>这个杀手不太冷</strong>
+                <strong id="video-title">这个杀手不太冷</strong>
                 <p><em>导演：吕克·贝松</em></p>
                 
             </div>
@@ -66,6 +66,6 @@
       <div><strong>某某科技有限公司</strong>&nbsp;&nbsp;&nbsp;版权所有&nbsp;&nbsp;&nbsp;<a href="">苏ICP备000000号</a></div>
   </div>
 </footer>
-<script src="js/main.js"></script>
+<script src="js/main.min.js"></script>
 </body>
 </html>
