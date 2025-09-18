@@ -1,439 +1,848 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>全栈开发工程师 — 个人网站</title>
+    <meta name="description" content="" />
+    <style>
+      /* -------------------------
+       Design system & variables
+       ------------------------- */
+      :root {
+        --bg: #0f1724;
+        --card: #0b1220;
+        --muted: #9aa4b2;
+        --accent: #7c5cff;
+        --accent-2: #00d4ff;
+        --glass: rgba(255, 255, 255, 0.04);
+        --radius: 16px;
+        --max-width: 1100px;
+        --gap: 18px;
+        color-scheme: dark;
+      }
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Dev</title>
-    <meta name="keywords" content="Game Assets" />
-    <meta name="description" content="Game Assets" />
-    <link rel="stylesheet" href="css/mybase.css" />
-    <link rel="stylesheet" href="css/game-dev.css" />
-    <link rel="icon" href="/favicon.ico" />
-</head>
+      /* Light mode variables (JS toggle) */
+      :root.light {
+        --bg: #f6f7fb;
+        --card: #ffffff;
+        --muted: #5b6770;
+        --accent: #6b46ff;
+        --accent-2: #00a5cf;
+        --glass: rgba(11, 18, 32, 0.03);
+        color-scheme: light;
+      }
 
-<body>
-    
-<header id="header">
+      /* -------------------------
+       Base reset + layout
+       ------------------------- */
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        background: radial-gradient(
+            1200px 600px at 10% 10%,
+            rgba(124, 92, 255, 0.08),
+            transparent
+          ),
+          var(--bg);
+        color: #e6eef8;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        line-height: 1.45;
+        padding-bottom: 60px;
+      }
+
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* -------------------------
+       Top navigation
+       ------------------------- */
+      header {
+        position: sticky;
+        top: 12px;
+        z-index: 60;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        backdrop-filter: blur(6px);
+        background: linear-gradient(180deg, var(--glass), transparent);
+        padding: 8px;
+        border-radius: 16px;
+        box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .logo {
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: white;
+        box-shadow: 0 6px 20px rgba(11, 18, 30, 0.6);
+      }
+      nav ul {
+        display: flex;
+        gap: 12px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+      nav a:hover {
+        color: var(--accent);
+        background: transparent;
+      }
+
+      .actions {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 8px;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.03),
+          transparent
+        );
+        border: 1px solid rgba(255, 255, 255, 0.03);
+        color: var(--muted);
+        cursor: pointer;
+        font-weight: 600;
+      }
+      .btn.primary {
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        color: white;
+        border: 0;
+      }
+      .btn:hover {
+        opacity: 0.9;
+      }
+      .btn.primary:hover {
+        opacity: 0.9;
+      }
+      a.btn {
+        text-decoration: none;
+      }
+
+      /* -------------------------
+       Hero
+       ------------------------- */
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 360px;
+        gap: 32px;
+        align-items: center;
+        margin-top: 32px;
+      }
+      .card {
+        background: var(--card);
+        padding: 26px;
+        border-radius: var(--radius);
+        box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+      }
+      .intro h1 {
+        margin: 0;
+        font-size: 32px;
+        line-height: 1.02;
+      }
+      .intro p {
+        margin: 16px 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .avatar {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        padding: 20px;
+        border-radius: 12px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          transparent
+        );
+      }
+      .avatar svg {
+        width: 160px;
+        height: 160px;
+        border-radius: 12px;
+      }
+
+      /* Skill badges */
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+      }
+      .badge {
+        padding: 4px 8px;
+        border-radius: 999px;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.02),
+          transparent
+        );
+        font-weight: 700;
+        color: var(--muted);
+        border: 1px solid rgba(100, 100, 255, 0.4);
+      }
+
+      /* -------------------------
+       Sections
+       ------------------------- */
+      section {
+        margin-top: 22px;
+      }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 360px;
+        gap: 18px;
+      }
+
+      /* Projects
+    ------------------------- */
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 16px;
+      }
+      .project {
+        padding: 16px;
+        border-radius: 12px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          transparent
+        );
+        border: 1px solid rgba(255, 255, 255, 0.03);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .project h3 {
+        margin: 0;
+        font-size: 16px;
+      }
+      .tech {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .pill {
+        font-size: 12px;
+        padding: 6px 8px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.02);
+        color: var(--muted);
+      }
+
+      /* Timeline */
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .item {
+        display: flex;
+        gap: 12px;
+      }
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--accent);
+        margin-top: 6px;
+      }
+
+      /* Skill bars */
+      .skill-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .skill-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .skill-name {
+        width: 140px;
+        font-weight: 700;
+      }
+      .bar {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.03);
+        height: 12px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .bar > i {
+        display: block;
+        height: 100%;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        border-radius: 8px;
+        width: 0%;
+        transition: width 900ms cubic-bezier(0.2, 0.9, 0.3, 1);
+      }
+
+      /* Contact */
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      input,
+      textarea {
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.03);
+        background: transparent;
+        color: inherit;
+      }
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+      input:focus,
+      textarea:focus {
+        outline: 2px solid var(--accent);
+        border-color: var(--accent);
+      }
+
+      /* Footer */
+      footer {
+        opacity: 0.85;
+        margin-top: 32px;
+        text-align: center;
+        color: var(--muted);
+      }
+
+      /* -------------------------
+       Responsive
+       ------------------------- */
+      @media (max-width: 980px) {
+        .hero,
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+        nav ul {
+          display: none;
+        }
+        .nav {
+          padding: 12px;
+        }
+        .hero {
+          gap: 18px;
+          margin-top: 18px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .logo {
+          width: 44px;
+          height: 44px;
+        }
+        .avatar svg {
+          width: 120px;
+          height: 120px;
+        }
+        .badges {
+          gap: 6px;
+        }
+        .badge {
+          padding: 6px 8px;
+          font-size: 16px;
+        }
+      }
+
+      /* small print / printing */
+      @media print {
+        body {
+          background: white;
+          color: black;
+        }
+        .nav,
+        .actions {
+          display: none;
+        }
+        .card {
+          box-shadow: none;
+          border: 1px solid #ccc;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
-        <a href="#" class="site-name">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m7.5 4.27 9 5.15"></path>
-                <path
-                    d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z">
-                </path>
-                <path d="m3.3 7 8.7 5 8.7-5"></path>
-                <path d="M12 22V12"></path>
-            </svg>
-            <strong>Game Assets</strong>
-        </a>
-        <nav>
-            <a href="#">
-                Characters
-            </a>
-            <a href="#">
-                Backgrounds
-            </a>
-            <a href="#">
-                Audio
-            </a>
-            <a href="#">
-                3D Models
-            </a>
-        </nav>
-    </div>
-</header>
+      <header>
+        <div class="nav">
+          <div class="brand">
+            <div class="logo">EL</div>
+            <div>
+              <div style="font-weight: 800">刘工程师（Engineer Liu）</div>
+              <div style="font-size: 12px; color: var(--muted)">
+                全栈工程师（偏前端） — Frontend & Backend
+              </div>
+            </div>
+          </div>
 
-    <div class="poster cb01">
-        <section>
-            <div class="container poster-inner">
-                <h1>Share Your Game Assets / 分享你的素材</h1>
-                <p>Contribute your own game assets to the community and help other developers bring their projects
-                    to life.</p>
-                <a class="black-button" href="/game-dev/asset-list">Submit Asset</a>
+          <nav aria-label="Main navigation">
+            <ul>
+              <li><a href="#about">关于</a></li>
+              <li><a href="#projects">作品</a></li>
+              <li><a href="#skills">技能</a></li>
+              <li><a href="#contact">联系</a></li>
+            </ul>
+          </nav>
+
+          <div class="actions">
+            <button class="btn" id="copyEmail" title="复制邮箱">📧 邮箱</button>
+            <!-- <button class="btn" id="themeToggle" title="切换主题">🌙</button> -->
+            <a class="btn primary" href="#contact">联系我</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="card intro">
+            <h1>全栈工程师 — 专注于高质量可维护的产品</h1>
+            <p>
+              专长前端：Vite · React Hooks · Zustand · Ant Design；后端：Go ·
+              Gin · GORM · PostgreSQL /
+              MySQL。使用现代工程化方案搭建可扩展的生产级系统。
+            </p>
+
+            <div class="badges">
+              <span class="badge">Vite</span>
+              <span class="badge">React Hooks</span>
+              <span class="badge">Zustand</span>
+              <span class="badge">Ant Design</span>
+              <span class="badge">Go</span>
+              <span class="badge">Gin</span>
+              <span class="badge">GORM</span>
+              <span class="badge">Postgres</span>
+              <span class="badge">MySQL</span>
+              <span class="badge">Flutter</span>
+              <span class="badge">Vue3</span>
             </div>
+
+            <div style="margin-top: 18px; display: flex; gap: 12px">
+              <a class="btn primary" href="#projects">查看作品</a>
+              <a class="btn" href="#contact">下载简历</a>
+            </div>
+          </div>
+
+          <aside class="card avatar" aria-hidden="true">
+            <!-- Decorative SVG avatar -->
+            <svg
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="avatar"
+            >
+              <defs>
+                <linearGradient id="g" x1="0" x2="1">
+                  <stop offset="0" stop-color="#7c5cff" />
+                  <stop offset="1" stop-color="#00d4ff" />
+                </linearGradient>
+              </defs>
+              <rect width="200" height="200" rx="20" fill="url(#g)" />
+              <g transform="translate(30,38)" fill="#fff" opacity="0.95">
+                <circle cx="70" cy="36" r="26" fill="#fff" opacity="0.12" />
+                <circle cx="70" cy="36" r="22" fill="#fff" />
+                <rect
+                  x="14"
+                  y="82"
+                  width="112"
+                  height="8"
+                  rx="4"
+                  opacity="0.18"
+                />
+                <rect
+                  x="14"
+                  y="96"
+                  width="112"
+                  height="8"
+                  rx="4"
+                  opacity="0.08"
+                />
+              </g>
+            </svg>
+          </aside>
         </section>
+
+        <!-- Projects & Sidebar -->
+        <section id="projects" class="grid-2">
+          <div>
+            <div class="card">
+              <h2>精选项目</h2>
+              <p style="color: var(--muted)">
+                每个项目都包含可复现的工程化步骤。下面是项目摘要与关键技术。
+              </p>
+              <div class="projects" style="margin-top: 12px">
+                <article class="project">
+                  <h3>通用后台管理系统</h3>
+                  <div class="tech">
+                    <span class="pill">Vite</span><span class="pill">React</span
+                    ><span class="pill">Ant Design</span
+                    ><span class="pill">Zustand</span>
+                  </div>
+                  <p style="color: var(--muted); margin-top: 8px">
+                    <a
+                      style="color: #6688ff; text-decoration: none"
+                      target="_blank"
+                      href="https://viteplat.vercel.app/"
+                      >从0搭建一个生产级通用后台管理系统前端工程。封装了通用的查询表单和数据写入表单等常用的组件，提高代码复用率。</a
+                    >
+                  </p>
+                </article>
+
+                <!-- <article class="project">
+                  <h3>实时协作平台（P2P + WebSocket）</h3>
+                  <div class="tech">
+                    <span class="pill">React Hooks</span
+                    ><span class="pill">WebSocket</span
+                    ><span class="pill">Gin</span
+                    ><span class="pill">Docker</span>
+                  </div>
+                  <p style="color: var(--muted); margin-top: 8px">
+                    功能：多人实时协作、消息历史持久化、回滚与乐观更新。
+                  </p>
+                </article> -->
+
+                <article class="project">
+                  <h3>在线视频点播平台</h3>
+                  <div class="tech">
+                    <span class="pill">Go</span><span class="pill">Gin</span
+                    ><span class="pill">GORM</span
+                    ><span class="pill">PostgreSQL</span>
+                  </div>
+                  <p style="color: var(--muted); margin-top: 8px">
+                    <a
+                      style="color: #6688ff; text-decoration: none"
+                      target="_blank"
+                      href="/movie"
+                      >实现了首页视频列表的分类展示，视频的搜索查询，以及视频的点击播放，
+                      以及通过动态数据上生成静态页面（类似于SSG）</a
+                    >
+                  </p>
+                </article>
+              </div>
+            </div>
+
+            <div class="card" style="margin-top: 18px">
+              <h2>工作经历 & 教育</h2>
+              <div class="timeline" style="margin-top: 8px">
+                <div class="item">
+                  <div class="dot" aria-hidden></div>
+                  <div>
+                    <div style="font-weight: 800">
+                      高级后端工程师 · 某科技公司
+                    </div>
+                    <div style="color: var(--muted); font-size: 13px">
+                      2022 — 至今 · 负责微服务、接口设计与数据库建模
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="dot" aria-hidden></div>
+                  <div>
+                    <div style="font-weight: 800">
+                      前端工程师 · 某产品型公司
+                    </div>
+                    <div style="color: var(--muted); font-size: 13px">
+                      2019 — 2022 · 构建可复用组件、优化首屏性能
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside>
+            <div class="card">
+              <h3>专业技能速览</h3>
+              <div class="skill-list" style="margin-top: 8px">
+                <div class="skill-row"><div class="skill-name">前端</div></div>
+                <div class="skill-row">
+                  <div class="skill-name">React</div>
+                  <div class="bar"><i data-percent="90"></i></div>
+                </div>
+                <div class="skill-row">
+                  <div class="skill-name">Ant Design</div>
+                  <div class="bar"><i data-percent="80"></i></div>
+                </div>
+                <div class="skill-row"><div class="skill-name">后端</div></div>
+                <div class="skill-row">
+                  <div class="skill-name">Go / Gin</div>
+                  <div class="bar"><i data-percent="90"></i></div>
+                </div>
+                <div class="skill-row">
+                  <div class="skill-name">MySQL</div>
+                  <div class="bar"><i data-percent="80"></i></div>
+                </div>
+                <div class="skill-row">
+                  <div class="skill-name">PostgreSQL</div>
+                  <div class="bar"><i data-percent="80"></i></div>
+                </div>
+                <div class="skill-row">
+                  <div class="skill-name">移动端</div>
+                </div>
+                <div class="skill-row">
+                  <div class="skill-name">Flutter</div>
+                  <div class="bar"><i data-percent="92"></i></div>
+                </div>
+              </div>
+
+              <div
+                style="
+                  margin-top: 16px;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 8px;
+                "
+              >
+                <a class="btn" href="#contact">📄 简历（PDF）</a>
+                <a
+                  class="btn"
+                  target="_blank"
+                  href="https://github.com/codetown?tab=repositories"
+                  >📦 GitHub / 项目</a
+                >
+              </div>
+            </div>
+
+            <!-- <div class="card" style="margin-top: 18px">
+              <h3>技术亮点</h3>
+              <ul
+                style="color: var(--muted); padding-left: 18px; margin: 8px 0"
+              >
+                <li>工程化：Vite + monorepo + GitHub Actions</li>
+                <li>高并发设计（Go，Connection Pool）</li>
+                <li>对数据库建模及索引优化有丰富经验</li>
+                <li>重视测试：单元测试 + 集成测试</li>
+              </ul>
+            </div> -->
+          </aside>
+        </section>
+
+        <section id="skills">
+          <div class="card">
+            <h2>深入技能</h2>
+            <p style="color: var(--muted)">
+              下面列出与项目实践结合的技能说明 —
+              包含遇到的问题与解决方案（节选）。
+            </p>
+            <div
+              style="
+                margin-top: 12px;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+              "
+            >
+              <div
+                class="card"
+                style="
+                  padding: 16px;
+                  background: transparent;
+                  border: 1px dashed rgba(255, 255, 255, 0.03);
+                "
+              >
+                <h4>前端工程化</h4>
+                <p style="color: var(--muted); margin: 8px 0">
+                  使用 Vite + React Hooks 构建高性能 SPA；SCSS样式编写
+                  高度还原高保真设计；使用 Zustand 做细粒度状态管理，降低
+                  Context 重渲染开销。
+                </p>
+              </div>
+
+              <div
+                class="card"
+                style="
+                  padding: 16px;
+                  background: transparent;
+                  border: 1px dashed rgba(255, 255, 255, 0.03);
+                "
+              >
+                <h4>后端与数据库</h4>
+                <p style="color: var(--muted); margin: 8px 0">
+                  Go + Gin 提供高吞吐与低延迟；使用 GORM 做 ORM
+                  层，同时在关键路径使用原生 SQL 优化；Postgres
+                  负责复杂查询、MySQL 用于高并发事务场景。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact">
+          <div class="card">
+            <h2>联系我</h2>
+            <p style="color: var(--muted)">
+              如果你想一起合作、招聘或技术交流，请填写下面的表单。
+            </p>
+
+            <form id="contactForm" novalidate>
+              <input id="name" placeholder="你的姓名" required />
+              <input id="email" type="email" placeholder="你的邮箱" required />
+              <input id="subject" placeholder="主题" />
+              <textarea
+                id="message"
+                placeholder="项目描述或其他信息"
+                required
+              ></textarea>
+              <div style="display: flex; gap: 8px">
+                <button class="btn primary" type="submit">发送消息</button>
+                <button class="btn" type="reset">重置</button>
+              </div>
+              <div
+                id="formMsg"
+                style="color: var(--muted); margin-top: 8px; font-size: 16px"
+              ></div>
+            </form>
+          </div>
+        </section>
+
+        <footer>
+          <div class="card" style="text-align: center">
+            <div style="font-weight: 800">刘工程师 · 全栈工程师</div>
+            <div style="color: var(--muted); font-size: 13px; margin-top: 6px">
+              © <span id="year"></span> All rights reserved.
+            </div>
+          </div>
+        </footer>
+      </main>
     </div>
-    <main class="container">
-        <section>
-            <div class="module-title">
-                <h2>免费素材下载</h2>
-                <p>本列表里的素材可以完全商用</p>
-                <a href="">view all</a>
-            </div>
-            <div class="gutter-grid">
-                
-                <div class="app-card">
-                    <img src="images/splash-01.jpg" alt="Firefox" />
-                    <strong>Firefox</strong>
-                    <p>一款免费且开源的网络浏览器。</p>
-                    <span><a>Download</a></span>
-                </div>
-                
-                <div class="app-card">
-                    <img src="images/splash-02.jpg" alt="LibreOffice" />
-                    <strong>LibreOffice</strong>
-                    <p>一款功能强大的办公套件。</p>
-                    <span><a>Download</a></span>
-                </div>
-                
-                <div class="app-card">
-                    <img src="images/splash-03.jpg" alt="VLC Media Player" />
-                    <strong>VLC Media Player</strong>
-                    <p>一款高度便携的多媒体播放器，支持多种音频和视频压缩格式。</p>
-                    <span><a>Download</a></span>
-                </div>
-                
-                <div class="app-card">
-                    <img src="images/splash-04.jpg" alt="GIMP" />
-                    <strong>GIMP</strong>
-                    <p>一款先进的图形编辑器，用于照片修复、图像合成和图像创作。</p>
-                    <span><a>Download</a></span>
-                </div>
-                
-                <div class="app-card">
-                    <img src="images/splash-05.jpg" alt="Apache" />
-                    <strong>Apache</strong>
-                    <p>最广泛使用的Web服务器软件。</p>
-                    <span><a>Download</a></span>
-                </div>
-                
-                <div class="app-card">
-                    <img src="images/splash-06.jpg" alt="MySQL" />
-                    <strong>MySQL</strong>
-                    <p>一款快速、可靠且安全的数据库系统。</p>
-                    <span><a>Download</a></span>
-                </div>
-                
-                <div class="app-card">
-                    <img src="images/splash-07.jpg" alt="Git" />
-                    <strong>Git</strong>
-                    <p>一款分布式版本控制系统，旨在高效地处理从小型到大型项目的各种规模。</p>
-                    <span><a>Download</a></span>
-                </div>
-                
-                <div class="app-card">
-                    <img src="images/splash-08.jpg" alt="Docker" />
-                    <strong>Docker</strong>
-                    <p>一个平台，允许开发人员打包、分发、运行和管理应用程序在称为容器的软件包中。</p>
-                    <span><a>Download</a></span>
-                </div>
-                
-                <div class="app-card">
-                    <img src="images/splash-09.jpg" alt="PostgreSql" />
-                    <strong>PostgreSql</strong>
-                    <p>一个开放源代码、跨平台的、快速、可靠且安全的数据库系统。</p>
-                    <span><a>Download</a></span>
-                </div>
-                
-                <div class="app-card">
-                    <img src="images/splash-10.jpg" alt="Zig" />
-                    <strong>Zig</strong>
-                    <p>一种清晰且强大的面向对象的编程语言。</p>
-                    <span><a>Download</a></span>
-                </div>
-                
-            </div>
-        </section>
-        <section>
-            <div class="module-title">
-                <h2>商用素材购买</h2>
-                <p>本列表里的素材需付费购买</p>
-                <a href="">view all</a>
-            </div>
-            <div class="gutter-grid">
-                
-                <div class="cate-card">
-                    <img src="images/splash-01.jpg" alt="Firefox" />
-                    <h3>Firefox</h3>
-                    <p>
-                        一款免费且开源的网络浏览器。
-                    </p>
-                    <a href="">Learn More</a>
-                </div>
-                
-                <div class="cate-card">
-                    <img src="images/splash-02.jpg" alt="LibreOffice" />
-                    <h3>LibreOffice</h3>
-                    <p>
-                        一款功能强大的办公套件。
-                    </p>
-                    <a href="">Learn More</a>
-                </div>
-                
-                <div class="cate-card">
-                    <img src="images/splash-03.jpg" alt="VLC Media Player" />
-                    <h3>VLC Media Player</h3>
-                    <p>
-                        一款高度便携的多媒体播放器，支持多种音频和视频压缩格式。
-                    </p>
-                    <a href="">Learn More</a>
-                </div>
-                
-                <div class="cate-card">
-                    <img src="images/splash-04.jpg" alt="GIMP" />
-                    <h3>GIMP</h3>
-                    <p>
-                        一款先进的图形编辑器，用于照片修复、图像合成和图像创作。
-                    </p>
-                    <a href="">Learn More</a>
-                </div>
-                
-                <div class="cate-card">
-                    <img src="images/splash-05.jpg" alt="Apache" />
-                    <h3>Apache</h3>
-                    <p>
-                        最广泛使用的Web服务器软件。
-                    </p>
-                    <a href="">Learn More</a>
-                </div>
-                
-                <div class="cate-card">
-                    <img src="images/splash-06.jpg" alt="MySQL" />
-                    <h3>MySQL</h3>
-                    <p>
-                        一款快速、可靠且安全的数据库系统。
-                    </p>
-                    <a href="">Learn More</a>
-                </div>
-                
-                <div class="cate-card">
-                    <img src="images/splash-07.jpg" alt="Git" />
-                    <h3>Git</h3>
-                    <p>
-                        一款分布式版本控制系统，旨在高效地处理从小型到大型项目的各种规模。
-                    </p>
-                    <a href="">Learn More</a>
-                </div>
-                
-                <div class="cate-card">
-                    <img src="images/splash-08.jpg" alt="Docker" />
-                    <h3>Docker</h3>
-                    <p>
-                        一个平台，允许开发人员打包、分发、运行和管理应用程序在称为容器的软件包中。
-                    </p>
-                    <a href="">Learn More</a>
-                </div>
-                
-                <div class="cate-card">
-                    <img src="images/splash-09.jpg" alt="PostgreSql" />
-                    <h3>PostgreSql</h3>
-                    <p>
-                        一个开放源代码、跨平台的、快速、可靠且安全的数据库系统。
-                    </p>
-                    <a href="">Learn More</a>
-                </div>
-                
-                <div class="cate-card">
-                    <img src="images/splash-10.jpg" alt="Zig" />
-                    <h3>Zig</h3>
-                    <p>
-                        一种清晰且强大的面向对象的编程语言。
-                    </p>
-                    <a href="">Learn More</a>
-                </div>
-                
-            </div>
-        </section>
-        <section>
-            <div class="module-title">
-                <h2>商用素材2购买</h2>
-                <p>本列表里的素材需付费购买</p>
-                <a href="">view all</a>
-            </div>
-            <div class="gutter-grid">
-                
-                <div class="price-card">
-                    <div class="asset-viewer">
-                        <img src="images/splash-01.jpg" alt="Firefox" />
-                        <a href="assets.html">
-                            预览
-                        </a>
-                    </div>
-                    <h3>Firefox</h3>
-                    <p>@Auther:作者</p>
-                    <p>
-                        <strong class="price-number">$ 9.99</strong>
-                        <button class="blue-button">Add To Cart</button>
-                    </p>
-                </div>
-                
-                <div class="price-card">
-                    <div class="asset-viewer">
-                        <img src="images/splash-02.jpg" alt="LibreOffice" />
-                        <a href="assets.html">
-                            预览
-                        </a>
-                    </div>
-                    <h3>LibreOffice</h3>
-                    <p>@Auther:作者</p>
-                    <p>
-                        <strong class="price-number">$ 9.99</strong>
-                        <button class="blue-button">Add To Cart</button>
-                    </p>
-                </div>
-                
-                <div class="price-card">
-                    <div class="asset-viewer">
-                        <img src="images/splash-03.jpg" alt="VLC Media Player" />
-                        <a href="assets.html">
-                            预览
-                        </a>
-                    </div>
-                    <h3>VLC Media Player</h3>
-                    <p>@Auther:作者</p>
-                    <p>
-                        <strong class="price-number">$ 9.99</strong>
-                        <button class="blue-button">Add To Cart</button>
-                    </p>
-                </div>
-                
-                <div class="price-card">
-                    <div class="asset-viewer">
-                        <img src="images/splash-04.jpg" alt="GIMP" />
-                        <a href="assets.html">
-                            预览
-                        </a>
-                    </div>
-                    <h3>GIMP</h3>
-                    <p>@Auther:作者</p>
-                    <p>
-                        <strong class="price-number">$ 9.99</strong>
-                        <button class="blue-button">Add To Cart</button>
-                    </p>
-                </div>
-                
-                <div class="price-card">
-                    <div class="asset-viewer">
-                        <img src="images/splash-05.jpg" alt="Apache" />
-                        <a href="assets.html">
-                            预览
-                        </a>
-                    </div>
-                    <h3>Apache</h3>
-                    <p>@Auther:作者</p>
-                    <p>
-                        <strong class="price-number">$ 9.99</strong>
-                        <button class="blue-button">Add To Cart</button>
-                    </p>
-                </div>
-                
-                <div class="price-card">
-                    <div class="asset-viewer">
-                        <img src="images/splash-06.jpg" alt="MySQL" />
-                        <a href="assets.html">
-                            预览
-                        </a>
-                    </div>
-                    <h3>MySQL</h3>
-                    <p>@Auther:作者</p>
-                    <p>
-                        <strong class="price-number">$ 9.99</strong>
-                        <button class="blue-button">Add To Cart</button>
-                    </p>
-                </div>
-                
-                <div class="price-card">
-                    <div class="asset-viewer">
-                        <img src="images/splash-07.jpg" alt="Git" />
-                        <a href="assets.html">
-                            预览
-                        </a>
-                    </div>
-                    <h3>Git</h3>
-                    <p>@Auther:作者</p>
-                    <p>
-                        <strong class="price-number">$ 9.99</strong>
-                        <button class="blue-button">Add To Cart</button>
-                    </p>
-                </div>
-                
-                <div class="price-card">
-                    <div class="asset-viewer">
-                        <img src="images/splash-08.jpg" alt="Docker" />
-                        <a href="assets.html">
-                            预览
-                        </a>
-                    </div>
-                    <h3>Docker</h3>
-                    <p>@Auther:作者</p>
-                    <p>
-                        <strong class="price-number">$ 9.99</strong>
-                        <button class="blue-button">Add To Cart</button>
-                    </p>
-                </div>
-                
-                <div class="price-card">
-                    <div class="asset-viewer">
-                        <img src="images/splash-09.jpg" alt="PostgreSql" />
-                        <a href="assets.html">
-                            预览
-                        </a>
-                    </div>
-                    <h3>PostgreSql</h3>
-                    <p>@Auther:作者</p>
-                    <p>
-                        <strong class="price-number">$ 9.99</strong>
-                        <button class="blue-button">Add To Cart</button>
-                    </p>
-                </div>
-                
-                <div class="price-card">
-                    <div class="asset-viewer">
-                        <img src="images/splash-10.jpg" alt="Zig" />
-                        <a href="assets.html">
-                            预览
-                        </a>
-                    </div>
-                    <h3>Zig</h3>
-                    <p>@Auther:作者</p>
-                    <p>
-                        <strong class="price-number">$ 9.99</strong>
-                        <button class="blue-button">Add To Cart</button>
-                    </p>
-                </div>
-                
-            </div>
-        </section>
-    </main>
-    
-<footer class="cb01">
-    <section>
-        <div class="main container">
-            <a href="">公司介绍</a>
-            <a href="">新闻动态</a>
-            <a href="">联系方式</a>
-            <a href="">招聘信息</a>
-            <a href="">内容合作</a>
-            <a href="">广告合作</a>
-            <a href="">技术合作</a>
-            <a href="">用户协议</a>
-            <a href="">隐私政策</a>
-            <a href="">帮助反馈</a>
-        </div>
-        
-        <hr class="divider"/>
-        <div class="copy container">
-            <div>版权所有 Copyright&nbsp;&copy;&nbsp;CodeMorn All rights resevrved</div>
-            <div><strong>某某科技有限公司</strong>&nbsp;&nbsp;&nbsp;版权所有&nbsp;&nbsp;&nbsp;<a href="">苏ICP备000000号</a></div>
-        </div>
-    </section>
-</footer>
 
     <script>
-        window.addEventListener('scroll', function () {
-            const navbar = document.getElementById('header');
-            if (window.scrollY > 64) { 
-                navbar.classList.add('sticky');
-            } else {
-                navbar.classList.remove('sticky'); 
-            }
+      // -------------------------
+      // Small ES6 interactions
+      // -------------------------
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Theme toggle (light/dark) — toggles a class on :root
+      // const themeBtn = document.getElementById("themeToggle");
+      const root = document.documentElement;
+      const prefersLight =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: light)").matches;
+      // if (prefersLight) root.classList.add('light');
+
+      // themeBtn.addEventListener("click", () => {
+      //   root.classList.toggle("light");
+      //   themeBtn.textContent = root.classList.contains("light") ? "🌞" : "🌙";
+      // });
+
+      // Copy email
+      document
+        .getElementById("copyEmail")
+        .addEventListener("click", async (e) => {
+          const email = "codetown@aliyun.com";
+          try {
+            await navigator.clipboard.writeText(email);
+            e.target.textContent = "已复制 ✓";
+            setTimeout(() => (e.target.textContent = "📧 邮箱"), 1500);
+          } catch (err) {
+            alert("复制失败，请手动复制: " + email);
+          }
         });
-        
 
+      // Skill bars animation when visible
+      const bars = document.querySelectorAll(".bar i");
+      const animateBars = () =>
+        bars.forEach((b) => {
+          const p = Number(b.dataset.percent) || 0;
+          requestAnimationFrame(() => (b.style.width = p + "%"));
+        });
+      // simple visibility check
+      const io = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((ent) => ent.isIntersecting && animateBars()),
+        { threshold: 0.25 }
+      );
+      io.observe(document.querySelector("#projects"));
+
+      // Contact form (mocked)
+      const form = document.getElementById("contactForm");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const msg = document.getElementById("message").value.trim();
+        const out = document.getElementById("formMsg");
+        if (!name || !email || !msg) {
+          out.textContent = "请填写必填字段。";
+          return;
+        }
+        // Basic email regex
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+          out.textContent = "请输入有效的邮箱地址。";
+          return;
+        }
+
+        // Simulate send
+        out.textContent = "正在发送...";
+        setTimeout(() => {
+          out.textContent = "消息已发送 — 我会尽快回复你 🙏";
+          form.reset();
+        }, 900);
+      });
+
+      // Smooth scroll for internal links
+      document.querySelectorAll('a[href^="#"]').forEach((a) =>
+        a.addEventListener("click", (e) => {
+          const id = a.getAttribute("href");
+          if (id === "#") return;
+          const el = document.querySelector(id);
+          if (el) {
+            e.preventDefault();
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        })
+      );
+
+      // Accessibility: reduce motion
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        bars.forEach((b) => (b.style.transition = "none"));
+      }
     </script>
-</body>
-
+  </body>
 </html>
