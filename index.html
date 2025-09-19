@@ -10,15 +10,15 @@
        Design system & variables
        ------------------------- */
       :root {
-        --bg: #0f1724;
-        --card: #0b1220;
+        --bg: #1f2734;
+        --card: #0d1422;
         --muted: #9aa4b2;
         --accent: #7c5cff;
         --accent-2: #00d4ff;
         --glass: rgba(255, 255, 255, 0.04);
         --radius: 16px;
-        --max-width: 1100px;
-        --gap: 18px;
+        --max-width: 1120px;
+        --gap: 24px;
         color-scheme: dark;
       }
 
@@ -29,7 +29,7 @@
         --muted: #5b6770;
         --accent: #6b46ff;
         --accent-2: #00a5cf;
-        --glass: rgba(11, 18, 32, 0.03);
+        --glass: rgba(11, 18, 32, 0.1);
         color-scheme: light;
       }
 
@@ -45,8 +45,8 @@
       }
       body {
         margin: 0;
-        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial;
+        font-family: "PingFang SC", "Microsoft Yahei", "Helvetica Neue",
+          Helvetica, Arial, "Hiragino Sans GB", -apple-system, sans-serif;
         background: radial-gradient(
             1200px 600px at 10% 10%,
             rgba(124, 92, 255, 0.08),
@@ -56,14 +56,11 @@
         color: #e6eef8;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        line-height: 1.45;
-        padding-bottom: 60px;
       }
 
       .container {
         max-width: var(--max-width);
         margin: 0 auto;
-        padding: 0 24px;
       }
 
       /* -------------------------
@@ -71,24 +68,33 @@
        ------------------------- */
       header {
         position: sticky;
-        top: 12px;
+        top: 32px;
         z-index: 60;
       }
       .nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 12px;
+        gap: 16px;
         backdrop-filter: blur(6px);
         background: linear-gradient(180deg, var(--glass), transparent);
-        padding: 8px;
+        padding: 12px;
         border-radius: 16px;
-        box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+        box-shadow: 0 6px 24px rgba(2, 6, 23, 0.6);
       }
       .brand {
         display: flex;
         align-items: center;
         gap: 12px;
+      }
+      .brand-text strong {
+        display: block;
+        margin-bottom: 4px;
+      }
+      .brand-text p {
+        margin: 0;
+        font-size: 14px;
+        color: #abb7d0;
       }
       .logo {
         width: 48px;
@@ -103,7 +109,7 @@
       }
       nav ul {
         display: flex;
-        gap: 12px;
+        gap: 16px;
         list-style: none;
         padding: 0;
         margin: 0;
@@ -111,7 +117,7 @@
       nav a {
         color: var(--muted);
         text-decoration: none;
-        padding: 8px 12px;
+        padding: 8px 16px;
         border-radius: 8px;
         font-weight: 600;
       }
@@ -129,14 +135,14 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        padding: 8px 12px;
+        padding: 8px 16px;
         border-radius: 8px;
         background: linear-gradient(
           90deg,
-          rgba(255, 255, 255, 0.03),
+          rgba(255, 255, 255, 0.1),
           transparent
         );
-        border: 1px solid rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         color: var(--muted);
         cursor: pointer;
         font-weight: 600;
@@ -155,22 +161,34 @@
       a.btn {
         text-decoration: none;
       }
-
+      main {
+        padding-top: 64px;
+      }
       /* -------------------------
        Hero
        ------------------------- */
       .hero {
         display: grid;
         grid-template-columns: 1fr 360px;
-        gap: 32px;
+        gap: 24px;
         align-items: center;
-        margin-top: 32px;
       }
       .card {
         background: var(--card);
-        padding: 26px;
+        padding: 32px;
         border-radius: var(--radius);
-        box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+        box-shadow: 0 8px 24px rgba(2, 6, 23, 0.6);
+      }
+      .card > h2 {
+        margin-top: 0;
+      }
+      .card > h4 {
+        margin-top: 0;
+        margin-bottom: 12px;
+      }
+      .card > h4 + p {
+        margin-top: 0;
+        font-size: 14px;
       }
       .intro h1 {
         margin: 0;
@@ -189,7 +207,7 @@
         display: grid;
         place-items: center;
         padding: 20px;
-        border-radius: 12px;
+        border-radius: 16px;
         background: linear-gradient(
           180deg,
           rgba(255, 255, 255, 0.02),
@@ -199,7 +217,7 @@
       .avatar svg {
         width: 160px;
         height: 160px;
-        border-radius: 12px;
+        border-radius: 16px;
       }
 
       /* Skill badges */
@@ -207,11 +225,13 @@
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-        margin-top: 12px;
+        margin-top: 16px;
+        margin-bottom: 20px;
       }
       .badge {
-        padding: 4px 8px;
+        padding: 6px 12px;
         border-radius: 999px;
+        font-size: 14px;
         background: linear-gradient(
           90deg,
           rgba(255, 255, 255, 0.02),
@@ -226,12 +246,12 @@
        Sections
        ------------------------- */
       section {
-        margin-top: 22px;
+        margin-bottom: 32px;
       }
       .grid-2 {
         display: grid;
         grid-template-columns: 1fr 360px;
-        gap: 18px;
+        gap: 24px;
       }
 
       /* Projects
@@ -243,13 +263,13 @@
       }
       .project {
         padding: 16px;
-        border-radius: 12px;
+        border-radius: 16px;
         background: linear-gradient(
           180deg,
           rgba(255, 255, 255, 0.02),
           transparent
         );
-        border: 1px solid rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         display: flex;
         flex-direction: column;
         gap: 8px;
@@ -264,10 +284,10 @@
         flex-wrap: wrap;
       }
       .pill {
-        font-size: 12px;
+        font-size: 16px;
         padding: 6px 8px;
         border-radius: 8px;
-        background: rgba(255, 255, 255, 0.02);
+        background: rgba(255, 255, 255, 0.06);
         color: var(--muted);
       }
 
@@ -275,15 +295,15 @@
       .timeline {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 16px;
       }
       .item {
         display: flex;
-        gap: 12px;
+        gap: 16px;
       }
       .dot {
-        width: 12px;
-        height: 12px;
+        width: 16px;
+        height: 16px;
         border-radius: 50%;
         background: var(--accent);
         margin-top: 6px;
@@ -298,7 +318,7 @@
       .skill-row {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 16px;
       }
       .skill-name {
         width: 140px;
@@ -306,8 +326,8 @@
       }
       .bar {
         flex: 1;
-        background: rgba(255, 255, 255, 0.03);
-        height: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        height: 16px;
         border-radius: 8px;
         overflow: hidden;
       }
@@ -324,13 +344,13 @@
       form {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 16px;
       }
       input,
       textarea {
-        padding: 12px;
+        padding: 16px;
         border-radius: 8px;
-        border: 1px solid rgba(255, 255, 255, 0.03);
+        border: 2px solid rgba(255, 255, 255, 0.2);
         background: transparent;
         color: inherit;
       }
@@ -347,7 +367,7 @@
       /* Footer */
       footer {
         opacity: 0.85;
-        margin-top: 32px;
+        margin-bottom: 32px;
         text-align: center;
         color: var(--muted);
       }
@@ -364,11 +384,11 @@
           display: none;
         }
         .nav {
-          padding: 12px;
+          padding: 16px;
         }
         .hero {
-          gap: 18px;
-          margin-top: 18px;
+          gap: 24px;
+          margin-top: 24px;
         }
       }
 
@@ -413,14 +433,11 @@
         <div class="nav">
           <div class="brand">
             <div class="logo">EL</div>
-            <div>
-              <div style="font-weight: 800">刘工程师（Engineer Liu）</div>
-              <div style="font-size: 12px; color: var(--muted)">
-                全栈工程师（偏前端） — Frontend & Backend
-              </div>
+            <div class="brand-text">
+              <strong>刘工程师（Engineer Liu）</strong>
+              <p>全栈工程师（偏前端） — Frontend & Backend</p>
             </div>
           </div>
-
           <nav aria-label="Main navigation">
             <ul>
               <li><a href="#about">关于</a></li>
@@ -429,7 +446,6 @@
               <li><a href="#contact">联系</a></li>
             </ul>
           </nav>
-
           <div class="actions">
             <button class="btn" id="copyEmail" title="复制邮箱">📧 邮箱</button>
             <!-- <button class="btn" id="themeToggle" title="切换主题">🌙</button> -->
@@ -439,7 +455,7 @@
       </header>
 
       <main>
-        <section class="hero">
+        <section id="about" class="hero">
           <div class="card intro">
             <h1>全栈工程师 — 专注于高质量可维护的产品</h1>
             <p>
@@ -462,7 +478,7 @@
               <span class="badge">Vue3</span>
             </div>
 
-            <div style="margin-top: 18px; display: flex; gap: 12px">
+            <div style="display: flex; gap: 16px">
               <a class="btn primary" href="#projects">查看作品</a>
               <a class="btn" href="#contact">下载简历</a>
             </div>
@@ -515,7 +531,7 @@
               <p style="color: var(--muted)">
                 每个项目都包含可复现的工程化步骤。下面是项目摘要与关键技术。
               </p>
-              <div class="projects" style="margin-top: 12px">
+              <div class="projects" style="margin-top: 16px">
                 <article class="project">
                   <h3>通用后台管理系统</h3>
                   <div class="tech">
@@ -566,17 +582,17 @@
               </div>
             </div>
 
-            <div class="card" style="margin-top: 18px">
+            <div class="card" style="margin-top: 24px">
               <h2>工作经历 & 教育</h2>
               <div class="timeline" style="margin-top: 8px">
                 <div class="item">
                   <div class="dot" aria-hidden></div>
                   <div>
-                    <div style="font-weight: 800">
-                      高级后端工程师 · 某科技公司
+                    <div style="font-weight: 800; margin-bottom: 8px">
+                      高级前端开发工程师 · 南京中软国际技术服务有限公司
                     </div>
                     <div style="color: var(--muted); font-size: 13px">
-                      2022 — 至今 · 负责微服务、接口设计与数据库建模
+                      2022年10月 — 至今 · 企业级AI产品的前端开发，优化用户体验
                     </div>
                   </div>
                 </div>
@@ -584,11 +600,12 @@
                 <div class="item">
                   <div class="dot" aria-hidden></div>
                   <div>
-                    <div style="font-weight: 800">
-                      前端工程师 · 某产品型公司
+                    <div style="font-weight: 800; margin-bottom: 8px">
+                      高级全栈开发工程师 · 深圳市爱能森科技有限公司南京分公司
                     </div>
                     <div style="color: var(--muted); font-size: 13px">
-                      2019 — 2022 · 构建可复用组件、优化首屏性能
+                      2019年2月 — 2020年10月 ·
+                      独立开发供暖数据采集系统，以及公众号取暖费缴费系统
                     </div>
                   </div>
                 </div>
@@ -649,10 +666,10 @@
               </div>
             </div>
 
-            <!-- <div class="card" style="margin-top: 18px">
+            <!-- <div class="card" style="margin-top: 24px">
               <h3>技术亮点</h3>
               <ul
-                style="color: var(--muted); padding-left: 18px; margin: 8px 0"
+                style="color: var(--muted); padding-left: 24px; margin: 8px 0"
               >
                 <li>工程化：Vite + monorepo + GitHub Actions</li>
                 <li>高并发设计（Go，Connection Pool）</li>
@@ -672,10 +689,10 @@
             </p>
             <div
               style="
-                margin-top: 12px;
+                margin-top: 16px;
                 display: flex;
                 flex-direction: column;
-                gap: 12px;
+                gap: 16px;
               "
             >
               <div
@@ -683,7 +700,7 @@
                 style="
                   padding: 16px;
                   background: transparent;
-                  border: 1px dashed rgba(255, 255, 255, 0.03);
+                  border: 1px solid rgba(255, 255, 255, 0.1);
                 "
               >
                 <h4>前端工程化</h4>
@@ -699,7 +716,7 @@
                 style="
                   padding: 16px;
                   background: transparent;
-                  border: 1px dashed rgba(255, 255, 255, 0.03);
+                  border: 1px dashed rgba(255, 255, 255, 0.1);
                 "
               >
                 <h4>后端与数据库</h4>
