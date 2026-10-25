@@ -1,868 +1,227 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>全栈开发工程师 — 个人网站</title>
-    <meta name="description" content="" />
-    <style>
-      /* -------------------------
-       Design system & variables
-       ------------------------- */
-      :root {
-        --bg: #1f2734;
-        --card: #0d1422;
-        --muted: #9aa4b2;
-        --accent: #7c5cff;
-        --accent-2: #00d4ff;
-        --glass: rgba(255, 255, 255, 0.04);
-        --radius: 16px;
-        --max-width: 1120px;
-        --gap: 24px;
-        color-scheme: dark;
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="description" content="刘川的个人技术主页：高级前端开发、TypeScript、React、Vibe Coding 与 AI 应用开发。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="刘川 · 前端工程师 / AI 应用开发" />
+  <meta property="og:description" content="以扎实的前端工程能力结合 AI 编程工具，把想法可靠地交付为产品。" />
+  <meta property="og:locale" content="zh_CN" />
+  <title>刘川 · 前端工程师 / AI 应用开发</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <div class="page-grid" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="nav-wrap container">
+      <a class="brand" href="#top" aria-label="刘川主页">
+        <span class="brand-mark">LC<span>.</span></span>
+        <span class="brand-label">个人技术主页</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="打开导航菜单" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#skills">技术能力</a>
+        <a href="#projects">项目经历</a>
+        <a href="#experience">工作经历</a>
+        <a href="#contact">联系我</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换明暗主题" title="切换明暗主题">
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.7 14.2A8.8 8.8 0 0 1 9.8 3.3 8.9 8.9 0 1 0 20.7 14.2Z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-      /* Light mode variables (JS toggle) */
-      :root.light {
-        --bg: #f6f7fb;
-        --card: #ffffff;
-        --muted: #5b6770;
-        --accent: #6b46ff;
-        --accent-2: #00a5cf;
-        --glass: rgba(11, 18, 32, 0.1);
-        color-scheme: light;
-      }
+  <main id="main">
+    <section class="hero section container" id="top">
+      <div class="hero-copy reveal">
+        <div class="availability"><span class="status-dot"></span> OPEN TO OPPORTUNITIES <span class="availability-divider">/</span> 南京 · 远程协作亦可沟通</div>
+        <p class="eyebrow">FRONTEND ENGINEER <span>×</span> AI BUILDER</p>
+        <h1>用工程化思维，<br />把 <span class="gradient-text">AI 效率</span> 变成<br class="mobile-break" />真正的产品。</h1>
+        <p class="hero-summary">你好，我是<strong>刘川</strong>。专注 TypeScript、React 与企业级前端开发，也持续实践 Vibe Coding 和 AI 应用集成。重视的不只是生成代码，更是把需求、实现、验证与交付完整地串起来。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">浏览项目 <span aria-hidden="true">↘</span></a>
+          <a class="button button-ghost" href="#contact">联系我 <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-links">
+          <a href="https://github.com/codetown" target="_blank" rel="noreferrer" aria-label="GitHub 个人主页">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.9-2.7c3-.3 6.2-1.5 6.2-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6S17.6 1.2 15 3.2a13.2 13.2 0 0 0-7 0C5.4 1.2 4.2 1.5 4.2 1.5a4.8 4.8 0 0 0-.1 3.6 5.2 5.2 0 0 0-1.4 3.6c0 5.2 3.2 6.4 6.2 6.7A3.4 3.4 0 0 0 8 18.1V22"/></svg>
+            github.com/codetown
+          </a>
+          <a href="mailto:codetown@aliyun.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+            codetown@aliyun.com
+          </a>
+        </div>
+      </div>
 
-      /* -------------------------
-       Base reset + layout
-       ------------------------- */
-      * {
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        height: 100%;
-      }
-      body {
-        margin: 0;
-        font-family: "PingFang SC", "Microsoft Yahei", "Helvetica Neue",
-          Helvetica, Arial, "Hiragino Sans GB", -apple-system, sans-serif;
-        background: radial-gradient(
-            1200px 600px at 10% 10%,
-            rgba(124, 92, 255, 0.08),
-            transparent
-          ),
-          var(--bg);
-        color: #e6eef8;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-
-      .container {
-        max-width: var(--max-width);
-        margin: 0 auto;
-      }
-
-      /* -------------------------
-       Top navigation
-       ------------------------- */
-      header {
-        position: sticky;
-        top: 32px;
-        z-index: 60;
-      }
-      .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        backdrop-filter: blur(6px);
-        background: linear-gradient(180deg, var(--glass), transparent);
-        padding: 12px;
-        border-radius: 16px;
-        box-shadow: 0 6px 24px rgba(2, 6, 23, 0.6);
-      }
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-      .brand-text strong {
-        display: block;
-        margin-bottom: 4px;
-      }
-      .brand-text p {
-        margin: 0;
-        font-size: 14px;
-        color: #abb7d0;
-      }
-      .logo {
-        width: 48px;
-        height: 48px;
-        border-radius: 8px;
-        display: grid;
-        place-items: center;
-        font-weight: 800;
-        background: linear-gradient(135deg, var(--accent), var(--accent-2));
-        color: white;
-        box-shadow: 0 6px 20px rgba(11, 18, 30, 0.6);
-      }
-      nav ul {
-        display: flex;
-        gap: 16px;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      nav a {
-        color: var(--muted);
-        text-decoration: none;
-        padding: 8px 16px;
-        border-radius: 8px;
-        font-weight: 600;
-      }
-      nav a:hover {
-        color: var(--accent);
-        background: transparent;
-      }
-
-      .actions {
-        display: flex;
-        gap: 8px;
-        align-items: center;
-      }
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 8px 16px;
-        border-radius: 8px;
-        background: linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.1),
-          transparent
-        );
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        color: var(--muted);
-        cursor: pointer;
-        font-weight: 600;
-      }
-      .btn.primary {
-        background: linear-gradient(90deg, var(--accent), var(--accent-2));
-        color: white;
-        border: 0;
-      }
-      .btn:hover {
-        opacity: 0.9;
-      }
-      .btn.primary:hover {
-        opacity: 0.9;
-      }
-      a.btn {
-        text-decoration: none;
-      }
-      main {
-        padding-top: 64px;
-      }
-      /* -------------------------
-       Hero
-       ------------------------- */
-      .hero {
-        display: grid;
-        grid-template-columns: 1fr 360px;
-        gap: 24px;
-        align-items: center;
-      }
-      .card {
-        background: var(--card);
-        padding: 32px;
-        border-radius: var(--radius);
-        box-shadow: 0 8px 24px rgba(2, 6, 23, 0.6);
-      }
-      .card > h2 {
-        margin-top: 0;
-      }
-      .card > h4 {
-        margin-top: 0;
-        margin-bottom: 12px;
-      }
-      .card > h4 + p {
-        margin-top: 0;
-        font-size: 14px;
-      }
-      .intro h1 {
-        margin: 0;
-        font-size: 32px;
-        line-height: 1.02;
-      }
-      .intro p {
-        margin: 16px 0;
-        color: var(--muted);
-        font-size: 15px;
-      }
-
-      .avatar {
-        width: 100%;
-        height: 100%;
-        display: grid;
-        place-items: center;
-        padding: 20px;
-        border-radius: 16px;
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.02),
-          transparent
-        );
-      }
-      .avatar svg {
-        width: 160px;
-        height: 160px;
-        border-radius: 16px;
-      }
-
-      /* Skill badges */
-      .badges {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 16px;
-        margin-bottom: 20px;
-      }
-      .badge {
-        padding: 6px 12px;
-        border-radius: 999px;
-        font-size: 14px;
-        background: linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.02),
-          transparent
-        );
-        font-weight: 700;
-        color: var(--muted);
-        border: 1px solid rgba(100, 100, 255, 0.4);
-      }
-
-      /* -------------------------
-       Sections
-       ------------------------- */
-      section {
-        margin-bottom: 32px;
-      }
-      .grid-2 {
-        display: grid;
-        grid-template-columns: 1fr 360px;
-        gap: 24px;
-      }
-
-      /* Projects
-    ------------------------- */
-      .projects {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-        gap: 16px;
-      }
-      .project {
-        padding: 16px;
-        border-radius: 16px;
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.02),
-          transparent
-        );
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-      .project h3 {
-        margin: 0 0 4px 0;
-        font-size: 16px;
-      }
-      .project p {
-        margin: 0;
-        font-size: 14px;
-      }
-      .project a {
-        color: var(--accent);
-        font-size: 14px;
-        text-decoration: none;
-      }
-      .tech {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-      }
-      .pill {
-        font-size: 14px;
-        padding: 6px 8px;
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.06);
-        color: var(--muted);
-      }
-
-      /* Timeline */
-      .timeline {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-      .item {
-        display: flex;
-        gap: 16px;
-      }
-      .dot {
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background: var(--accent);
-        margin-top: 6px;
-      }
-
-      /* Skill bars */
-      .skill-list {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-      .skill-row {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
-      .skill-name {
-        width: 140px;
-        font-weight: 700;
-      }
-      .bar {
-        flex: 1;
-        background: rgba(255, 255, 255, 0.05);
-        height: 16px;
-        border-radius: 8px;
-        overflow: hidden;
-      }
-      .bar > i {
-        display: block;
-        height: 100%;
-        background: linear-gradient(90deg, var(--accent), var(--accent-2));
-        border-radius: 8px;
-        width: 0%;
-        transition: width 900ms cubic-bezier(0.2, 0.9, 0.3, 1);
-      }
-
-      /* Contact */
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-      input,
-      textarea {
-        padding: 16px;
-        border-radius: 8px;
-        border: 2px solid rgba(255, 255, 255, 0.2);
-        background: transparent;
-        color: inherit;
-      }
-      textarea {
-        min-height: 120px;
-        resize: vertical;
-      }
-      input:focus,
-      textarea:focus {
-        outline: 2px solid var(--accent);
-        border-color: var(--accent);
-      }
-
-      /* Footer */
-      footer {
-        opacity: 0.85;
-        margin-bottom: 32px;
-        text-align: center;
-        color: var(--muted);
-      }
-
-      /* -------------------------
-       Responsive
-       ------------------------- */
-      @media (max-width: 980px) {
-        .hero,
-        .grid-2 {
-          grid-template-columns: 1fr;
-        }
-        nav ul {
-          display: none;
-        }
-        .nav {
-          padding: 16px;
-        }
-        .hero {
-          gap: 24px;
-          margin-top: 24px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .logo {
-          width: 44px;
-          height: 44px;
-        }
-        .avatar svg {
-          width: 120px;
-          height: 120px;
-        }
-        .badges {
-          gap: 6px;
-        }
-        .badge {
-          padding: 6px 8px;
-          font-size: 16px;
-        }
-      }
-
-      /* small print / printing */
-      @media print {
-        body {
-          background: white;
-          color: black;
-        }
-        .nav,
-        .actions {
-          display: none;
-        }
-        .card {
-          box-shadow: none;
-          border: 1px solid #ccc;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <div class="nav">
-          <div class="brand">
-            <div class="logo">EL</div>
-            <div class="brand-text">
-              <strong>刘工程师（Engineer Liu）</strong>
-              <p>全栈工程师（偏前端） — Frontend & Backend</p>
-            </div>
+      <div class="hero-visual reveal" aria-label="技术栈与开发工作流展示">
+        <div class="visual-orbit orbit-one"></div>
+        <div class="visual-orbit orbit-two"></div>
+        <div class="visual-glow"></div>
+        <div class="code-window">
+          <div class="window-bar">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <span>developer.ts</span>
+            <span class="window-lock">TS</span>
           </div>
-          <nav aria-label="Main navigation">
-            <ul>
-              <li><a href="#about">关于</a></li>
-              <li><a href="#projects">作品</a></li>
-              <li><a href="#skills">技能</a></li>
-              <li><a href="#contact">联系</a></li>
-            </ul>
-          </nav>
-          <div class="actions">
-            <button class="btn" id="copyEmail" title="复制邮箱">📧 邮箱</button>
-            <!-- <button class="btn" id="themeToggle" title="切换主题">🌙</button> -->
-            <a class="btn primary" href="#contact">联系我</a>
+          <div class="code-body" aria-label="开发者信息示例代码">
+            <div><span class="line-number">01</span><code><span class="code-purple">const</span> developer = {</code></div>
+            <div><span class="line-number">02</span><code>&nbsp; name: <span class="code-green">"刘川"</span>,</code></div>
+            <div><span class="line-number">03</span><code>&nbsp; focus: [</code></div>
+            <div><span class="line-number">04</span><code>&nbsp;&nbsp; <span class="code-green">"TypeScript"</span>,</code></div>
+            <div><span class="line-number">05</span><code>&nbsp;&nbsp; <span class="code-green">"React"</span>,</code></div>
+            <div><span class="line-number">06</span><code>&nbsp;&nbsp; <span class="code-green">"Vibe Coding"</span>,</code></div>
+            <div><span class="line-number">07</span><code>&nbsp;&nbsp; <span class="code-green">"AI Applications"</span></code></div>
+            <div><span class="line-number">08</span><code>&nbsp; ],</code></div>
+            <div><span class="line-number">09</span><code>&nbsp; mindset: <span class="code-green">"Build. Verify. Ship."</span></code></div>
+            <div><span class="line-number">10</span><code>};<span class="cursor-block"></span></code></div>
+          </div>
+          <div class="window-footer"><span><i class="small-green-dot"></i> Ready to build</span><span>UTF-8 · TypeScript</span></div>
+        </div>
+        <div class="float-card float-ai"><span class="float-card-icon ai-icon">✳</span><span><b>AI-assisted workflow</b><small>从需求到验证，持续迭代</small></span><span class="float-check">✓</span></div>
+        <div class="float-card float-ts"><span class="ts-badge">TS</span><span><b>TypeScript</b><small>清晰类型 · 可维护组件</small></span></div>
+        <div class="visual-caption"><span class="caption-line"></span> CODE WITH CLARITY. BUILD WITH PURPOSE.</div>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="向下浏览"><span class="scroll-line"></span> SCROLL TO EXPLORE</a>
+    </section>
+
+    <section class="section section-about" id="about">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">01 / ABOUT</p><h2>不止于写出代码，<br class="mobile-break" />更关注它如何可靠地运行。</h2></div>
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p class="lead-copy">我是一名有多年业务系统开发经验的工程师，主要方向是现代前端与 AI 应用开发。</p>
+            <p>工作中，我使用 React、TypeScript 和 Vue 构建企业级业务界面，做过 AI 目标检测、智能质检、数据标注和 Agent 工作流等项目。面对新需求，我会把 AI 编程工具纳入开发流程，用它们辅助理解代码、拆解任务、生成实现方案和定位问题，再通过人工审查与运行验证控制交付质量。</p>
+            <p>我相信高效开发并不等于盲目生成。好的工程实践，是把产品理解、技术判断、清晰结构和持续验证结合起来。</p>
+          </div>
+          <div class="principles reveal">
+            <div class="principle-item"><span class="principle-index">A</span><div><h3>工程优先</h3><p>关注代码结构、类型边界、组件复用与长期可维护性。</p></div></div>
+            <div class="principle-item"><span class="principle-index">B</span><div><h3>AI 协作</h3><p>善用编程智能体放大效率，同时保持审查、测试和验证。</p></div></div>
+            <div class="principle-item"><span class="principle-index">C</span><div><h3>面向交付</h3><p>理解业务目标，把页面、接口与流程串联成可用功能。</p></div></div>
           </div>
         </div>
-      </header>
+      </div>
+    </section>
 
-      <main>
-        <section id="about" class="hero">
-          <div class="card intro">
-            <h1>全栈工程师 — 专注于高质量可维护的产品</h1>
-            <p>
-              专长前端：Vite · React Hooks · Zustand · Ant Design；后端：Go ·
-              Gin · GORM · PostgreSQL /
-              MySQL。使用现代工程化方案搭建可扩展的生产级系统。
-            </p>
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading section-heading-row reveal"><div><p class="eyebrow">02 / TOOLKIT</p><h2>核心技术能力</h2></div><p class="heading-aside">从用户界面到服务端，从 AI 编程协作到模型应用集成。</p></div>
+        <div class="skill-grid">
+          <article class="skill-card skill-card-featured reveal">
+            <div class="skill-icon icon-react"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="3.3"/><ellipse cx="24" cy="24" rx="20" ry="8.2"/><ellipse cx="24" cy="24" rx="20" ry="8.2" transform="rotate(60 24 24)"/><ellipse cx="24" cy="24" rx="20" ry="8.2" transform="rotate(120 24 24)"/></svg></div>
+            <p class="card-kicker">01 — FRONTEND ENGINEERING</p><h3>TypeScript · React</h3><p class="skill-description">现代前端开发的主战场。擅长企业级业务页面、复杂交互、动态配置表单和可复用组件设计。</p>
+            <div class="tag-list"><span>TypeScript</span><span>React Hooks</span><span>Next.js</span><span>Vite</span><span>Zustand</span><span>React Router</span><span>Ant Design</span><span>HTML / CSS</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-icon icon-ai">✳</div><p class="card-kicker">02 — VIBE CODING</p><h3>AI 编程工作流</h3><p class="skill-description">将 AI 编程智能体融入需求分析、代码理解、模块实现、Bug 排查与重构，并以运行结果验证质量。</p>
+            <div class="tag-list"><span>Codex</span><span>Claude Code</span><span>OpenCode</span><span>GitHub Copilot</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-icon icon-model">◎</div><p class="card-kicker">03 — LLM & AI APPS</p><h3>大模型与 AI 应用</h3><p class="skill-description">有主流大模型产品的实际使用经验，了解 API 集成、提示词设计、RAG 与本地量化模型推理。</p>
+            <div class="tag-list"><span>ChatGPT</span><span>Grok</span><span>Gemini</span><span>通义千问</span><span>FastGPT</span><span>RAG</span><span>Ollama</span><span>llama.cpp</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-icon icon-stack">⌘</div><p class="card-kicker">04 — FULL STACK</p><h3>Golang · 服务端</h3><p class="skill-description">能够完成常见 REST API 开发、数据库读写、前后端联调，并参与从开发到部署的完整链路。</p>
+            <div class="tag-list"><span>Golang</span><span>Gin</span><span>Iris</span><span>MySQL</span><span>PostgreSQL</span><span>Redis</span><span>MongoDB</span><span>Docker</span><span>Nginx</span><span>Linux</span><span>Git</span></div>
+          </article>
+          <article class="skill-card reveal">
+            <div class="skill-icon icon-vue">V</div><p class="card-kicker">05 — WEB ECOSYSTEM</p><h3>React 与 Vue 双栈</h3><p class="skill-description">具备 React、Vue 项目经验，熟悉不同组件库与状态管理方案，能够适配既有业务技术体系。</p>
+            <div class="tag-list"><span>Vue</span><span>Pinia</span><span>Element Plus</span><span>Ant Design Vue</span><span>Material UI</span></div>
+          </article>
+          <article class="skill-card skill-note reveal">
+            <span class="note-mark">“</span><p>AI 负责加速探索，<br /><strong>工程判断决定交付质量。</strong></p><div class="note-rule"></div><span class="note-caption">BUILD WITH INTENTION</span>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            <div class="badges">
-              <span class="badge">Vite</span>
-              <span class="badge">React Hooks</span>
-              <span class="badge">Zustand</span>
-              <span class="badge">Ant Design</span>
-              <span class="badge">Go</span>
-              <span class="badge">Gin</span>
-              <span class="badge">GORM</span>
-              <span class="badge">Postgres</span>
-              <span class="badge">MySQL</span>
-              <span class="badge">Flutter</span>
-              <span class="badge">Vue3</span>
-            </div>
+    <section class="section section-projects" id="projects">
+      <div class="container">
+        <div class="section-heading section-heading-row reveal"><div><p class="eyebrow">03 / SELECTED WORK</p><h2>项目经历</h2></div><p class="heading-aside">围绕 AI 视觉、业务配置、数据标注与智能体工作流的项目实践。</p></div>
+        <div class="project-filters reveal" role="group" aria-label="筛选项目">
+          <button class="filter-button is-active" type="button" data-filter="all">全部项目 <span>05</span></button>
+          <button class="filter-button" type="button" data-filter="ai">AI 应用</button>
+          <button class="filter-button" type="button" data-filter="frontend">前端工程</button>
+          <button class="filter-button" type="button" data-filter="fullstack">全栈项目</button>
+        </div>
+        <div class="project-grid" id="projectGrid">
+          <article class="project-card project-large reveal" data-category="ai fullstack">
+            <div class="project-visual visual-detection"><div class="scan-grid"></div><div class="scan-box scan-box-one"><span>OBJECT 01</span></div><div class="scan-box scan-box-two"><span>OBJECT 02</span></div><div class="scan-label">VISION / DETECTION</div><div class="visual-corner corner-a"></div><div class="visual-corner corner-b"></div></div>
+            <div class="project-content"><div class="project-meta"><span class="project-number">PROJECT / 01</span><span class="project-role">前端负责人 / 全栈</span></div><h3>AI 目标检测平台</h3><p>面向目标检测业务的配置与管理平台，负责前端体验、规则链配置与大文件分片上传等功能。</p><div class="project-tags"><span>React</span><span>Next.js</span><span>Golang</span><span>YOLOv8</span><span>OpenCV</span></div><ul class="project-highlights"><li>开发目标检测规则链，简化规则配置流程</li><li>实现大文件分片上传，改善文件处理体验</li><li>调整前端布局与代码组织，提升可维护性</li></ul></div>
+          </article>
+          <article class="project-card reveal" data-category="ai frontend">
+            <div class="project-visual visual-quality"><div class="quality-ring ring-one"></div><div class="quality-ring ring-two"></div><div class="quality-core"><span>QC</span><b>98.4%</b><small>QUALITY CHECK</small></div><div class="quality-spark spark-one"></div><div class="quality-spark spark-two"></div></div>
+            <div class="project-content"><div class="project-meta"><span class="project-number">PROJECT / 02</span><span class="project-role">前端负责人</span></div><h3>床垫 AI 质检系统</h3><p>服务于生产质检场景，提供检测规则配置与可视化质检统计。</p><div class="project-tags"><span>TypeScript</span><span>React</span><span>Material UI</span><span>YOLOv8</span></div><ul class="project-highlights"><li>开发智能质检规则配置功能</li><li>构建数据大屏，展示质检统计结果</li></ul></div>
+          </article>
+          <article class="project-card reveal" data-category="ai frontend">
+            <div class="project-visual visual-wildlife"><div class="wildlife-horizon"></div><div class="wildlife-sun"></div><div class="wildlife-mountain mountain-one"></div><div class="wildlife-mountain mountain-two"></div><div class="wildlife-track track-one"></div><div class="wildlife-track track-two"></div><div class="wildlife-label"><span class="status-dot"></span> FIELD MONITORING</div></div>
+            <div class="project-content"><div class="project-meta"><span class="project-number">PROJECT / 03</span><span class="project-role">前端负责人</span></div><h3>自然保护区动物活动监测</h3><p>支持无人值守监测场景，提供监测规则管理与动物活动数据展示。</p><div class="project-tags"><span>TypeScript</span><span>Vue</span><span>Pinia</span><span>YOLOv8</span></div><ul class="project-highlights"><li>开发智能监测配置功能</li><li>实现动物活动监测数据大屏</li></ul></div>
+          </article>
+          <article class="project-card reveal" data-category="frontend">
+            <div class="project-visual visual-labeling"><div class="label-image"><div class="label-object"></div><div class="label-anchor anchor-one"></div><div class="label-anchor anchor-two"></div><div class="label-anchor anchor-three"></div><div class="label-bounds"></div></div><div class="label-tools"><i></i><i></i><i></i><i></i></div><div class="label-status">ANNOTATION TOOLKIT <span>● READY</span></div></div>
+            <div class="project-content"><div class="project-meta"><span class="project-number">PROJECT / 04</span><span class="project-role">前端开发</span></div><h3>多模态数据标注平台</h3><p>为 AI 模型训练提供标注工具，覆盖点云以及图片、文本、视频等数据类型。</p><div class="project-tags"><span>TypeScript</span><span>Vue</span><span>Ant Design Vue</span><span>Java</span></div><ul class="project-highlights"><li>开发 3D 点云数据标注功能</li><li>开发图片、文本、视频标注功能</li></ul></div>
+          </article>
+          <article class="project-card reveal" data-category="ai frontend">
+            <div class="project-visual visual-agent"><div class="agent-node node-trigger"><span>⚡</span><small>INPUT</small></div><div class="agent-connector connector-one"></div><div class="agent-node node-llm"><span>✳</span><small>AGENT</small></div><div class="agent-connector connector-two"></div><div class="agent-node node-output"><span>↗</span><small>OUTPUT</small></div><div class="agent-flow-label">WORKFLOW BUILDER</div></div>
+            <div class="project-content"><div class="project-meta"><span class="project-number">PROJECT / 05</span><span class="project-role">前端开发</span></div><h3>Agent 开发平台</h3><p>面向企业低代码智能体搭建场景，支持知识库检索、应用配置及工作流节点管理。</p><div class="project-tags"><span>TypeScript</span><span>Vue</span><span>Pinia</span><span>RAG</span><span>MongoDB</span></div><ul class="project-highlights"><li>开发知识库增强检索前端功能</li><li>开发应用配置与工作流节点配置</li></ul></div>
+          </article>
+        </div>
+        <p class="project-footnote"><span class="footnote-star">✳</span> 项目内容依据个人工作经历整理，页面展示的是参与方向与负责功能，不代表项目全部能力均由个人独立完成。</p>
+      </div>
+    </section>
 
-            <div style="display: flex; gap: 16px">
-              <a class="btn primary" href="#projects">查看作品</a>
-              <a class="btn" href="#contact">下载简历</a>
-            </div>
-          </div>
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading section-heading-row reveal"><div><p class="eyebrow">04 / CAREER</p><h2>工作经历</h2></div><p class="heading-aside">持续积累前端工程、全栈协作与业务交付经验。</p></div>
+        <div class="timeline">
+          <article class="timeline-item reveal"><div class="timeline-date">2022.10 — 2025.10</div><div class="timeline-marker"><span></span></div><div class="timeline-body"><div class="timeline-title-row"><h3>中软国际 · 南京分公司</h3><span class="timeline-badge">最近一段经历</span></div><p class="timeline-position">高级前端开发工程师（React）</p><ul><li>负责企业级管理系统及 AI 相关项目的前端开发，主要使用 TypeScript 与 React。</li><li>根据产品设计实现高保真页面，关注界面布局、交互一致性与使用体验。</li><li>参与 React + Golang 全栈项目，开发 Gin API 并完成前端对接与业务联调。</li></ul></div></article>
+          <article class="timeline-item reveal"><div class="timeline-date">2020.10 — 2022.10</div><div class="timeline-marker"><span></span></div><div class="timeline-body"><h3>上海申朴 · 南京分公司</h3><p class="timeline-position">高级前端开发工程师</p><p class="timeline-note">劳务派遣至平安科技南京公司</p><ul><li>负责 React 项目前端开发及相关负责人工作。</li><li>负责 Vue 项目的前端开发及相关负责人工作。</li></ul></div></article>
+          <article class="timeline-item reveal"><div class="timeline-date">2019.03 — 2020.10</div><div class="timeline-marker"><span></span></div><div class="timeline-body"><h3>深圳爱能森新能源 · 南京分公司</h3><p class="timeline-position">全栈（偏前端）开发工程师</p><ul><li>独立开发供暖数据可视化平台（Golang + Vue）。</li><li>独立开发数据采集系统（服务端 Golang，客户端 C#）。</li><li>担任公司技术顾问，为其他技术人员提供技术支持。</li></ul></div></article>
+          <article class="timeline-item reveal"><div class="timeline-date">2018.06 — 2019.03</div><div class="timeline-marker"><span></span></div><div class="timeline-body"><h3>南京国聪科技有限公司</h3><p class="timeline-position">全栈工程师</p><ul><li>独立负责手机端 Web 商城系统的二次开发与维护。</li><li>使用 PHP、AngularJS、Linux，并基于 CodeIgniter 与 SmallShop 开发商城功能。</li></ul></div></article>
+          <article class="timeline-item timeline-item-early reveal"><div class="timeline-date">2011.12 — 2018.06</div><div class="timeline-marker"><span></span></div><div class="timeline-body"><h3>早期开发与运维经历</h3><p class="timeline-position">PHP / 原生前端开发 · 运维</p><ul><li>2013.01 — 2018.06：在南京多家公司从事 PHP 与原生前端开发。</li><li>2011.12 — 2013.01：在广东天福有限公司从事运维，主要负责 SQL 报表编写。</li></ul></div></article>
+        </div>
+      </div>
+    </section>
 
-          <aside class="card avatar" aria-hidden="true">
-            <!-- Decorative SVG avatar -->
-            <svg
-              viewBox="0 0 200 200"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="avatar"
-            >
-              <defs>
-                <linearGradient id="g" x1="0" x2="1">
-                  <stop offset="0" stop-color="#7c5cff" />
-                  <stop offset="1" stop-color="#00d4ff" />
-                </linearGradient>
-              </defs>
-              <rect width="200" height="200" rx="20" fill="url(#g)" />
-              <g transform="translate(30,38)" fill="#fff" opacity="0.95">
-                <circle cx="70" cy="36" r="26" fill="#fff" opacity="0.12" />
-                <circle cx="70" cy="36" r="22" fill="#fff" />
-                <rect
-                  x="14"
-                  y="82"
-                  width="112"
-                  height="8"
-                  rx="4"
-                  opacity="0.18"
-                />
-                <rect
-                  x="14"
-                  y="96"
-                  width="112"
-                  height="8"
-                  rx="4"
-                  opacity="0.08"
-                />
-              </g>
-            </svg>
-          </aside>
-        </section>
+    <section class="section education-section" id="education">
+      <div class="container education-wrap reveal">
+        <div><p class="eyebrow">05 / EDUCATION</p><h2>教育背景</h2></div>
+        <div class="education-detail"><h3>无锡工艺职业技术学院</h3><p class="education-major">软件技术专业 <span>·</span> 大专</p><p class="education-date">2008.09 — 2011.06</p><div class="education-extra"><span>数据库原理</span><span>计算机组成原理</span><span>计算机网络</span><span>C 语言</span><span>数据结构</span><span>C++ 自学实践</span></div></div>
+      </div>
+    </section>
 
-        <!-- Projects & Sidebar -->
-        <section id="projects" class="grid-2">
-          <div>
-            <div class="card">
-              <h2>精选项目</h2>
-              <p style="color: var(--muted)">
-                每个项目都包含可复现的工程化步骤。下面是项目摘要与关键技术。
-              </p>
-              <div class="projects" style="margin-top: 16px">
-                <article class="project">
-                  <h3>通用后台管理系统</h3>
-                  <div class="tech">
-                    <span class="pill">Vite</span><span class="pill">React</span
-                    ><span class="pill">Ant Design</span
-                    ><span class="pill">Zustand</span>
-                  </div>
-                  <p>
-                    <a target="_blank" href="https://viteplat.vercel.app/">
-                      从0搭建一个生产级通用后台管理系统前端工程。封装了通用的查询表单和数据写入表单等常用的组件，提高代码复用率。
-                    </a>
-                  </p>
-                </article>
+    <section class="section contact-section" id="contact">
+      <div class="container contact-panel reveal">
+        <div class="contact-decoration" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="contact-content"><p class="eyebrow">06 / GET IN TOUCH</p><h2>聊聊技术，<br />也聊聊下一件值得做的事。</h2><p>欢迎交流前端工程、Vibe Coding、AI 应用开发与全栈项目机会。</p><div class="contact-actions"><a class="button button-primary" href="mailto:codetown@aliyun.com">发送邮件 <span aria-hidden="true">↗</span></a><button class="button button-ghost copy-email" id="copyEmail" type="button" data-email="codetown@aliyun.com">复制邮箱 <span aria-hidden="true">▣</span></button></div><span class="copy-feedback" id="copyFeedback" role="status" aria-live="polite"></span></div>
+        <div class="contact-side"><div class="contact-info-row"><span class="contact-info-label">EMAIL</span><a href="mailto:codetown@aliyun.com">codetown@aliyun.com</a></div><div class="contact-info-row"><span class="contact-info-label">GITHUB</span><a href="https://github.com/codetown" target="_blank" rel="noreferrer">github.com/codetown ↗</a></div><div class="contact-info-row"><span class="contact-info-label">FOCUS</span><span>Frontend · Vibe Coding · AI</span></div></div>
+      </div>
+    </section>
+  </main>
 
-                <!-- <article class="project">
-                  <h3>实时协作平台（P2P + WebSocket）</h3>
-                  <div class="tech">
-                    <span class="pill">React Hooks</span
-                    ><span class="pill">WebSocket</span
-                    ><span class="pill">Gin</span
-                    ><span class="pill">Docker</span>
-                  </div>
-                  <p style="color: var(--muted); margin-top: 8px">
-                    功能：多人实时协作、消息历史持久化、回滚与乐观更新。
-                  </p>
-                </article> -->
-
-                <article class="project">
-                  <h3>在线视频点播平台</h3>
-                  <div class="tech">
-                    <span class="pill">Go</span><span class="pill">Gin</span
-                    ><span class="pill">GORM</span
-                    ><span class="pill">PostgreSQL</span>
-                  </div>
-                  <p>
-                    <a target="_blank" href="/movie">
-                      实现了首页视频列表的分类展示，视频的搜索查询，以及视频的点击播放，
-                      以及通过动态数据上生成静态页面
-                    </a>
-                  </p>
-                </article>
-              </div>
-            </div>
-
-            <div class="card" style="margin-top: 24px">
-              <h2>工作经历 & 教育</h2>
-              <div class="timeline" style="margin-top: 8px">
-                <div class="item">
-                  <div class="dot" aria-hidden></div>
-                  <div>
-                    <div style="font-weight: 800; margin-bottom: 8px">
-                      高级前端开发工程师 · 南京中软国际技术服务有限公司
-                    </div>
-                    <div style="color: var(--muted); font-size: 13px">
-                      2022年10月 — 至今 · 企业级AI产品的前端开发，优化用户体验
-                    </div>
-                  </div>
-                </div>
-
-                <div class="item">
-                  <div class="dot" aria-hidden></div>
-                  <div>
-                    <div style="font-weight: 800; margin-bottom: 8px">
-                      高级全栈开发工程师 · 深圳市爱能森科技有限公司南京分公司
-                    </div>
-                    <div style="color: var(--muted); font-size: 13px">
-                      2019年2月 — 2020年10月 ·
-                      独立开发供暖数据采集系统，以及公众号取暖费缴费系统
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <aside>
-            <div class="card">
-              <h3>专业技能速览</h3>
-              <div class="skill-list" style="margin-top: 8px">
-                <div class="skill-row"><div class="skill-name">前端</div></div>
-                <div class="skill-row">
-                  <div class="skill-name">React</div>
-                  <div class="bar"><i data-percent="90"></i></div>
-                </div>
-                <div class="skill-row">
-                  <div class="skill-name">Ant Design</div>
-                  <div class="bar"><i data-percent="80"></i></div>
-                </div>
-                <div class="skill-row"><div class="skill-name">后端</div></div>
-                <div class="skill-row">
-                  <div class="skill-name">Go / Gin</div>
-                  <div class="bar"><i data-percent="90"></i></div>
-                </div>
-                <div class="skill-row">
-                  <div class="skill-name">MySQL</div>
-                  <div class="bar"><i data-percent="80"></i></div>
-                </div>
-                <div class="skill-row">
-                  <div class="skill-name">PostgreSQL</div>
-                  <div class="bar"><i data-percent="80"></i></div>
-                </div>
-                <div class="skill-row">
-                  <div class="skill-name">移动端</div>
-                </div>
-                <div class="skill-row">
-                  <div class="skill-name">Flutter</div>
-                  <div class="bar"><i data-percent="92"></i></div>
-                </div>
-              </div>
-
-              <div
-                style="
-                  margin-top: 16px;
-                  display: flex;
-                  flex-direction: column;
-                  gap: 8px;
-                "
-              >
-                <a class="btn" href="#contact">📄 简历（PDF）</a>
-                <a
-                  class="btn"
-                  target="_blank"
-                  href="https://github.com/codetown?tab=repositories"
-                  >📦 GitHub / 项目</a
-                >
-              </div>
-            </div>
-
-            <!-- <div class="card" style="margin-top: 24px">
-              <h3>技术亮点</h3>
-              <ul
-                style="color: var(--muted); padding-left: 24px; margin: 8px 0"
-              >
-                <li>工程化：Vite + monorepo + GitHub Actions</li>
-                <li>高并发设计（Go，Connection Pool）</li>
-                <li>对数据库建模及索引优化有丰富经验</li>
-                <li>重视测试：单元测试 + 集成测试</li>
-              </ul>
-            </div> -->
-          </aside>
-        </section>
-
-        <section id="skills">
-          <div class="card">
-            <h2>深入技能</h2>
-            <p style="color: var(--muted)">
-              下面列出与项目实践结合的技能说明 —
-              包含遇到的问题与解决方案（节选）。
-            </p>
-            <div
-              style="
-                margin-top: 16px;
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-              "
-            >
-              <div
-                class="card"
-                style="
-                  padding: 16px;
-                  background: transparent;
-                  border: 1px solid rgba(255, 255, 255, 0.1);
-                "
-              >
-                <h4>前端工程化</h4>
-                <p style="color: var(--muted); margin: 8px 0">
-                  使用 Vite + React Hooks 构建高性能 SPA；SCSS样式编写
-                  高度还原高保真设计；使用 Zustand 做细粒度状态管理，降低
-                  Context 重渲染开销。
-                </p>
-              </div>
-
-              <div
-                class="card"
-                style="
-                  padding: 16px;
-                  background: transparent;
-                  border: 1px dashed rgba(255, 255, 255, 0.1);
-                "
-              >
-                <h4>后端与数据库</h4>
-                <p style="color: var(--muted); margin: 8px 0">
-                  Go + Gin 提供高吞吐与低延迟；使用 GORM 做 ORM
-                  层，同时在关键路径使用原生 SQL 优化；Postgres
-                  负责复杂查询、MySQL 用于高并发事务场景。
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact">
-          <div class="card">
-            <h2>联系我</h2>
-            <p style="color: var(--muted)">
-              如果你想一起合作、招聘或技术交流，请填写下面的表单。
-            </p>
-
-            <form id="contactForm" novalidate>
-              <input id="name" placeholder="你的姓名" required />
-              <input id="email" type="email" placeholder="你的邮箱" required />
-              <input id="subject" placeholder="主题" />
-              <textarea
-                id="message"
-                placeholder="项目描述或其他信息"
-                required
-              ></textarea>
-              <div style="display: flex; gap: 8px">
-                <button class="btn primary" type="submit">发送消息</button>
-                <button class="btn" type="reset">重置</button>
-              </div>
-              <div
-                id="formMsg"
-                style="color: var(--muted); margin-top: 8px; font-size: 16px"
-              ></div>
-            </form>
-          </div>
-        </section>
-
-        <footer>
-          <div class="card" style="text-align: center">
-            <div style="font-weight: 800">刘工程师 · 全栈工程师</div>
-            <div style="color: var(--muted); font-size: 13px; margin-top: 6px">
-              © <span id="year"></span> All rights reserved.
-            </div>
-          </div>
-        </footer>
-      </main>
-    </div>
-
-    <script>
-      // -------------------------
-      // Small ES6 interactions
-      // -------------------------
-      document.getElementById("year").textContent = new Date().getFullYear();
-
-      // Theme toggle (light/dark) — toggles a class on :root
-      // const themeBtn = document.getElementById("themeToggle");
-      const root = document.documentElement;
-      const prefersLight =
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: light)").matches;
-      // if (prefersLight) root.classList.add('light');
-
-      // themeBtn.addEventListener("click", () => {
-      //   root.classList.toggle("light");
-      //   themeBtn.textContent = root.classList.contains("light") ? "🌞" : "🌙";
-      // });
-
-      // Copy email
-      document
-        .getElementById("copyEmail")
-        .addEventListener("click", async (e) => {
-          const email = "codetown@aliyun.com";
-          try {
-            await navigator.clipboard.writeText(email);
-            e.target.textContent = "已复制 ✓";
-            setTimeout(() => (e.target.textContent = "📧 邮箱"), 1500);
-          } catch (err) {
-            alert("复制失败，请手动复制: " + email);
-          }
-        });
-
-      // Skill bars animation when visible
-      const bars = document.querySelectorAll(".bar i");
-      const animateBars = () =>
-        bars.forEach((b) => {
-          const p = Number(b.dataset.percent) || 0;
-          requestAnimationFrame(() => (b.style.width = p + "%"));
-        });
-      // simple visibility check
-      const io = new IntersectionObserver(
-        (entries) =>
-          entries.forEach((ent) => ent.isIntersecting && animateBars()),
-        { threshold: 0.25 }
-      );
-      io.observe(document.querySelector("#projects"));
-
-      // Contact form (mocked)
-      const form = document.getElementById("contactForm");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const msg = document.getElementById("message").value.trim();
-        const out = document.getElementById("formMsg");
-        if (!name || !email || !msg) {
-          out.textContent = "请填写必填字段。";
-          return;
-        }
-        // Basic email regex
-        if (!/^\S+@\S+\.\S+$/.test(email)) {
-          out.textContent = "请输入有效的邮箱地址。";
-          return;
-        }
-
-        // Simulate send
-        out.textContent = "正在发送...";
-        setTimeout(() => {
-          out.textContent = "消息已发送 — 我会尽快回复你 🙏";
-          form.reset();
-        }, 900);
-      });
-
-      // Smooth scroll for internal links
-      document.querySelectorAll('a[href^="#"]').forEach((a) =>
-        a.addEventListener("click", (e) => {
-          const id = a.getAttribute("href");
-          if (id === "#") return;
-          const el = document.querySelector(id);
-          if (el) {
-            e.preventDefault();
-            el.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-        })
-      );
-
-      // Accessibility: reduce motion
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        bars.forEach((b) => (b.style.transition = "none"));
-      }
-    </script>
-  </body>
+  <footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="#top">LC<span>.</span></a><p>以清晰的工程实践，构建可靠的数字产品。</p><span class="footer-copy">© <span id="year"></span> 刘川 · Built with HTML, CSS & JavaScript</span><a class="back-top" href="#top">回到顶部 ↑</a></div></footer>
+  <script src="script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "刘川",
+    "url": "https://codetown.github.io",
+    "email": "mailto:codetown@aliyun.com",
+    "jobTitle": "高级前端开发工程师 / AI 应用开发",
+    "knowsAbout": ["TypeScript", "React", "Vue", "Vibe Coding", "AI 应用开发", "Golang"]
+  }
+  </script>
+</body>
 </html>
