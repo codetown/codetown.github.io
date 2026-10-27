@@ -1,0 +1,9 @@
+{
+  "name": "墨页 MoPage",
+  "short_name": "墨页",
+  "description": "纯浏览器本地的 Markdown ↔ PDF 互转工具",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f1ec",
+  "theme_color": "#c0442c"
+}
